@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.2.js"></script>
+    <script src="https://fb.me/react-dom-0.14.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var SongTracker = React.createClass({
+        getInitialState: function() {
+          return {
+            newSong: {
+              artist: '',
+              rating: '1',
+              title: ''
+            },
+
+            query: '',
+
+            songs: [{
+              artist: 'Evolve',
+              rating: '3',
+              title: 'Well I Gotta Story'
+            }, {
+              artist: 'Dzihan & Kamien',
+              rating: '2',
+              title: 'Call Me'
+            }, {
+              artist: 'Tetris',
+              rating: '4',
+              title: 'El Rhytmo De Miami'
+            }, {
+              artist: 'Peace Orchestra',
+              rating: '3',
+              title: 'Who am I'
+            }, {
+              artist: 'Majid Jordan',
+              rating: '5',
+              title: 'Her'
+            }]
+          };
+        },
+
+        handleClickCreate: function() {
+          var nextNewSong = { artist: '', rating: '1', title: '' };
+          var nextSongs = this.state.songs.concat(this.state.newSong);
+
+          this.setState({ newSong: nextNewSong, songs: nextSongs });
+        },
+
+        handleClickDelete: function(song) {
+          var nextSongs = this.state.songs.filter(function(element) {
+            return song !== element;
+          });
+
+          this.setState({ songs: nextSongs });
+        },
+
+        handleClickEdit: function(song, rating) {
+          var nextSongs = this.state.songs.map(function(element) {
+            if (song !== element) {
+              return element;
+            }
+
+            return Object.assign({}, song, { rating: rating });
+          });
+
+          this.setState({ songs: nextSongs });
+        },
+
+        handleChangeNewSong: function(event) {
+          var nextNewSong = Object.assign({}, this.state.newSong);
+          nextNewSong[event.target.name] = event.target.value;
+
+          this.setState({ newSong: nextNewSong });
+        },
+
+        handleChangeQuery: function(event) {
+          var nextQuery = event.target.value;
+
+          this.setState({ query: nextQuery });
+        },
+
+        render: function() {
+          var songs = this.state.songs.filter(function(song) {
+            var query = this.state.query.trim().toLowerCase();
+
+            if (!query) {
+              return true;
+            }
+
+            return (
+              song.title.toLowerCase().includes(query) || song.artist.toLowerCase().includes(query)
+            );
+          }, this);
+
+          var songEls = songs.map(function(song, index) {
+            var ratingEls = [1, 2, 3, 4, 5].map(function(rating) {
+              return <span
+                key={rating}
+                onClick={this.handleClickEdit.bind(null, song, rating)}
+              >
+                {rating <= parseInt(song.rating, 10) ? '★' : '☆'}
+              </span>;
+            }, this);
+
+            return <tr key={index}>
+              <td>{song.title}</td>
+              <td>{song.artist}</td>
+              <td>{ratingEls}</td>
+              <td>
+                <button
+                  onClick={this.handleClickDelete.bind(null, song)}
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>;
+          }, this);
+
+          var totalStars = songs.reduce(function(prev, song) {
+            return prev + parseInt(song.rating, 10);
+          }, 0);
+
+          var avgRating = 0;
+
+          if (songs.length) {
+            avgRating = Math.round(totalStars / songs.length * 10) / 10;
+          }
+
+          return <div>
+            <input
+              onChange={this.handleChangeQuery}
+              placeholder="Search query"
+              size="30"
+              type="text"
+              value={this.state.query}
+            />
+
+            <p>Average rating: {avgRating.toFixed(1)}</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Artist</th>
+                  <th>Rating</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <input
+                      name="artist"
+                      onChange={this.handleChangeNewSong}
+                      placeholder="Title"
+                      type="text"
+                      value={this.state.newSong.artist}
+                    />
+                  </td>
+                  <td>
+                    <input
+                      name="title"
+                      onChange={this.handleChangeNewSong}
+                      placeholder="Artist"
+                      type="text"
+                      value={this.state.newSong.title}
+                    />
+                  </td>
+                  <td>
+                    <select
+                      name="rating"
+                      onChange={this.handleChangeNewSong}
+                      value={this.state.newSong.rating}
+                    >
+                      <option value="1">★</option>
+                      <option value="2">★★</option>
+                      <option value="3">★★★</option>
+                      <option value="4">★★★★</option>
+                      <option value="5">★★★★★</option>
+                    </select>
+                  </td>
+                  <td>
+                    <button onClick={this.handleClickCreate}>Create</button>
+                  </td>
+                </tr>
+
+                {songEls}
+              </tbody>
+            </table>
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <SongTracker />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

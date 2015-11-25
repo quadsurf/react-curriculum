@@ -9,11 +9,12 @@
 * [Props and State](05-props-and-state.md)
 * [Component Life Cycle](06-component-life-cycle.md)
 * [Refs and Timers](07-refs-and-timers.md)
-* [Final Assignment: React Todo](08-final-assignment-react-todo.md)
+* [Immutable models](08-immutable-models.md)
+* [Final Assignment: React Todo](09-final-assignment-react-todo.md)
 
 ## How does the curriculum work?
 
-The goal of each chapter is to demonstrate practical concepts you'll likely use the most in the working world. Some chapters will cover more concepts than are required to complete the final assignment. 
+The goal of each chapter is to demonstrate practical concepts you'll likely use the most in the working world. Some chapters will cover more concepts than are required to complete the final assignment.
 
 1. Type out every code sample.
 2. Complete every exercise.
