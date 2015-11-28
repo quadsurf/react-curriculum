@@ -6,7 +6,7 @@ In this chapter, you'll learn what the React Developer Tools are, why they're im
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| TBD                  | TBD                 |
+| About 1 hour         | TBD                 |
 
 ## What are the React Developer Tools?
 
