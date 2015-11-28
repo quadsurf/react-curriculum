@@ -47,7 +47,7 @@ What's similar about React and Angular? What's different about them?
 
 Let's start by examining this simple React application.
 
-**TIP:** Type this code sample out *by hand* and then run it. No copy-and-paste cheating either. The sooner you start writing code, the sooner you start learning.
+**TIP:** Type this code example out *by hand* and then run it. No copy-and-paste cheating either. The sooner you start writing code, the sooner you start learning.
 
 `hello.html`
 ```html
@@ -110,7 +110,7 @@ Finally, the `ReactDOM.render` function is called with two arguments—a `ReactE
 
 The `ReactDOM.render` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM as the child of the `DOMElement`. The `ReactDOM.render` function controls the contents of the `DOMElement`. Any existing elements inside are replaced when the function is first called. In later calls, React uses its reconciliation algorithm to efficiently update the contents.
 
-To help learn how React works, the code sample from above is extra explicit about the input and output of each React function. In a production system, the same code would be written like this.
+To help learn how React works, the code example from above is extra explicit about the input and output of each React function. In a production system, the same code would be written like this.
 
 ```html
 <script>
@@ -129,7 +129,7 @@ Update your code with the above changes. And if needed, update what you wrote ea
 
 Now that you've gotten some practice with the fundamentals, it's time to build a more interesting React application. You could use only `ReactElement` objects, but to really take advantage of React, you'll want to leverage components. Remember, components are encapsulated code that handle presentation, state, and behavior.
 
-Let's start by moving the presentation logic of the previous code sample into a custom component. The `React.createClass` function will create and return a component class given a `specification` object.
+Let's start by moving the presentation logic of the previous code example into a custom component. The `React.createClass` function will create and return a component class given a `specification` object.
 
 `hello.html`
 ```html
@@ -343,7 +343,7 @@ Now that our component class responds to user interface changes, let's expand it
 </script>
 ```
 
-The main difference in the above code sample is that the `render` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that `message` is *not* part of the component's state.
+The main difference in the above code example is that the `render` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that `message` is *not* part of the component's state.
 
 A component's state should only contain data that its event handlers may change in order to trigger a user interface update. In real applications, this data tends to be very small. When building a stateful component, think about the minimal possible representation of its state and only store those values in the `this.state` object. Then, inside the `render` function, simply compute any other information you need based on `this.state`.
 

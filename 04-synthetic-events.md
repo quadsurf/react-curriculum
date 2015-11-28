@@ -53,7 +53,7 @@ var Textfield = React.createClass({
 });
 ```
 
-In the above code sample, the `<input />` component's event prop is `onChange` and the event handler is a reference to the `this.handleChange()` function. When the component is mounted or unmounted, the event handler is registered to or unregistered from React's own internal mapping.
+In the above code example, the `<input />` component's event prop is `onChange` and the event handler is a reference to the `this.handleChange()` function. When the component is mounted or unmounted, the event handler is registered to or unregistered from React's own internal mapping.
 
 When the `value` of the `<input />` component changes, a native event is fired and propagated through the DOM. At the end of [the bubbling phase](http://www.quirksmode.org/js/events_order.html), the native event reaches React's single event listener. The listener triggers its own internal event handler kicking off React's synthetic event system.
 
@@ -107,7 +107,7 @@ The following sections demonstrate how to handle the most common synthetic event
 
 ### Exercise
 
-Type out the following code samples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste! The objective of this exercise is to ingrain how to handle a variety of synthetic events deep in your memory. Because you'll be writing a lot of new code, there's no additional assignment at the end of the chapter.
+Type out the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste! The objective of this exercise is to ingrain how to handle a variety of synthetic events deep in your memory. Because you'll be writing a lot of new code, there's no additional assignment at the end of the chapter.
 
 **NOTE:** The surrounding HTML structure has been omitted on purpose. From here on out, you're responsible for implementing it.
 
