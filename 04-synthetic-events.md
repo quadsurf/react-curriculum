@@ -569,9 +569,9 @@ ReactDOM.render(
 
 ## Keyboard events
 
-When a user presses down and releases up a key on a component, the `onKeyDown` and `onKeyUp` events will fire respectively. The `onKeyDown` event will repeatedly fire as long as the key is held down.
+When a user presses down and releases up a key on a *focusable* component (e.g. `<input />`, `<textarea />`, `<select>`, etc.), the `onKeyDown` and `onKeyUp` events will fire respectively. The `onKeyDown` event will repeatedly fire as long as the key is held down.
 
-When a user presses a key *and* a character is inserted into a component, the `onKeyPress` event will fire. The `onKeyPress` event will fire repeatedly as long as the key is pressed down and a character is inserted. Keys like Escape, Shift, Control, and Alt can't be inserted into a component. To handle these key presses, you'll need to register an event handler with a component's `onKeyDown` event prop instead.
+When a user presses a key *and* a character is inserted into a focusable component, the `onKeyPress` event will fire. The `onKeyPress` event will fire repeatedly as long as the key is pressed down and a character is inserted. Keys like Escape, Shift, Control, and Alt can't be inserted into a component. To handle these key presses, you'll need to register an event handler with a component's `onKeyDown` event prop instead.
 
 Typically, the registered event handlers will respond to keys in different ways. For that, you'll need compare the value of `event.which` with an expected code. When the `onKeyDown` and `onKeyUp` events are fired, `event.which` contains a **key code** number which represents an actual key on the keyboard. When the `onKeyPress` event is fired, `event.which` contains a **character code** number which represents the key's UTF-8 character.
 
