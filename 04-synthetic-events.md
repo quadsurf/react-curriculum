@@ -107,7 +107,7 @@ The following sections demonstrate how to handle the most common synthetic event
 
 ### Exercise
 
-Type out the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste! The objective of this exercise is to ingrain how to handle a variety of synthetic events deep in your memory. Because you'll be writing a lot of new code, there's no additional assignment at the end of the chapter.
+Type out the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste!
 
 **NOTE:** The surrounding HTML structure has been omitted on purpose. From here on out, you're responsible for implementing it.
 
