@@ -54,7 +54,7 @@ Under the hood, React JSX transforms HTML-like elements, attributes, and childre
 
 For the following code examples, use the [Babel REPL](https://babeljs.io/repl/) to transpile the React JSX code example into JavaScript. Then write down your answers to each question.
 
-**TIP:** Type each code example out *by hand* and then run it. No copy-and-paste cheating either. The objective of these exercises is to start building muscle memory.
+**NOTE:** Type each code example out *by hand* and then run it. No copy-and-paste cheating either.
 
 #### HTML tag
 
