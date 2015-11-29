@@ -344,7 +344,6 @@ As a reminder, here's a list of the new topics covered in this chapter.
 - Anchor tags
 - Image tags
 - List tags
-- Input button tags
 - CSS classes
 - Inline CSS styles
 - Attribute expressions

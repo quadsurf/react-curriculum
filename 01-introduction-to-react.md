@@ -366,7 +366,7 @@ These two concepts spawn a bunch more subconcepts like component classes, pure f
 
 Write a React app that cheers your favorite city's sportsball team. For example:
 
-![FavoriteCity](https://dl.dropboxusercontent.com/s/5fpe9ba4w17swkl/9A3C9FA8-62C7-43F7-9045-AA106F2D0D78-40520-00006EC6BAD14D40.gif?dl=0)
+![City](https://dl.dropboxusercontent.com/s/w41k7wj1kqqs1in/B89A9A25-D4C8-453D-9398-BB694AA72781-40520-0001E846DB7513FF.gif?dl=0)
 
 Make sure your app is case insensitive when it comes to city names. In other words, treat `SEATTLE`, `seattle`, `SeAtTlE`, etc. all that same.
 
