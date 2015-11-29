@@ -664,7 +664,7 @@ In this chapter, you learned how to make React applications more interactive. Sp
 
 ## Assignment
 
-Your assignment is to implement all the exercises in the chapter by hand. Where ever you get stuck or whatever you don't understand, find an instructor and ask for help.
+![Calculator](http://i.imgur.com/58S88rS.gif)
 
 ## References
 
