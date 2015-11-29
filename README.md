@@ -1,6 +1,6 @@
 # React Curriculum
 
-The goal of this curriculum is to teach you how to build real-world React applications. To this end, the curriculum is divided into chapters to demonstrate one concept at time. As you progress, the chapters will ramp up in difficulty and culminate in a final coding assignment where you'll build a real-world application in React.
+The goal of this curriculum is to teach you how to build real-world React applications. To this end, the curriculum is divided into chapters to demonstrate one concept at time. The chapters are constructed so that concepts can be learned as a class or as an individual. As you progress, the chapters ramp up in difficulty and culminate in a final coding assignment where you'll build a real-world application in React.
 
 **NOTE:** This curriculum is a work-in-progress. Don't hesitate to open a pull request to fix spelling or grammar mistakes, to fix bugs or logic errors, and to point out areas that are confusing.
 
