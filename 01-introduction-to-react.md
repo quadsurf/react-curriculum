@@ -47,8 +47,6 @@ What's similar about React and Angular? What's different about them?
 
 Let's start by examining this simple React application.
 
-**TIP:** Type this code example out *by hand* and then run it. No copy-and-paste cheating either. The sooner you start writing code, the sooner you start learning.
-
 `hello.html`
 ```html
 <!DOCTYPE html>
@@ -78,7 +76,7 @@ Open `hello.html` in your browser and, if you've typed everything correctly, you
 
 ### Exercise
 
-Inspect this page in your browser's developer tools. In the **Elements** tab, you'll see something like this.
+Type out the above code example *by hand* and then run it. No copy-and-paste cheating either. Once everything is working, inspect the page in your browser's developer tools. In the **Elements** tab, you'll see something like this.
 
 ```html
 <div id="hello">
@@ -370,7 +368,7 @@ Write a React app that cheers your favorite city's sportsball team. For example:
 
 Make sure your app is case insensitive when it comes to city names. In other words, treat `SEATTLE`, `seattle`, `SeAtTlE`, etc. all that same.
 
-**TIP:** It's perfectly fine if the initial value of a property on the `this.state` object starts out as an empty String `""`.
+**HINT:** It's perfectly fine if the initial value of a property on the `this.state` object starts out as an empty String `""`.
 
 ## References
 
