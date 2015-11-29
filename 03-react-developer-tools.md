@@ -17,7 +17,7 @@ Go ahead and install the React Developer Tools for both browsers.
 * [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 * [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
 
-**WARNING:** Due to a [Chrome bug](https://github.com/facebook/react-devtools/issues/172), the next set of instructions only works in Firefox.
+**WARNING:** Due to a [Chrome bug](https://github.com/facebook/react-devtools/issues/172), only Firefox's React Developer Tools plugin can inspect React applications served with the `file://` protocol.
 
 Once installed, open the **Hello world** application from the previous chapter in your browser, load up its developer tools panel, and click on the **React** tab. You should see something like this:
 
@@ -126,8 +126,6 @@ Then log into your [Facebook](https://www.facebook.com/) account, if you have on
 In this chapter, you were exposed to the fundamentals of the React Developer Tools. You got to practice inspecting and editing both personal and production React applications. At this point, you're ready to write more sophisticated React applications.
 
 ## Assignment
-
-**WARNING:** Due to a [Chrome bug](https://github.com/facebook/react-devtools/issues/172), the first half of this assignment only works in Firefox.
 
 If you haven't already, inspect and edit your **sportball team** assignment from the previous chapter using the React Developer Tools. Make sure you understand the application's component hierarchy and its state before moving on to the next part of the assignment.
 
