@@ -1,4 +1,4 @@
-#### [⇐ Previous](07-refs-and-timers.md) | [Next ⇒](09-final-assignment-react-todo.md)
+#### [⇐ Previous](07-refs-and-timers.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](09-final-assignment.md)
 
 # Immutable models
 
@@ -90,4 +90,4 @@ Implement the following features:
 * [Mozilla Developer Network - Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 * [Mozilla Developer Network - Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
-#### [⇐ Previous](07-refs-and-timers.md) | [Next ⇒](09-final-assignment-react-todo.md)
+#### [⇐ Previous](07-refs-and-timers.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](09-final-assignment.md)

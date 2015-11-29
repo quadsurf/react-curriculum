@@ -1,4 +1,4 @@
-#### [⇐ Previous](01-introduction-to-react.md) | [Next ⇒](03-react-developer-tools.md)
+#### [⇐ Previous](01-introduction-to-react.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](03-react-developer-tools.md)
 
 # React JSX
 
@@ -359,4 +359,4 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 * [React Docs - Self-closing Tag](https://facebook.github.io/react/tips/self-closing-tag.html)
 * [Wikipedia - Source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)
 
-#### [⇐ Previous](01-introduction-to-react.md) | [Next ⇒](03-react-developer-tools.md)
+#### [⇐ Previous](01-introduction-to-react.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](03-react-developer-tools.md)

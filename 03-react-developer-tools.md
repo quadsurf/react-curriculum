@@ -1,4 +1,4 @@
-#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-synthetic-events.md)
+#### [⇐ Previous](02-react-jsx.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-synthetic-events.md)
 
 # React Developer Tools
 
@@ -137,4 +137,4 @@ Afterwards, read the article called [Thinking in React](https://facebook.github.
 
 [GitHub - facebook/react-devtools](https://github.com/facebook/react-devtools)
 
-#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-synthetic-events.md)
+#### [⇐ Previous](02-react-jsx.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-synthetic-events.md)

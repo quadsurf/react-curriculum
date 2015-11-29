@@ -4,7 +4,7 @@ The goal of this curriculum is to teach you how to build real-world React applic
 
 **NOTE:** This curriculum is a work-in-progress. Don't hesitate to open a pull request to fix spelling or grammar mistakes, to fix bugs or logic errors, and to point out areas that are confusing.
 
-## Table of contents
+## Table of Contents
 
 1. [Introduction to React](01-introduction-to-react.md)
 2. [React JSX](02-react-jsx.md)

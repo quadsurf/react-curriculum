@@ -1,4 +1,4 @@
-#### [⇐ Previous](03-react-developer-tools.md) | [Next ⇒](05-props-and-state.md)
+#### [⇐ Previous](03-react-developer-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-props-and-state.md)
 
 # Synthetic events
 
@@ -675,4 +675,4 @@ Your assignment is to implement all the exercises in the chapter by hand. Where 
 * [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
 * [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
 
-#### [⇐ Previous](03-react-developer-tools.md) | [Next ⇒](05-props-and-state.md)
+#### [⇐ Previous](03-react-developer-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-props-and-state.md)

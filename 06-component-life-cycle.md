@@ -1,4 +1,4 @@
-#### [⇐ Previous](05-props-and-state.md) | [Next ⇒](07-refs-and-timers.md)
+#### [⇐ Previous](05-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-refs-and-timers.md)
 
 # Component Life Cycle
 
@@ -109,4 +109,4 @@ You can see these methods in action with this example:
 
     [![Gyazo](https://i.gyazo.com/cbf99774cb8a8bc7507ebad5e651dffc.gif)](https://gyazo.com/cbf99774cb8a8bc7507ebad5e651dffc)
 
-#### [⇐ Previous](05-props-and-state.md) | [Next ⇒](07-refs-and-timers.md)
+#### [⇐ Previous](05-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-refs-and-timers.md)
