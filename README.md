@@ -27,3 +27,5 @@ Completing a chapter's **exercises** will reinforce its concepts. Sometimes you'
 Completing a chapter's **assignment** will cement its concepts. You'll be asked to apply some or all of what you've learned to solve a coding challenge. Remember, just because you don't use a concept to complete an assignment doesn't mean it's unimportant. Collectively, the assignments will help you practice the concepts you'll need to know for the final assignment.
 
 The **final assignment** is where you'll be evaluated. You'll be asked to apply all the significant concepts you've learned from previous assignments to build a real-world application.
+
+**NOTE:** Instructors have access to [solutions](https://github.com/gSchool/react-curriculum-solutions) for all assignments.
