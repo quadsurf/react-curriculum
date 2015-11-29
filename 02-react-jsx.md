@@ -329,6 +329,10 @@ ReactDOM.render(
 
 Open or refresh the page in your browser and make sure everything still works. Congratulations! You've just written your first React JSX application.
 
+### Exercise
+
+Update your **Hello world** application with the above changes. Resist the urge to copy-and-paste! Make sure everything is working before moving on to the assignment.
+
 ## Summary
 
 In this chapter, you were exposed to the fundamentals of React JSX—an HTML-like syntax for creating `ReactElement` objects. In addition, you practiced writing React JSX and transpiling it into JavaScript using Babel, a popular JavaScript transpiler. At this point, you're well on your way to writing larger, more sophisticated React applications.

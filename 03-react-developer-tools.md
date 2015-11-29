@@ -65,44 +65,15 @@ Find another React application from this list of [sites using React](https://git
 
 With the React Developers Tools, you can finally see that **components** are instances of React component classes and HTML tags. And, a component hierarchy is made up of a root component with possible children, grandchildren, etc.
 
-We can confirm this by rendering a second component hierarchy inside the **Hello world** application using the same root component class.
+We can confirm this by rendering a second component hierarchy for the **Hello world** application using the same root component class. We'll start by adding another container to the HTML.
+
+```html
+<div id="helloAgain"></div>
+```
+
+Then we'll update the JavaScript to render another `<Hello />` component inside the new container.
 
 ```jsx
-var Hello = React.createClass({
-  getInitialState: function() {
-    return { who: 'world' };
-  },
-
-  handleChange: function(event) {
-    var nextState = { who: event.target.value };
-    this.setState(nextState);
-  },
-
-  render: function() {
-    var message;
-
-    if (this.state.who.trim() === '') {
-      message = 'Hello?';
-    } else {
-      message = 'Hello ' + this.state.who;
-    }
-
-    return <div>
-      <h1>{message}</h1>
-      <input
-        onChange={this.handleChange}
-        type="text"
-        value={this.state.who}
-      />
-    </div>;
-  }
-});
-
-ReactDOM.render(
-  <Hello />,
-  document.getElementById('hello')
-);
-
 ReactDOM.render(
   <Hello />,
   document.getElementById('helloAgain')
@@ -117,7 +88,7 @@ When displaying components in the tree view, the React Developer Tools names eac
 
 ### Exercise
 
-In your own words, write down how you might reuse a component hierarchy and for what specific use cases.
+Update your **Hello world** application with the above changes. Resist the urge to copy-and-paste! Once everything is working, write down how you might reuse a component hierarchy and for what specific use cases.
 
 Then log into your [Facebook](https://www.facebook.com/) account, if you have one, and see if you can figure out which component hierarchies are being reused on the timeline.
 
