@@ -9,11 +9,11 @@ The goal of this curriculum is to teach you how to build real-world React applic
 1. [Introduction to React](01-introduction-to-react.md)
 2. [React JSX](02-react-jsx.md)
 3. [React Developer Tools](03-react-developer-tools.md)
-4. [Synthetic events](04-synthetic-events.md)
+4. [Synthetic Events](04-synthetic-events.md)
 5. [Props and State](05-props-and-state.md)
 6. [Component Life Cycle](06-component-life-cycle.md)
 7. [Refs and Timers](07-refs-and-timers.md)
-8. [Immutable models](08-immutable-models.md)
+8. [Immutable Models](08-immutable-models.md)
 9. [Final Assignment](09-final-assignment.md)
 
 ## How does this curriculum work?

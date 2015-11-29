@@ -1,8 +1,8 @@
 #### [⇐ Previous](03-react-developer-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-props-and-state.md)
 
-# Synthetic events
+# Synthetic Events
 
-Now that you've gotten some practice with React JSX and the React Developer Tools, let's learn how to make our React applications more interactive. In this chapter, you'll learn what Synthetic events are, why they're important, and how to use them. By the end, you'll have written a bunch of React applications that handle a variety of user interactions.
+Now that you've gotten some practice with React JSX and the React Developer Tools, let's learn how to make our React applications more interactive. In this chapter, you'll learn what synthetic events are, why they're important, and how to use them. By the end, you'll have written a bunch of React applications that handle a variety of user interactions.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
