@@ -32,13 +32,13 @@ Create a `SongTracker` React component that looks and behaves like this.
 
 Implement the following features:
 
-- Display the average rating of all tracked songs, rounded to the nearest tenth decimal place, at the top of the page.
-- Display the tracked songs as a table with columns for Title, Artist, Rating, and Action below that.
-- Allow users to create additional tracked songs using the first row of the table.
-- Display newly tracked songs at the bottom of the table.
-- Allow users to delete any tracked song at any time.
-- Display the average rating and table correctly when all the tracked songs have been deleted.
-- Allow users to edit the rating of a tracked song by clicking on any of its five stars.
+* Display the average rating of all tracked songs, rounded to the nearest tenth decimal place, at the top of the page.
+* Display the tracked songs as a table with columns for Title, Artist, Rating, and Action below that.
+* Allow users to create additional tracked songs using the first row of the table.
+* Display newly tracked songs at the bottom of the table.
+* Allow users to delete any tracked song at any time.
+* Display the average rating and table correctly when all the tracked songs have been deleted.
+* Allow users to edit the rating of a tracked song by clicking on any of its five stars.
 
 **TIP 1:** You can copy-and-paste this full star ★ character and this empty star ☆ character into your application as Strings.
 
