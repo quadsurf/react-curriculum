@@ -586,13 +586,13 @@ Here's a table that explains the difference between a key code and a character c
 | Return | 13       | 13             |
 | Escape | 27       | N/A            |
 
-**NOTE:** Some browsers have built-in behavior that's triggered when a particular key is pressed. For example, pressing the Escape key in Firefox will stop the page from loading. However, Firefox can be stingy about sharing this event even after the page has loaded. If you want to respond to an Escape `onKeyDown` event in Firefox, you'll need to prevent its built-in behavior by calling the `event.preventDefault()` function in your event handler.
+**NOTE:** As of Firefox v42 and React v0.14, pressing the Escape key will sometimes stop React from executing. I haven't figure out why this happens, but you can fix it by calling the  `event.preventDefault()` function in your event handler. Other browsers like Chrome don't have this problem and calling the `event.preventDefault()` function has no effect on them.
 
 ```js
 handleKeyDown: function(event) {
   if (event.which === 27) {
     event.preventDefault();
-    // custom logic
+    // continue handling the event
   }
 }
 ```
@@ -677,7 +677,45 @@ In this chapter, you learned how to make React applications more interactive. Sp
 
 ## Assignment
 
+Using [this template](assignments/04-synthetic-events/calculator.html), create a `Calculator` React component that looks and behaves like this.
+
 ![Calculator](http://i.imgur.com/58S88rS.gif)
+
+The `Calcuator` component only needs to solves math expressions with a single operator. But it does need to work with both positive and negative operands. (e.g. `1+2`, `-3*4`, `5/-6`, etc.)
+
+More specifically, your `Calculator` component needs to:
+
+* Display a blank screen when its first rendered.
+* Respond to operand or operator button clicks by adding its content to the screen.
+* Respond to equal button clicks by evaluating the screen's math expression.
+  * Match the math expression with the regular expression from below.
+  * If the expressions don't match, update the screen with the word `Error`.
+  * If the expressions do match, calculate the result and update the screen.
+* Ignore operand, operator, and equal button clicks when the screen displays `Error`.
+* Respond to cancel button clicks by clearing the screen.
+
+**HINT 1:** To make it easier for you to focus on handling events, you can use the [`String.prototype.match()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) function with the following regular expression: `/^(\-?\d+)(x|\/|\+|\-)(\-?\d+)$/`. For example, matching the math expression `-1+2` to the regular expression works like this.
+
+```js
+var matches = '-1+2'.match(/^(\-?\d+)(x|\/|\+|\-)(\-?\d+)$/);
+console.log(matches);  // ["-1+2", "-1", "+", "2"]
+```
+
+The `String.prototype.match()` function returns `null` when the math and regular expressions don't match.
+
+**HINT 2:** In this assignment, the `<input id="screen" />` is read-only because...
+
+## Bonus Assignment
+
+When you're finished with the assignment above, enhance your `Calcuator` component so users can input a math expression from the keyboard like this.
+
+![Calculator bonus](https://dl.dropboxusercontent.com/s/ay2rewk4bo0c3u7/6EBAFE26-B5E9-456F-8EB9-B86EB574CB7D-40520-000215706B37064A.gif?dl=0)
+
+More specifically, your `Calculator` component also needs to:
+
+* Respond to changes in the screen's value.
+* Respond to Enter key presses by evaluating the screen's math expression.
+* Respond to Escape key presses by clearing the screen.
 
 ## References
 
