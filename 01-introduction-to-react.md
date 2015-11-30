@@ -239,7 +239,7 @@ Update your code with the above changes and run the code. Once everything is wor
 ```html
 <div data-reactid=".0">
   <h1 data-reactid=".0.0">Hello world</h1>
-  <input type="text" value="world" data-reactid=".0.1">
+  <input type="text" data-reactid=".0.1">
 </div>
 ```
 
