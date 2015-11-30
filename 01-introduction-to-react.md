@@ -150,7 +150,7 @@ The reason why this is so important is because React will call the `render()` fu
 
 Also note how different a component class is from a standard, object-oriented class. You *never* explicitly call `new` to instantiate it. Again, React does that for you inside the `ReactDOM.render()` function when it's building the component hierarchy.
 
-The last thing to note is how `React.createElement` only requires one argument—`type`. If there's no data or children to pass into an element, they can be omitted.
+The last thing to note is how `React.createElement()` only requires one argument—`type`. If there's no data or children to pass into an element, they can be omitted.
 
 ### Exercise
 
