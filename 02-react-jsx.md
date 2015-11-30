@@ -158,7 +158,7 @@ var element = <input
 />;
 ```
 
-In the wild, you'll may see multi-line JSX tags wrapped in parenthesis. Syntactically, this provides no benefit and just increases the indentation level unnecessarily.
+In the wild, you may see multi-line JSX tags wrapped in parenthesis. Syntactically, this provides no benefit and just increases the indentation level unnecessarily.
 
 ```jsx
 // UNNECESSARY PARENTHESIS
