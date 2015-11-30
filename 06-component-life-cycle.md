@@ -95,10 +95,10 @@ You can see these methods in action with this example:
 * Read [this](http://javascript.tutorialhorizon.com/2014/09/13/execution-sequence-of-a-react-components-lifecycle-methods/) article on the react component life cycle
 * Github Assignment
     - Create a component called GithubProfile
-    - Prior to the component mounting, make an ajax called `http://api.github.com/users/` + your github username.
+    - After your component mounts, make an ajax called `http://api.github.com/users/` + your github username.
     - Your user name should be injected utilizing props for the component: (`this.props.children`).
     - Your component should render the username and an image of the user  
-    - You should use `componentWillMount` to make your AJAX call.
+    - You should use `componentDidMount` to make your AJAX call.
 * OMDB Assignment
     - Create two components, MovieSearchForm and Movie
     - MovieSearchForm should render a form and the Movie component (which should have no information at first)
