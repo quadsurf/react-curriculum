@@ -368,7 +368,7 @@ Write a React app that cheers your favorite city's sportsball team. For example:
 
 Make sure your app is case insensitive when it comes to city names. In other words, treat `SEATTLE`, `seattle`, `SeAtTlE`, etc. all that same.
 
-**HINT:** It's perfectly fine if the initial value of a property on the `this.state` object starts out as an empty String `""`.
+**HINT:** It's perfectly fine if the initial value of `this.state.who` starts out as an empty String `""`.
 
 ## References
 
