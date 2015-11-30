@@ -28,4 +28,4 @@ Additionally, completing a chapter's **assignment** will cement its concepts. Yo
 
 The **final assignment** is where you'll be evaluated. You'll be asked to apply all the significant concepts you've learned from previous assignments to build a real-world application.
 
-**NOTE:** Instructors have access to [solutions](https://github.com/gSchool/react-curriculum-solutions) for all assignments.
+**NOTE:** Instructors and students who complete the program have access to [solutions](https://github.com/gSchool/react-curriculum-solutions) for all assignments.
