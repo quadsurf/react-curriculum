@@ -26,7 +26,7 @@ Thinking about web applications as a component hierarchy is incredibly powerful 
 
 ### One-way data binding
 
-In computer science, data binding refers to the process of establishing a connection between an application's state and it's user interface. Data binding is a great way to maintain consistency without writing much code by hand.
+In computer science, data binding refers to the process of establishing a connection between an application's state and its user interface. Data binding is a great way to maintain consistency without writing much code by hand.
 
 When an application uses **two-way** data binding:
 
