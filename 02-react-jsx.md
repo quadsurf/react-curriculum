@@ -48,7 +48,7 @@ React developers argue that the best solution for this problem is to use the exp
 
 ## How does React JSX work?
 
-Under the hood, React JSX transforms HTML-like elements, attributes, and children into arguments that are passed to the `React.createElement` function. Both HTML tags and React component classes can be transformed from JSX to JavaScript.
+Under the hood, React JSX transforms HTML-like elements, attributes, and children into arguments that are passed to the `React.createElement()` function. Both HTML tags and React component classes can be transformed from JSX to JavaScript.
 
 ### Exercise
 
@@ -98,12 +98,12 @@ var Truck = React.createClass({
 var element = <Truck />;
 ```
 
-As previously mentioned, component classes must specify a `render` function that returns a single `ReactElement` object. But that single `ReactElement` object can contain other `ReactElement` objects as children. This is the first key to building complex user interfaces.
+As previously mentioned, component classes must specify a `render()` function that returns a single `ReactElement` object. But that single `ReactElement` object can contain other `ReactElement` objects as children. This is the first key to building complex user interfaces.
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 * What is the `displayName` of the component class?
-* What type of object does the `render` function return?
+* What type of object does the `render()` function return?
 
 #### Nested React component classes
 
@@ -287,7 +287,7 @@ Let's practice by refactoring the **Hello world** example from the previous chap
 
 Then, we need to instruct Babel to transpile any JSX it finds into JavaScript. To do this, let's add a `type="text/babel"` attribute to the `<script>` tag.
 
-**NOTE:** If you forget this step, you'll see an `Uncaught SyntaxError: Unexpected token <` error in the console when you start refactoring `React.createElement` function calls to React JSX.
+**NOTE:** If you forget this step, you'll see an `Uncaught SyntaxError: Unexpected token <` error in the console when you start refactoring `React.createElement()` function calls to React JSX.
 
 ```html
 <script type="text/babel">
@@ -295,7 +295,7 @@ Then, we need to instruct Babel to transpile any JSX it finds into JavaScript. 
 </script>
 ```
 
-Now, let's refactor the component class's `render` function into React JSX. Simply convert all `React.createElement` function calls into JSX using the rules from above.
+Now, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
 
 **NOTE:** If you forget to end a self-closing tag with `/>`, you'll see an `Uncaught SyntaxError: embedded: Expected corresponding JSX closing tag` error in the console.
 
@@ -320,7 +320,7 @@ render: function() {
 }
 ```
 
-Finally, we can refactor the `ReactDOM.render` function into React JSX. Again, don't forget to properly end the self-closing tag.
+Finally, we can refactor the `ReactDOM.render()` function into React JSX. Again, don't forget to properly end the self-closing tag.
 
 ```jsx
 ReactDOM.render(

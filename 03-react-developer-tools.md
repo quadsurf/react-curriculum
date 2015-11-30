@@ -41,7 +41,7 @@ Additionally, selecting a component in the tree view on the left allows you to i
 
 ![Editing a component's state](https://dl.dropboxusercontent.com/s/02ohh014d3mt1to/DF6C8888-3E88-48D6-BF76-00A6BEEA94ED-40520-00010832DD3ABD60.gif?dl=0)
 
-**NOTE:** Not every change to a props or state value will result in the DOM being updated. When it comes to component classes, it depends on the `ReactElement` object that's returned from its `render` function.
+**NOTE:** Not every change to a props or state value will result in the DOM being updated. When it comes to component classes, it depends on the `ReactElement` object that's returned from its `render()` function.
 
 ### Exercise
 

@@ -90,23 +90,23 @@ In your own words, write down how React works in as much detail as you can. No p
 
 Most of the above code should look familiar. An empty `<div id="hello">` element is declared and inserted into the DOM. Then, the `react` and `react-dom` JavaScript libraries are loaded into the page.
 
-Once loaded, the `React.createElement` function is called with three arguments—a `type`, some `props`, and a `child`.
+Once loaded, the `React.createElement()` function is called with three arguments—a `type`, some `props`, and a `child`.
 
 | `type`   | `props`  | `child`           |
 |----------|----------|-------------------|
 | `'h1'`   | `null`   | `'Hello world'`   |
 
-The `type` tells React what kind of element to create. Next come the `props`, which is data passed into an element. You can ignore that for now. And finally, the `child` adds some content to the element. The `React.createElement` function returns a new `ReactElement` object which is then stored in the `element` variable. It's important to note that nothing has been added to the DOM yet.
+The `type` tells React what kind of element to create. Next come the `props`, which is data passed into an element. You can ignore that for now. And finally, the `child` adds some content to the element. The `React.createElement()` function returns a new `ReactElement` object which is then stored in the `element` variable. It's important to note that nothing has been added to the DOM yet.
 
-Then comes the `document.getElementById` function. You're probably familiar with how it searches the DOM for an existing element with a specific `id` attribute and returns it. The `DOMElement` is then stored in the `container` variable. Still, nothing has been added to the DOM.
+Then comes the `document.getElementById()` function. You're probably familiar with how it searches the DOM for an existing element with a specific `id` attribute and returns it. The `DOMElement` is then stored in the `container` variable. Still, nothing has been added to the DOM.
 
-Finally, the `ReactDOM.render` function is called with two arguments—a `ReactElement` and a `DOMElement`.
+Finally, the `ReactDOM.render()` function is called with two arguments—a `ReactElement` and a `DOMElement`.
 
 | `ReactElement` | `DOMElement`  |
 |----------------|---------------|
 | `element`      |   `container` |
 
-The `ReactDOM.render` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM as the child of the `DOMElement`. The `ReactDOM.render` function controls the contents of the `DOMElement`. Any existing elements inside are replaced when the function is first called. In later calls, React uses its reconciliation algorithm to efficiently update the contents.
+The `ReactDOM.render()` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM as the child of the `DOMElement`. The `ReactDOM.render()` function controls the contents of the `DOMElement`. Any existing elements inside are replaced when the function is first called. In later calls, React uses its reconciliation algorithm to efficiently update the contents.
 
 To help learn how React works, the code example from above is extra explicit about the input and output of each React function. In a production system, the same code would be written like this.
 
@@ -127,7 +127,7 @@ Update your code with the above changes. And if needed, update what you wrote ea
 
 Now that you've gotten some practice with the fundamentals, it's time to build a more interesting React application. You could use only `ReactElement` objects, but to really take advantage of React, you'll want to leverage components. Remember, components are encapsulated code that handle presentation, state, and behavior.
 
-Let's start by moving the presentation logic of the previous code example into a custom component. The `React.createClass` function will create and return a component class given a `specification` object.
+Let's start by moving the presentation logic of the previous code example into a custom component. The `React.createClass()` function will create and return a component class given a `specification` object.
 
 `hello.html`
 ```html
@@ -144,11 +144,11 @@ Let's start by moving the presentation logic of the previous code example into a
   );
 </script>
 ```
-The `specification` object *must* implement a `render` function that returns a single `ReactElement`. This is so important, it bears repeating. The `specification` object given to the `React.createClass` function **must** implement a `render` function that returns a single `ReactElement`. Otherwise :boom:.
+The `specification` object *must* implement a `render()` function that returns a single `ReactElement`. This is so important, it bears repeating. The `specification` object given to the `React.createClass()` function **must** implement a `render()` function that returns a single `ReactElement`. Otherwise :boom:.
 
-The reason why this is so important is because React will call the `render` function, on your behalf, when it's building the component hierarchy in the `ReactDOM.render` function. If it isn't implemented correctly, React will complain loudly by throwing an error.
+The reason why this is so important is because React will call the `render()` function, on your behalf, when it's building the component hierarchy in the `ReactDOM.render()` function. If it isn't implemented correctly, React will complain loudly by throwing an error.
 
-Also note how different a component class is from a standard, object-oriented class. You *never* explicitly call `new` to instantiate it. Again, React does that for you inside the `ReactDOM.render` function when it's building the component hierarchy.
+Also note how different a component class is from a standard, object-oriented class. You *never* explicitly call `new` to instantiate it. Again, React does that for you inside the `ReactDOM.render()` function when it's building the component hierarchy.
 
 The last thing to note is how `React.createElement` only requires one argument—`type`. If there's no data or children to pass into an element, they can be omitted.
 
@@ -180,16 +180,16 @@ Now that our component class has some presentation logic, let's spice it up by a
 </script>
 ```
 
-Component classes can also define a `getInitialState` function. It's invoked once, and only once, right before the component is **mounted** or inserted into the DOM. The function's return value is used as the initial value of `this.state`.
+Component classes can also define a `getInitialState()` function. It's invoked once, and only once, right before the component is **mounted** or inserted into the DOM. The function's return value is used as the initial value of `this.state`.
 
-After the component is mounted, React will invoke the `render` function which should be implemented as a **pure function**. In other words, it should:
+After the component is mounted, React will invoke the `render()` function which should be implemented as a **pure function**. In other words, it should:
 
 1. Return the same `ReactElement` given the same component state.
 2. Not modify the component's state.
 3. Not read from or write to the DOM.
-4. Not interact with the browser via functions like `setTimeout`.
+4. Not interact with the browser via functions like `setTimeout()`.
 
-React provides other places where you can modify state or interact with the browser. Just not in the `render` function. Keeping the `render` function pure makes component classes easier to think about.
+React provides other places where you can modify state or interact with the browser. Just not in the `render()` function. Keeping the `render()` function pure makes component classes easier to think about.
 
 ### Exercise
 
@@ -222,11 +222,11 @@ Now that our component class has state, let's provide a dynamic user interface t
 </script>
 ```
 
-Remember how the `React.createElement` function accepts a `type`, some `props`, and a `child`? Well, a `child` can be either a `String` or another `ReactElement`. Neat!
+Remember how the `React.createElement()` function accepts a `type`, some `props`, and a `child`? Well, a `child` can be either a `String` or another `ReactElement`. Neat!
 
-In addition, an arbitrary number of children can be passed as arguments into the `React.createElement` function. Just don't forget to pass something in for `type` and `props` first. Creating a hierarchy of `ReactElement` objects is how the `render` function can return more than one element.
+In addition, an arbitrary number of children can be passed as arguments into the `React.createElement()` function. Just don't forget to pass something in for `type` and `props` first. Creating a hierarchy of `ReactElement` objects is how the `render()` function can return more than one element.
 
-**NOTE:** The order in which children are passed into the `React.createElement` function is the order they'll be inserted into the DOM.
+**NOTE:** The order in which children are passed into the `React.createElement()` function is the order they'll be inserted into the DOM.
 
 As you can see from the above code, the `props` object is made up of key-value pairs that set the HTML attributes of the element. Any HTML attribute can be a key in `props` object so long as it's converted to camelcase. However, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
 
@@ -287,11 +287,11 @@ Here's an official list of the [supported events](https://facebook.github.io/rea
 
 When an event handler is invoked by React, an `event` object is passed in as the first argument. The `event` object contains all the relevant information about the event that was just fired. Because of one-way data binding, it's up to you to determine how to handle the event.
 
-In the code above, both the `h1` and `input` elements need be updated to reflect what the user has typed. In other words, the component's state needs to be updated. To do that, the `this.setState` function is called with a `nextState` object. This function performs a *shallow* merge of the `nextState` object into the current `this.state` object. The resulting object is automatically reassigned back into `this.state` variable for you.
+In the code above, both the `h1` and `input` elements need be updated to reflect what the user has typed. In other words, the component's state needs to be updated. To do that, the `this.setState()` function is called with a `nextState` object. This function performs a *shallow* merge of the `nextState` object into the current `this.state` object. The resulting object is automatically reassigned back into `this.state` variable for you.
 
-After the merge, the component is also automatically re-rendered thus updating the user interface. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState` function.
+After the merge, the component is also automatically re-rendered thus updating the user interface. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState()` function.
 
-React thinks of components as simple **state machines**. By thinking of a component as being in various states, it's easy to keep your user interface consistent. In React, you simply update a component's state using the `this.setState` function and it will render a new user interface based on this new state. React efficiently updates the DOM using a process called **reconciliation** which we'll study later.
+React thinks of components as simple **state machines**. By thinking of a component as being in various states, it's easy to keep your user interface consistent. In React, you simply update a component's state using the `this.setState()` function and it will render a new user interface based on this new state. React efficiently updates the DOM using a process called **reconciliation** which we'll study later.
 
 ### Exercise
 
@@ -341,11 +341,11 @@ Now that our component class responds to user interface changes, let's expand it
 </script>
 ```
 
-The main difference in the above code example is that the `render` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that `message` is *not* part of the component's state.
+The main difference in the above code example is that the `render()` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that `message` is *not* part of the component's state.
 
-A component's state should only contain data that its event handlers may change in order to trigger a user interface update. In real applications, this data tends to be very small. When building a stateful component, think about the minimal possible representation of its state and only store those values in the `this.state` object. Then, inside the `render` function, simply compute any other information you need based on `this.state`.
+A component's state should only contain data that its event handlers may change in order to trigger a user interface update. In real applications, this data tends to be very small. When building a stateful component, think about the minimal possible representation of its state and only store those values in the `this.state` object. Then, inside the `render()` function, simply compute any other information you need based on `this.state`.
 
-Don't worry about precomputing values based on state. Adding redundant and computed values into the `this.state` object means you'll have to write code that explicitly keeps everything synchronized. Instead, rely on the component to compute values inside the `render` function and the user interface will remain consistent when the state changes.
+Don't worry about precomputing values based on state. Adding redundant and computed values into the `this.state` object means you'll have to write code that explicitly keeps everything synchronized. Instead, rely on the component to compute values inside the `render()` function and the user interface will remain consistent when the state changes.
 
 ### Exercise
 
