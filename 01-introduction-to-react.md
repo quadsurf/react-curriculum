@@ -41,7 +41,7 @@ However, changes made to the user interface are *not* automatically propagated t
 
 ### Exercise
 
-What's similar about React and Angular? What's different about them?
+In your own words, write down what's similar and what's different about React and Angular.
 
 ## What does React code look like?
 
