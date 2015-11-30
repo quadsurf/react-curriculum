@@ -6,7 +6,7 @@ This chapter is a gentle introduction to the fundamental concepts of React. You'
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| About 1.5 hours      | About 2.25 hours    |
+| About 1.5 hours      | About 3.5 hours     |
 
 ## What's React?
 
