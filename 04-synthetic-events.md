@@ -97,7 +97,7 @@ In your own words, write down how React's synthetic event system works identical
 
 ## How do you handle synthetic events?
 
-The following sections demonstrate how to handle the most common synthetic events.
+React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones.
 
 * [Form events](#form-events)
   * [Textfield input](#textfield-input)
