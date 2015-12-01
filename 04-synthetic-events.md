@@ -586,7 +586,18 @@ Here's a table that explains the difference between a key code and a character c
 | Return | 13       | 13             |
 | Escape | 27       | N/A            |
 
-And here's a table to help you quickly remember which event does what.
+**NOTE:** Some browsers have built-in behavior that's triggered when a particular key is pressed. For example, pressing the Escape key in Firefox will stop the page from loading. However, Firefox can be stingy about sharing this event even after the page has loaded. If you want to respond to an Escape `onKeyDown` event in Firefox, you'll need to prevent its built-in behavior by calling the `event.preventDefault()` function in your event handler.
+
+```js
+handleKeyDown: function(event) {
+  if (event.which === 27) {
+    event.preventDefault();
+    // custom logic
+  }
+}
+```
+
+Here's a table to help you quickly remember which event does what.
 
 | Event        | Trigger(s)                                  | `event.which`  |
 |--------------|---------------------------------------------|----------------|
