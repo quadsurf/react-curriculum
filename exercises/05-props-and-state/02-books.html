@@ -4,7 +4,7 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <div id="books"></div>
+    <div id="container"></div>
 
     <script src="https://fb.me/react-0.14.3.js"></script>
     <script src="https://fb.me/react-dom-0.14.3.js"></script>
@@ -13,7 +13,7 @@
     <script type="text/babel">
       var Book = React.createClass({
         handleChange: function(event) {
-          this.props.updateState(this.props.index, event.target.value);
+          this.props.updateBook(this.props.index, event.target.value);
         },
 
         render: function() {
@@ -31,11 +31,15 @@
       var Books = React.createClass({
         getInitialState: function() {
           return {
-            books: ['The Lord of the Rings', "Ender's Game"]
-          }
+            books: [
+              'A Game of Thrones',
+              'Snow Crash',
+              'The Martian'
+            ]
+          };
         },
 
-        updateState: function(index, value) {
+        updateBook: function(index, value) {
           var nextBooks = this.state.books;
           nextBooks[index] = value;
           this.setState({ books: nextBooks });
@@ -47,7 +51,7 @@
               book={book}
               index={index}
               key={index}
-              updateState={this.updateState}
+              updateBook={this.updateBook}
             />;
           }, this);
 
@@ -57,7 +61,7 @@
 
       ReactDOM.render(
         <Books />,
-        document.getElementById('books')
+        document.getElementById('container')
       );
     </script>
   </body>

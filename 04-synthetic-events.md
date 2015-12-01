@@ -684,7 +684,7 @@ In this chapter, you learned how to make React applications more interactive. Sp
 
 Using [this template](assignments/04-synthetic-events/calculator.html), create a `Calculator` React component that looks and behaves like this.
 
-![Calculator](http://i.imgur.com/58S88rS.gif)
+![Calculator Part 1](http://i.imgur.com/58S88rS.gif)
 
 The `Calcuator` component only needs to solves math expressions with a single operator. But it does need to work with both positive and negative operands. (e.g. `1+2`, `-3*4`, `5/-6`, etc.)
 
@@ -712,9 +712,9 @@ The `String.prototype.match()` function returns `null` when the math and regular
 
 ## Assignment: Part 2
 
-When you're finished with the assignment above, enhance your `Calcuator` component so users can input a math expression from the keyboard like this.
+When you're finished with the assignment above, enhance your `Calcuator` component so users can input a math expression from their keyboard like this.
 
-![Calculator bonus](https://dl.dropboxusercontent.com/s/ay2rewk4bo0c3u7/6EBAFE26-B5E9-456F-8EB9-B86EB574CB7D-40520-000215706B37064A.gif?dl=0)
+![Calculator Part 2](https://dl.dropboxusercontent.com/s/ay2rewk4bo0c3u7/6EBAFE26-B5E9-456F-8EB9-B86EB574CB7D-40520-000215706B37064A.gif?dl=0)
 
 More specifically, your `Calculator` component also needs to:
 

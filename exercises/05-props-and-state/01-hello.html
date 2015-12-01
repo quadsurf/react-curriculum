@@ -4,8 +4,7 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <div id="hello"></div>
-    <div id="helloAgain"></div>
+    <div id="container"></div>
 
     <script src="https://fb.me/react-0.14.3.js"></script>
     <script src="https://fb.me/react-dom-0.14.3.js"></script>
@@ -13,14 +12,30 @@
 
     <script type="text/babel">
       var Hello = React.createClass({
+        getInitialState: function() {
+          return { who: 'world' };
+        },
+
+        handleChange: function(event) {
+          var nextState = { who: event.target.value };
+          this.setState(nextState);
+        },
+
         render: function() {
-          return <h1>{this.props.greeting} world</h1>;
+          return <div>
+            <h1>{this.props.greeting} {this.state.who}</h1>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              value={this.state.who}
+            />
+          </div>;
         }
       });
 
       ReactDOM.render(
-        <Hello greeting='Hello' />,
-        document.getElementById('hello')
+        <Hello greeting="Hello" />,
+        document.getElementById('container')
       );
     </script>
   </body>
