@@ -24,7 +24,7 @@
         render: function() {
           return <div>
             <div>
-              {"I'm changeable and under React's controller."}
+              {"I'm changeable and under React's control."}
               <input
                 onChange={this.handleChange}
                 type="checkbox"
@@ -33,17 +33,17 @@
             </div>
 
             <div>
-              {"I'm read-only, am under React's controller, but raise a warning."}
+              {"I'm read-only, am under React's control, but raise a warning."}
               <input type="checkbox" checked={true} />
             </div>
 
             <div>
-              {"I'm changeable but am not under React's controller."}
+              {"I'm changeable but am not under React's control."}
               <input type="checkbox" defaultChecked={true} />
             </div>
 
             <div>
-              {"I'm read-only and under React's controller."}
+              {"I'm read-only and under React's control."}
               <input type="checkbox" readOnly="true" checked={true} />
             </div>
           </div>;

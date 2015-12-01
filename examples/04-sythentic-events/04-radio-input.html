@@ -24,7 +24,7 @@
         render: function() {
           return <div>
             <div>
-              {"We're changeable and under React's controller."}
+              {"We're changeable and under React's control."}
               <input
                 onChange={this.handleChange}
                 type="radio"
@@ -40,19 +40,19 @@
             </div>
 
             <div>
-              {"We're read-only, are under React's controller, but raise a warning."}
+              {"We're read-only, are under React's control, but raise a warning."}
               <input type="radio" name="1" checked={true} value="yes" />
               <input type="radio" name="1" checked={false} value="no" />
             </div>
 
             <div>
-              {"We're changeable but are not under React's controller."}
+              {"We're changeable but are not under React's control."}
               <input type="radio" name="2" defaultChecked={true} value="yes" />
               <input type="radio" name="2" defaultChecked={false} value="no" />
             </div>
 
             <div>
-              {"We're read-only and are under React's controller."}
+              {"We're read-only and are under React's control."}
               <input type="radio" name="3" readOnly="true" checked={true} value="yes" />
               <input type="radio" name="3" readOnly="true" checked={false} value="no" />
             </div>
