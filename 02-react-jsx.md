@@ -6,7 +6,7 @@
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| About 1.5 hours      | About 1.25 hours    |
+| About 1.5 hours      | About 2.75 hours    |
 
 ## What is React JSX?
 
