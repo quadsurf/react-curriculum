@@ -143,7 +143,7 @@ When a user types a character into an `<input type="text" />` component, the `on
 ```jsx
 var TextfieldInput = React.createClass({
   getInitialState: function() {
-    return { value: "I'm changeable and under your control" };
+    return { value: "I'm changeable and under React's controller" };
   },
 
   handleChange: function(event) {
@@ -161,18 +161,18 @@ var TextfieldInput = React.createClass({
 
       <input
         type="text"
-        value="I'm read-only, am under your control, but raise a warning."
+        value="I'm read-only, am under React's controller, but raise a warning."
       />
 
       <input
         type="text"
-        defaultValue="I'm changeable but am not under your control."
+        defaultValue="I'm changeable but am not under React's controller."
       />
 
       <input
         type="text"
         readOnly="true"
-        value="I'm read-only and under your control."
+        value="I'm read-only and under React's controller."
       />
     </div>;
   }
@@ -193,7 +193,7 @@ When a user types a character into a `<textarea />` component, the `onChange` ev
 ```jsx
 var Textarea = React.createClass({
   getInitialState: function() {
-    return { value: "I'm changeable and under your control." };
+    return { value: "I'm changeable and under React's controller." };
   },
 
   handleChange: function(event) {
@@ -209,16 +209,16 @@ var Textarea = React.createClass({
       />
 
       <textarea
-        value="I'm read-only, am under your control, but raise a warning."
+        value="I'm read-only, am under React's controller, but raise a warning."
       />
 
       <textarea
-        defaultValue="I'm changeable but am not under your control."
+        defaultValue="I'm changeable but am not under React's controller."
       />
 
       <textarea
         readOnly="true"
-        value="I'm read-only and under your control."
+        value="I'm read-only and under React's controller."
       />
     </div>;
   }
@@ -250,7 +250,7 @@ var CheckboxInput = React.createClass({
   render: function() {
     return <div>
       <div>
-        {"I'm changeable and under your control."}
+        {"I'm changeable and under React's controller."}
         <input
           onChange={this.handleChange}
           type="checkbox"
@@ -259,17 +259,17 @@ var CheckboxInput = React.createClass({
       </div>
 
       <div>
-        {"I'm read-only, am under your control, but raise a warning."}
+        {"I'm read-only, am under React's controller, but raise a warning."}
         <input type="checkbox" checked={true} />
       </div>
 
       <div>
-        {"I'm changeable but am not under your control."}
+        {"I'm changeable but am not under React's controller."}
         <input type="checkbox" defaultChecked={true} />
       </div>
 
       <div>
-        {"I'm read-only and under your control."}
+        {"I'm read-only and under React's controller."}
         <input type="checkbox" readOnly="true" checked={true} />
       </div>
     </div>;
@@ -302,7 +302,7 @@ var RadioInput = React.createClass({
   render: function() {
     return <div>
       <div>
-        {"We're changeable and under your control."}
+        {"We're changeable and under React's controller."}
         <input
           onChange={this.handleChange}
           type="radio"
@@ -318,19 +318,19 @@ var RadioInput = React.createClass({
       </div>
 
       <div>
-        {"We're read-only, are under your control, but raise a warning."}
+        {"We're read-only, are under React's controller, but raise a warning."}
         <input type="radio" name="1" checked={true} value="yes" />
         <input type="radio" name="1" checked={false} value="no" />
       </div>
 
       <div>
-        {"We're changeable but are not under your control."}
+        {"We're changeable but are not under React's controller."}
         <input type="radio" name="2" defaultChecked={true} value="yes" />
         <input type="radio" name="2" defaultChecked={false} value="no" />
       </div>
 
       <div>
-        {"We're read-only and are under your control."}
+        {"We're read-only and are under React's controller."}
         <input type="radio" name="3" readOnly="true" checked={true} value="yes" />
         <input type="radio" name="3" readOnly="true" checked={false} value="no" />
       </div>
@@ -364,7 +364,7 @@ var SelectDropDown = React.createClass({
   render: function() {
     return <div>
       <div>
-        {"I'm changeable and under your control."}
+        {"I'm changeable and under React's controller."}
         <select onChange={this.handleChange} value={this.state.value}>
           <option value="A">Apple</option>
           <option value="B">Banana</option>
@@ -372,7 +372,7 @@ var SelectDropDown = React.createClass({
       </div>
 
       <div>
-        {"I'm read-only, am under your control, but raise a warning."}
+        {"I'm read-only, am under React's controller, but raise a warning."}
         <select value="B">
           <option value="A">Apple</option>
           <option value="B">Banana</option>
@@ -380,7 +380,7 @@ var SelectDropDown = React.createClass({
       </div>
 
       <div>
-        {"I'm changeable but am not under your control."}
+        {"I'm changeable but am not under React's controller."}
         <select defaultValue="B">
           <option value="A">Apple</option>
           <option value="B">Banana</option>
@@ -388,7 +388,7 @@ var SelectDropDown = React.createClass({
       </div>
 
       <div>
-        {"I'm read-only but under your control."}
+        {"I'm read-only but under React's controller."}
         <select readOnly={true} value="B">
           <option value="A">Apple</option>
           <option value="B">Banana</option>

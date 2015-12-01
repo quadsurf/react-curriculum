@@ -13,7 +13,7 @@
     <script type="text/babel">
       var TextfieldInput = React.createClass({
         getInitialState: function() {
-          return { value: "I'm changeable and under your control" };
+          return { value: "I'm changeable and under React's controller" };
         },
 
         handleChange: function(event) {
@@ -31,18 +31,18 @@
 
             <input
               type="text"
-              value="I'm read-only, am under your control, but raise a warning."
+              value="I'm read-only, am under React's controller, but raise a warning."
             />
 
             <input
               type="text"
-              defaultValue="I'm changeable but am not under your control."
+              defaultValue="I'm changeable but am not under React's controller."
             />
 
             <input
               type="text"
               readOnly="true"
-              value="I'm read-only and under your control."
+              value="I'm read-only and under React's controller."
             />
           </div>;
         }
