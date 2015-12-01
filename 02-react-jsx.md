@@ -279,7 +279,7 @@ var element = <div>
 
 Let's practice by refactoring the **Hello world** example from the previous chapter into JSX. Start by loading Babel into the DOM using a CDN. Usually this is done immediately after `react` and `react-dom` are loaded.
 
-**NOTE:** Using Babel to transpile JSX in the browser is great for learning. However, the process is fairly slow and results in client-side computation that can be avoided. Typically, a real React application [precompiles its JSX](https://facebook.github.io/react/docs/tooling-integration.html#productionizing-precompiled-jsx) using a handful of Babel packages installed from npm. Since you're still learning, let's keep the toolchain simple for now.
+**NOTE:** Using Babel to transpile JSX in the browser is great for learning. However, the process is fairly slow and results in client-side computation that can be avoided. Typically, a real React application [pretranspiles its JSX](https://facebook.github.io/react/docs/tooling-integration.html#productionizing-precompiled-jsx) using a handful of Babel packages installed from npm. Since you're still learning, let's keep the toolchain simple for now.
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
