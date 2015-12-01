@@ -249,8 +249,17 @@ var element = <div>
 
 In JSX, the `style` attribute accepts a JavaScript object with camel cased CSS properties.
 
+**NOTE:** Vendor prefixes, other than `ms`, begin with a capital letter. This is why `WebkitTransition` has an uppercase `W`.
+
 ```jsx
-var element = <p style={{ backgroundColor: 'darkblue', color: 'lightgreen' }}>Happy Grillmore</p>;
+var styles = {
+  backgroundColor: 'darkblue',
+  color: 'lightgreen',
+  msTransition: 'all', // 'ms' is the only lowercase vendor prefix
+  WebkitTransition: 'all' // note the capital 'W' here
+};
+
+var element = <p style={styles}>Happy Grillmore</p>;
 ```
 
 * How many `ReactElement` objects are created?
@@ -361,6 +370,7 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 
 * [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
 * [React Docs - If-Else in JSX](https://facebook.github.io/react/tips/if-else-in-JSX.html)
+* [React Docs - Inline Styles](https://facebook.github.io/react/tips/inline-styles.html)
 * [React Docs - JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)
 * [React Docs - Self-closing Tag](https://facebook.github.io/react/tips/self-closing-tag.html)
 * [Wikipedia - Source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)
