@@ -65,13 +65,18 @@ When an event handler is called, it's time for your code to shine. This is where
 
 ```jsx
 var Anchor = React.createClass({
-  handleChange: function(event) {
+  handleClick: function(event) {
     event.preventDefault();
     // The browser will no longer load the page at event.target.href
   },
 
   render: function() {
-    return <a href="do-not-follow.html">Do not follow my href!</a>;
+    return <a
+      href="do-not-follow.html"
+      onClick={this.handleClick}
+    >
+      Do not follow my href!
+    </a>;
   }
 });
 ```
