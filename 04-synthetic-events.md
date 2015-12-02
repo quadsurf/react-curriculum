@@ -518,8 +518,8 @@ var Mouse = React.createClass({
     return {
       clicks: 0,
       location: null,
-      screenX: null,
-      screenY: null
+      pageX: null,
+      pageY: null
     };
   },
 
@@ -538,8 +538,8 @@ var Mouse = React.createClass({
 
   handleMouseMove: function(event) {
     var nextState = {
-      screenX: event.screenX,
-      screenY: event.screenY
+      pageX: event.pageX,
+      pageY: event.pageY
     };
     this.setState(nextState);
   },
@@ -560,8 +560,8 @@ var Mouse = React.createClass({
 
       <div>clicks: {this.state.clicks}</div>
       <div>location: {this.state.location}</div>            
-      <div>screenX: {this.state.screenX}</div>
-      <div>screenY: {this.state.screenY}</div>
+      <div>pageX: {this.state.pageX}</div>
+      <div>pageY: {this.state.pageY}</div>
     </div>;
   }
 });
