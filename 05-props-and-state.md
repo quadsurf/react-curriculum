@@ -7,7 +7,7 @@
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| TBD                  | TBD                 |
+| TBD                  | About 5.75 hours    |
 
 ## What are props and why are they important?
 
