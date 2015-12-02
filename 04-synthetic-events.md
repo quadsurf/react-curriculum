@@ -556,7 +556,7 @@ var Mouse = React.createClass({
           height: '300px',
           width: '300px'
         }}
-      ></div>
+      />
 
       <div>clicks: {this.state.clicks}</div>
       <div>location: {this.state.location}</div>            
