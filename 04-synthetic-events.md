@@ -680,7 +680,7 @@ ReactDOM.render(
 
 In this chapter, you learned how to make React applications more interactive. Specifically, you'll learned how React's synthetic event system works identically across all browsers. You also learned how to handle synthetic events and how to leverage their properties in a variety of common use cases. Believe it or not, but this chapter only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React.
 
-## Assignment
+## Assignment: Part 1
 
 Using [this template](assignments/04-synthetic-events/calculator.html), create a `Calculator` React component that looks and behaves like this.
 
@@ -710,7 +710,7 @@ The `String.prototype.match()` function returns `null` when the math and regular
 
 **HINT 2:** In this assignment, the `<input id="screen" />` is read-only because...
 
-## Bonus Assignment
+## Assignment: Part 2
 
 When you're finished with the assignment above, enhance your `Calcuator` component so users can input a math expression from the keyboard like this.
 
