@@ -154,7 +154,7 @@ The last thing to note is how `React.createElement()` only requires one argument
 
 ### Exercise
 
-Update your code with the above changes. Make sure everything is working before moving on to the next section.
+Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
 ## Component state
 
@@ -193,7 +193,7 @@ React provides other places where you can modify state or interact with the brow
 
 ### Exercise
 
-Update your code with the above changes. Make sure everything is working before moving on to the next section.
+Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
 ## Component hierarchy
 
@@ -243,7 +243,7 @@ Update your code with the above changes and run the code. Once everything is wor
 </div>
 ```
 
-If needed, update what you wrote earlier about how React works to take into account what's happening here.
+Now update your notes with what you just learned.
 
 ## One-way data binding
 
@@ -295,7 +295,7 @@ React thinks of components as simple **state machines**. By thinking of a compon
 
 ### Exercise
 
-Update your code with the above changes. Make sure everything is working before moving on to the next section.
+Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
 ## React behavior
 
@@ -349,7 +349,7 @@ Don't worry about precomputing values based on state. Adding redundant and compu
 
 ### Exercise
 
-Update your code with the above changes. Make sure everything is working before moving on to the assignment.
+Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
 ## Summary
 
