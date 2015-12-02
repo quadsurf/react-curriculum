@@ -441,7 +441,7 @@ var FormSubmission = React.createClass({
           name="username"
           onChange={this.handleChange}
           type="text"
-          value={this.username}
+          value={this.state.username}
         />
 
         Password:
@@ -449,7 +449,7 @@ var FormSubmission = React.createClass({
           name="password"
           onChange={this.handleChange}
           type="password"
-          value={this.password}
+          value={this.state.password}
         />
 
         <input type="submit" value="Log in" />
