@@ -32,10 +32,10 @@ The **final assignment** is where you'll be evaluated. You'll be asked to apply 
 
 ## How are the duration times determined?
 
-At the start of every chapter, you'll see two durations—by yourself and as a class. Unsurprisingly, **duration by yourself** indicates how long it's likely going to take a student to read the chapter, complete all the exercises, and complete the assignment. Typically, this is shorter than the **duration as a class** which includes the time it took to:
+At the start of every chapter, you'll see two durations—by yourself and as a class. Unsurprisingly, **duration by yourself** indicates how long it's likely going to take a student to read the chapter, complete all the exercises, and complete the assignment on their own. Typically, this is shorter than the **duration as a class** which includes the time it took to:
 
-* Explain the material to students
-* Field questions from students
-* Complete the exercises and assignment
-* Review solutions for the exercises and assignments
-* Give students a 10 minute break every hour
+* Explain the material to students.
+* Field questions from students.
+* Have the students complete the exercises and assignment independently.
+* Review the instructor's solutions for the exercises and assignments.
+* Give students a 10 minute break every hour.
