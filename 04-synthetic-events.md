@@ -6,7 +6,7 @@ Now that you've gotten some practice with React JSX and the React Developer Tool
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| TBD                  | About 3 hours       |
+| TBD                  | About 10.5 hours    |
 
 ## What's a synthetic event and why is it important?
 
