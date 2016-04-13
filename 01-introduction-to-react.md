@@ -237,9 +237,9 @@ As you can see from the above code, the `props` object is made up of key-value p
 Update your code with the above changes and run the code. Once everything is working, inspect the page in your browser's developer tools. In the **Elements** tab, you'll see something like this.
 
 ```html
-<div data-reactid=".0">
-  <h1 data-reactid=".0.0">Hello world</h1>
-  <input type="text" data-reactid=".0.1">
+<div data-reactroot>
+  <h1>Hello world</h1>
+  <input type="text">
 </div>
 ```
 
