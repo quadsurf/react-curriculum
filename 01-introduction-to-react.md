@@ -57,8 +57,8 @@ Let's start by examining this simple React application.
   <body>
     <div id="hello"></div>
 
-    <script src="https://fb.me/react-0.14.7.js"></script>
-    <script src="https://fb.me/react-dom-0.14.7.js"></script>
+    <script src="https://fb.me/react-15.0.1.js"></script>
+    <script src="https://fb.me/react-dom-15.0.1.js"></script>
 
     <script>
       var element = React.createElement('h1', null, 'Hello world');
@@ -80,7 +80,7 @@ Type out the above code example *by hand* and then run it. No copy-and-paste che
 
 ```html
 <div id="hello">
-  <h1 data-reactid=".0">Hello world</h1>
+  <h1 data-reactroot>Hello world</h1>
 </div>
 ```
 
