@@ -171,6 +171,16 @@ var element = (
 );
 ```
 
+However, because of [Javascript's semicolon insertion](http://inimino.org/~inimino/blog/javascript_semicolons) parenthesis are necessary if you are directly returning elements that span more than one line. This means when writing the return value of your render function, if you're code spans many lines, it should be wrapped in parenthesis like this:
+
+```
+	return (
+		<div>
+			<p>Returning multiple lines is easy!!!</p>
+		</div>
+	);
+```
+
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 
