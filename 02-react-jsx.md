@@ -293,7 +293,7 @@ Let's practice by refactoring the **Hello world** example from the previous chap
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
 ```
 
-Then, we need to instruct Babel to transpile any JSX it finds into JavaScript. To do this, let's add a `type="text/babel"` attribute to the `<script>` tag.
+Then, we need to instruct Babel to transpile any JSX it finds into JavaScript. To do this, let's add a `type="text/babel"` attribute to any `<script>` tag that uses JSX. In this case, you'll need to add this attribute to the final `<script>` tag in your HTML file.
 
 **NOTE:** If you forget this step, you'll see an `Uncaught SyntaxError: Unexpected token <` error in the console when you start refactoring `React.createElement()` function calls to React JSX.
 
