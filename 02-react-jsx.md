@@ -293,17 +293,15 @@ Let's practice by refactoring the **Hello world** example from the previous chap
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
 ```
 
-Then, we need to instruct Babel to transpile any JSX it finds into JavaScript. To do this, let's add a `type="text/babel"` attribute to any `<script>` tag that uses JSX. In this case, you'll need to add this attribute to the final `<script>` tag in your HTML file.
+Then, we need to instruct Babel to transpile any JSX it finds into JavaScript. To do this, let's add a `type="text/babel"` attribute to any `<script>` tag that uses JSX. In this case, you'll need to add this attribute to the final `<script>` tag in your HTML file. While we're at it, let's move our React code to a separate JSX file, called `hello.jsx`.
 
-**NOTE:** If you forget this step, you'll see an `Uncaught SyntaxError: Unexpected token <` error in the console when you start refactoring `React.createElement()` function calls to React JSX.
+**NOTE:** If you forget to set the `type` attribute, you'll see an `Uncaught SyntaxError: Unexpected token <` error in the console when you start refactoring `React.createElement()` function calls to React JSX.
 
 ```html
-<script type="text/babel">
-...
-</script>
+<script type="text/babel" src="hello.jsx"></script>
 ```
 
-Now, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
+Now, inside of `hello.jsx`, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above. 
 
 **NOTE:** If you forget to end a self-closing tag with `/>`, you'll see an `Uncaught SyntaxError: embedded: Expected corresponding JSX closing tag` error in the console.
 
