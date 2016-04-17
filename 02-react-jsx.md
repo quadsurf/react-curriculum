@@ -337,6 +337,51 @@ ReactDOM.render(
 
 Open or refresh the page in your browser and make sure everything still works. Congratulations! You've just written your first React JSX application.
 
+## Configuring ESLint with Sublime Text 3
+
+**If you are not using Sublime Text 3, skip to the next part**
+
+If you are using Sublime Text 3 you may notice that using emmet with JSX is quite challenging and that if you are using jshint to lint your code, you are seeing errors everywhere. In order to fix these issues we will be changing our linter from jshint to eslint which is a linter similar to jshint but one that is easier to work with in React and with ES2015/2016.
+
+To get started with eslint, the first thing you will want to do is remove jshint. You can either remove it completely using `npm uninstall -g jshint` and then remove the package `SublimeLinter-jshint` in sublime text or you can just disable jshint by going to `Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings - User` and setting the `"@disable": true,` for `"jshint"`. Also make sure that in your user settings you find the key of `"syntax_map"` and inside add the following `"javascript (babel)": "javascript,"`
+
+Once you have removed or ignored `jshint`. Install `eslint` globally using `npm install -g eslint`. You should then head to sublime and install a package called `SublimeLinter-contrib-eslint`, also make sure you install or have installed a package called `Babel` which you will be using for syntax highlighting. 
+
+If you are having trouble with this, check out [this tutorial](https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48#.p623sjx18)
+
+Here is a short .eslintrc file you can add to the root of your application (or you can use the one from the link below)
+
+```json
+{
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "modules": true,
+    "experimentalObjectRestSpread": true
+  },
+  "env": {
+    "amd": true,
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "globals": {
+    "$": true
+  },
+  "plugins": [
+    "react"
+  ]
+}
+```
+
+If you would like something more sophistocated check out [https://github.com/ryansobol/eslint-config-ryansobol](https://github.com/ryansobol/eslint-config-ryansobol).
+
+## Configuring JSX with Emmet in Sublime Text 3
+
+**If you are not using Sublime Text 3, skip to the next part**
+
+If you would like to use emmet shortcuts with Sublime Text 3 + JSX take a look at this video and tutorial [here](http://wesbos.com/emmet-react-jsx-sublime/)
+
 ### Exercise
 
 Update your **Hello world** application with the above changes. Resist the urge to copy-and-paste! Make sure everything is working before moving on to the assignment.
