@@ -1,6 +1,6 @@
 #### [⇐ Previous](06-component-life-cycle.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](08-immutable-models.md)
 
-# Refs and Timers
+# Refs 
 
 ## Objectives
 
