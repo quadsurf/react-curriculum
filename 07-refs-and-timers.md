@@ -31,8 +31,8 @@ Let's revisit our typing assignment and refactor to use refs!
           text: ""
         })
         // USING REFS!
-        React.findDOMNode(this.refs.textInput).value = "";
-        React.findDOMNode(this.refs.textInput).focus();
+        ReactDOM.findDOMNode(this.refs.textInput).value = "";
+        ReactDOM.findDOMNode(this.refs.textInput).focus();
       },
       render: function() {
         return (
@@ -47,10 +47,10 @@ Let's revisit our typing assignment and refactor to use refs!
       }
     });
 
-    React.render(<App>Type in here!</App>, document.body)
+    ReactDOM.render(<App>Type in here!</App>, document.body)
 ```
 
-Notice what we have done here. Our input now has a `ref="textInput"` and we are using a method called React.findDOMNode and passing in `this.refs` and the name of our ref to access the underlying node.
+Notice what we have done here. Our input now has a `ref="textInput"` and we are using a method called `ReactDOM.findDOMNode` and passing in `this.refs` and the name of our ref to access the underlying node.
 
 ### Quick Note
 
