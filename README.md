@@ -12,7 +12,7 @@ The goal of this curriculum is to teach you how to build real-world React applic
 4. [Synthetic Events](04-synthetic-events.md)
 5. [Props and State](05-props-and-state.md)
 6. [Component Life Cycle](06-component-life-cycle.md)
-7. [Refs and Timers](07-refs-and-timers.md)
+7. [Refs](07-refs.md)
 8. [Immutable Models](08-immutable-models.md)
 9. [Final Assignment](09-final-assignment.md)
 

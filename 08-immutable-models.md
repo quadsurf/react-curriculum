@@ -1,4 +1,4 @@
-#### [⇐ Previous](07-refs-and-timers.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](09-final-assignment.md)
+#### [⇐ Previous](07-refs.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](09-final-assignment.md)
 
 # Immutable Models
 

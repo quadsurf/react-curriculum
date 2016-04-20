@@ -1,4 +1,4 @@
-#### [⇐ Previous](05-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-refs-and-timers.md)
+#### [⇐ Previous](05-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-refs.md)
 
 # Component Life Cycle
 
