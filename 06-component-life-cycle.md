@@ -42,7 +42,7 @@ Here is an example that will focus on the input of a component when mounted:
       }
     });
 
-    React.render(<App/>, document.body);
+    ReactDOM.render(<App/>, document.body);
 
 ```
 
@@ -79,7 +79,7 @@ You can see these methods in action with this example:
       }
     });
 
-    React.render(<App/>, document.body)
+    ReactDOM.render(<App/>, document.body)
 ```
 
 ## Questions
