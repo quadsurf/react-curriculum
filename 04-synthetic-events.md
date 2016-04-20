@@ -680,7 +680,39 @@ ReactDOM.render(
 
 In this chapter, you learned how to make React applications more interactive. Specifically, you'll learned how React's synthetic event system works identically across all browsers. You also learned how to handle synthetic events and how to leverage their properties in a variety of common use cases. Believe it or not, but this chapter only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React.
 
-## Assignment: Part 1
+## Assignment: Colored Box
+
+Make a react component that has a div on the page and an input.  The value of the input should be the background color of the div.  The user should be able to change the background color by changing the value in the input field.  Also, if the user presses shift while using the input box, a random color is generated.  Here is a starter html template to use:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/box.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+    <script src="https://fb.me/react-15.0.1.js"></script>
+    <script src="https://fb.me/react-dom-15.0.1.js"></script>
+    <script type="text/babel" src="/box.jsx">
+  </body>
+</html>
+```
+
+And here is a css file to start with:
+
+```css
+.random-box {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+}
+```
+
+## Assignment: Calculator Part 1
 
 Using [this template](assignments/04-synthetic-events/calculator.html), create a `Calculator` React component that looks and behaves like this.
 
@@ -710,7 +742,7 @@ The `String.prototype.match()` function returns `null` when the math and regular
 
 **HINT 2:** In this assignment, the `<input id="screen" />` is read-only because...
 
-## Assignment: Part 2
+## Assignment: Calculator Part 2
 
 When you're finished with the assignment above, enhance your `Calcuator` component so users can input a math expression from their keyboard like this.
 
