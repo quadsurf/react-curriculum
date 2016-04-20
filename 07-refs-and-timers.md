@@ -70,8 +70,8 @@ Since we're going to be building larger applications, let's build an example ste
       var App = React.createClass({
         render: function() {
           return (
-
-            )
+            <h1></h1>
+          )
         }
       });
 
@@ -93,7 +93,7 @@ Since we're going to be building larger applications, let's build an example ste
         }
       });
 
-      React.render(<App/>,document.body)
+      ReactDOM.render(<App/>,document.body)
     ```
 
 2. The Header component should render an `<h1>` with the text of whatever its childrens props are (use `this.props.children`)
@@ -109,13 +109,14 @@ Since we're going to be building larger applications, let's build an example ste
     ```
 
     2. Our App Component should have an initialState with the keys and values of:
-      ```js
-      {
-        val: "",
-        checkboxVal: false,
-        radioVal: false
-      }
-      ```
+    
+    ```js
+    {
+      val: "",
+      checkboxVal: false,
+      radioVal: false
+    }
+    ```
 
     Answer:
 
