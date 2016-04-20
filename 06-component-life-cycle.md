@@ -115,4 +115,4 @@ You can see these methods in action with this example:
 [https://gist.github.com/fay-jai/fc8a5093c0b5124d4b2d#file-react-lifecycle-parent-child-jsx](https://gist.github.com/fay-jai/fc8a5093c0b5124d4b2d#file-react-lifecycle-parent-child-jsx)
 [http://tylermcginnis.com/an-introduction-to-life-cycle-events-in-react-js/](http://tylermcginnis.com/an-introduction-to-life-cycle-events-in-react-js/)
 
-#### [⇐ Previous](05-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-refs-and-timers.md)
+#### [⇐ Previous](05-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-refs.md)
