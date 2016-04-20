@@ -47,7 +47,7 @@ Let's revisit our typing assignment and refactor to use refs!
       }
     });
 
-    ReactDOM.render(<App>Type in here!</App>, document.body)
+    ReactDOM.render(<App>Type in here!</App>, document.getElementById('container'))
 ```
 
 Notice what we have done here. Our input now has a `ref="textInput"` and we are using a method called `ReactDOM.findDOMNode` and passing in `this.refs` and the name of our ref to access the underlying node.
@@ -64,7 +64,7 @@ Refs are a great way to send a message to a particular child instance in a way t
 
 Since we're going to be building larger applications, let's build an example step by step. Try to complete the tasks before looking at the solution.
 
-1. Create three components, Header, App and Form and render the App to the document.body
+1. Create three components, Header, App and Form and render the App to a div with an id of 'container'
 
     ```js
       var App = React.createClass({
@@ -93,7 +93,7 @@ Since we're going to be building larger applications, let's build an example ste
         }
       });
 
-      ReactDOM.render(<App/>,document.body)
+      ReactDOM.render(<App/>,document.getElementById('container'))
     ```
 
 2. The Header component should render an `<h1>` with the text of whatever its childrens props are (use `this.props.children`)
@@ -281,7 +281,7 @@ Since we're going to be building larger applications, let's build an example ste
     ```
 
 7. Our captureValue method should first prevent the default, and then let's define a few variables, `inputText`, `checkboxValue` and `radioValue`.
-  - `inputText` is equal to the value of the text input (use React.findDOMNode) and (this.refs.text) to access this element
+  - `inputText` is equal to the value of the text input (use ReactDOM.findDOMNode) and (this.refs.text) to access this element
   - `checkboxValue` is equal to `true` or `false` and is determined by whether the checkbox is checked
   - `radioValue` is equal to `true` or `false` and is determined by whether the radio button is clicked
 
@@ -291,9 +291,9 @@ Since we're going to be building larger applications, let's build an example ste
       var Form = React.createClass({
         captureValue: function(e){
           e.preventDefault();
-          var inputText = React.findDOMNode(this.refs.text).value
-          var checkboxValue = React.findDOMNode(this.refs.checkbox).checked
-          var radioValue = React.findDOMNode(this.refs.radio).checked
+          var inputText = ReactDOM.findDOMNode(this.refs.text).value
+          var checkboxValue = ReactDOM.findDOMNode(this.refs.checkbox).checked
+          var radioValue = ReactDOM.findDOMNode(this.refs.radio).checked
           this.props.onCustomSubmit(inputText,checkboxValue,radioValue)
         },
         render: function() {
@@ -350,8 +350,8 @@ Since we're going to be building larger applications, let's build an example ste
               <h1>Form Values</h1>
               <ul>
                 <li>Input: {this.state.val}</li>
-                <li>Checkbox: {this.state.checkboxVal}</li>
-                <li>Radio: {this.state.radioVal}</li>
+                <li>Checkbox: {this.state.checkboxVal.toString()}</li>
+                <li>Radio: {this.state.radioVal.toString()}</li>
               </ul>
               <Form onCustomSubmit={this.update}/>
             </div>
@@ -452,7 +452,7 @@ Since we're going to be building larger applications, let's build an example ste
         }
       });
 
-      React.render(<App/>,document.body)
+      ReactDOM.render(<App/>,document.getElementById('container'))
     ```
 
 DEMO:
