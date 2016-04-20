@@ -27,7 +27,7 @@ Here is an example that will focus on the input of a component when mounted:
         };
       },
       componentDidMount: function(){
-        React.findDOMNode(this.refs.nameInput).focus();
+        ReactDOM.findDOMNode(this.refs.nameInput).focus();
       },
       update: function(e){
         this.setState({txt: e.target.value})
@@ -67,7 +67,7 @@ You can see these methods in action with this example:
         console.log('WILL UNMOUNT JUST RAN!')
       },
       remove: function(){
-        React.unmountComponentAtNode(document.body)
+        ReactDOM.unmountComponentAtNode(document.body)
       },
       render: function() {
         return (
