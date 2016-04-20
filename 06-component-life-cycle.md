@@ -42,7 +42,7 @@ Here is an example that will focus on the input of a component when mounted:
       }
     });
 
-    ReactDOM.render(<App/>, document.body);
+    ReactDOM.render(<App/>, document.getElementById('container'));
 
 ```
 
@@ -67,7 +67,7 @@ You can see these methods in action with this example:
         console.log('WILL UNMOUNT JUST RAN!')
       },
       remove: function(){
-        ReactDOM.unmountComponentAtNode(document.body)
+        ReactDOM.unmountComponentAtNode(document.getElementById('container'))
       },
       render: function() {
         return (
@@ -79,7 +79,7 @@ You can see these methods in action with this example:
       }
     });
 
-    ReactDOM.render(<App/>, document.body)
+    ReactDOM.render(<App/>, document.getElementById('container'))
 ```
 
 ## Questions
