@@ -1,0 +1,15 @@
+li {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
