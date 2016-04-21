@@ -57,22 +57,32 @@ You can see these methods in action with this example:
           text: ""
         }
       },
+      
       componentWillMount: function(){
         console.log('WILL MOUNT JUST RAN!')
       },
+      
       componentDidMount: function(){
         console.log('DID MOUNT JUST RAN!')
       },
+      
       componentWillUnmount: function(){
         console.log('WILL UNMOUNT JUST RAN!')
       },
+      
+      handleChange: function(e) {
+        this.setState({text: e.target.value});
+      },
+      
       remove: function(){
         ReactDOM.unmountComponentAtNode(document.getElementById('container'))
       },
+      
       render: function() {
         return (
           <div>
             <h1>Hello world!</h1>
+            <input onChange={this.handleChange} value={this.state.text} />
             <button onClick={this.remove}>Remove</button>
           </div>
         );
@@ -81,6 +91,30 @@ You can see these methods in action with this example:
 
     ReactDOM.render(<App/>, document.getElementById('container'))
 ```
+
+### getDefaultProps
+
+Similar to `getInitialState`, this is another way to set initial properties on a component. This method is invoked once, before any components are created.
+
+### componentWillReceiveProps
+
+This method is invoked when a component is receiving new props. Useful if you need to set the state on a component based on some transition in the properties, as this method has access to both the new properties and the old ones.
+
+### propTypes
+
+This is an object that allows you to validate the types for your props when they are passed to your components. Useful for ensuring that the data types you expect are actually the ones you're getting.
+
+**Exercise**
+
+Modify the previous mounting/unmounting example in the following ways:
+
+1. Use `getDefaultProps` to set a default property of `foo` in your component. Set it's value to be any string.
+
+2. Determine the order in which the following methods are invoked: `componentDidMount`, `componentWillMount`, `getDefaultProps`, `getInitialState`.
+
+3. Use `propTypes` to ensure that the `foo` property is a string. What happens if you try to set it equal to a number inside of `getDefaultProps`?
+
+4. Add a child component called `Summary` to your application. It should have a length property which is equal to the lengh of the text in the `App` input. It should also indicate whether the last keypress by the user caused the length to decrease or not. (How could you use `componentWillReceiveProps` to accomplish this?)
 
 ## Questions
 
