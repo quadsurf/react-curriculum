@@ -57,8 +57,8 @@ Let's start by examining this simple React application.
   <body>
     <div id="hello"></div>
 
-    <script src="https://fb.me/react-15.0.1.js"></script>
-    <script src="https://fb.me/react-dom-15.0.1.js"></script>
+    <script src="https://fb.me/react-15.2.1.js"></script>
+    <script src="https://fb.me/react-dom-15.2.1.js"></script>
 
     <script>
       var element = React.createElement('h1', null, 'Hello world');

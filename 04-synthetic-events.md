@@ -695,8 +695,8 @@ Make a react component that has a div on the page and an input.  The value of th
     <div id="container"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
-    <script src="https://fb.me/react-15.0.1.js"></script>
-    <script src="https://fb.me/react-dom-15.0.1.js"></script>
+    <script src="https://fb.me/react-15.2.1.js"></script>
+    <script src="https://fb.me/react-dom-15.2.1.js"></script>
     <script type="text/babel" src="/box.jsx">
   </body>
 </html>
