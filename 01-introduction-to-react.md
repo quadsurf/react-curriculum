@@ -41,29 +41,29 @@ React applications don't require many programming constructs. In most cases, the
 React builds a component hierarchy and then inserts it into the DOM. Whenever its underlying data changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date. It's a radically different approach to developing web applications. In the beginning, it can be hard to imagine how it all works. But don't worry, you'll see a working example in a minute.
 
 ```text
-          ┌─────────────┐
-          │             │
-          │ Component A │
-          │             │
-          └─────────────┘
-                 │
-       ┌─────────┴──────────┐
-       │                    │
-       ▼                    ▼
-┌─────────────┐      ┌─────────────┐
-│             │      │             │
-│ Component B │      │ Component C │
-│             │      │             │
-└─────────────┘      └─────────────┘
+                     ┌─────────────┐
+                     │             │
+                     │ Component A │
+                     │             │
+                     └─────────────┘
                             │
-                  ┌─────────┴──────────┐
-                  │                    │
-                  ▼                    ▼
-           ┌─────────────┐      ┌─────────────┐
-           │             │      │             │
-           │ Component D │      │ Component E │
-           │             │      │             │
-           └─────────────┘      └─────────────┘
+       ┌────────────────────┼──────────────────────┐
+       │                    │                      │
+       ▼                    ▼                      ▼
+┌─────────────┐      ┌─────────────┐        ┌─────────────┐
+│             │      │             │        │             │
+│ Component B │      │ Component C │        │ Component D │
+│             │      │             │        │             │
+└─────────────┘      └─────────────┘        └─────────────┘
+                           │
+                 ┌─────────┴──────────┐
+                 │                    │
+                 ▼                    ▼
+          ┌─────────────┐      ┌─────────────┐
+          │             │      │             │
+          │ Component E │      │ Component F │
+          │             │      │             │
+          └─────────────┘      └─────────────┘
 ```
 
 Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of HTML. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
