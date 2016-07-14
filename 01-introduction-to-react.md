@@ -2,7 +2,14 @@
 
 # Introduction to React
 
-This chapter is a gentle introduction to the fundamental concepts of React. You'll learn what React is, why it's important, and how it works. By the end, you'll have built a React application, with some guidance, and be ready to build an application on your own.
+This chapter is a gentle introduction to the fundamental concepts of React.
+
+### Objectives
+
+- Explain what React is.
+- Explain why React is important.
+- Build a React application with some guidance.
+- Build a React application on your own.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
