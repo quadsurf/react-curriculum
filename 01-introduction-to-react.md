@@ -28,26 +28,14 @@ Building large, dynamic web applications is hard. Facebook created React to try 
 React applications don't require many programming constructs. In most cases, there's simply no need to write controllers, models, directives, templates, or event listeners. In fact, all that's required is a hierarchy of **components**—encapsulated code that handles presentation, state, and behavior. Each component in the hierarchy knows how it should look and act given its current underlying data.
 
 ```text
-╔═══════ Component ══════╗
-║                        ║
-║ ┌─── Presentation ───┐ ║
-║ │                    │ ║
-║ │        HTML        │ ║
-║ │                    │ ║
-║ └────────────────────┘ ║
-║                        ║
-║ ┌─────── State ──────┐ ║
-║ │                    │ ║
-║ │     JavaScript     │ ║
-║ │                    │ ║
-║ └────────────────────┘ ║
-║                        ║
-║ ┌───── Behavior ─────┐ ║
-║ │                    │ ║
-║ │     JavaScript     │ ║
-║ │                    │ ║
-║ └────────────────────┘ ║
-╚════════════════════════╝
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Component ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                        ┃
+┃ ┌─── Presentation ───┐  ┌─────── State ──────┐  ┌───── Behavior ─────┐ ┃
+┃ │                    │  │                    │  │                    │ ┃
+┃ │        HTML        │  │     JavaScript     │  │     JavaScript     │ ┃
+┃ │                    │  │                    │  │                    │ ┃
+┃ └────────────────────┘  └────────────────────┘  └────────────────────┘ ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
 React builds a component hierarchy and then inserts it into the DOM. Whenever its underlying data changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date. It's a radically different approach to developing web applications. In the beginning, it can be hard to imagine how it all works. But don't worry, you'll see a working example in a minute.
