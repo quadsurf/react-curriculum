@@ -46,11 +46,11 @@ React builds a component hierarchy and then inserts it into the DOM. Whenever it
        ┌─────────┴─────────┐
        │                   │
        ▼                   ▼
-┌─────────────┐     ┌─────────────┐
-│             │     │             │
-│ Component B │     │ Component C │
-│             │     │             │
-└─────────────┘     └─────────────┘
+┌─────────────┐     ┏━━━━━━━━━━━━━┓
+│             │     ┃             ┃
+│ Component B │     ┃ Component C ┃
+│             │     ┃             ┃
+└─────────────┘     ┗━━━━━━━━━━━━━┛
 ```
 
 Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of HTML. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
