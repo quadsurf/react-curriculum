@@ -17,11 +17,7 @@ This chapter is a gentle introduction to the fundamental concepts of React.
 
 ## What's React?
 
-[React](https://facebook.github.io/react/index.html) is a JavaScript library for building user interfaces. In other words, React is a self-contained toolset for building the V and C in MVC. This means you can easily try it out on a small feature for an existing project or use it as the foundation for a brand new project.
-
-## Why React?
-
-Building large, dynamic web applications is hard. Facebook created React to try to make this process easier and faster. What's interesting about React is how different it is compared to other JavaScript solutions. In fact, React has the entire industry rethinking its approach to modern web development.
+[React](https://facebook.github.io/react/index.html) is a JavaScript library for building sophisticated user interfaces for large, dynamic web applications. As you know, a sophisticated user interface can be hard to build and maintain. Facebook created React to try to make this process easier and faster. What's interesting about React is how different it is compared to other JavaScript solutions. In fact, React has the entire industry rethinking its approach to modern web development.
 
 ### Components hierarchy
 
@@ -109,6 +105,10 @@ However, changes made to the user interface are *not* automatically propagated t
 ### Exercise
 
 In your own words, write down what's similar and what's different about React and Angular.
+
+## Why is React important?
+
+[INSERT EXPLANATION HERE]
 
 ## What does React code look like?
 
