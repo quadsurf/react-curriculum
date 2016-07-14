@@ -68,11 +68,43 @@ When an application uses **two-way** data binding:
 1. Changes to its state (e.g. data received from a server) are *immediately* propagated to the user interface.
 2. Changes to its user interface (e.g. input received from a user) are *immediately* propagated to the state.
 
+```text
+         ┌───── Automatic change ────┐
+         │                           │
+         │                           ▼
+┌─────────────────┐         ┌─────────────────┐
+│                 │         │                 │
+│                 │         │                 │
+│      State      │         │ User Interface  │
+│                 │         │                 │
+│                 │         │                 │
+└─────────────────┘         └─────────────────┘
+         ▲                           │
+         │                           │
+         └───── Automatic change ────┘
+```
+
 Two-way data binding works great, especially for smaller applications. With larger applications, it's common to run into a few problems. First, it can be difficult to prevent cycles where a change to one two-way data binding causes a second data binding to change which causes the first data binding to change again. Second, two-way data bindings are expensive in terms of CPU resources. Too many of them can negatively affect an application's perceived speed, especially on resource-contrained mobile devices.
 
 React avoids these problems by only using **one-way** data binding. When building a component hierarchy, its state and presentation logic are combined to produce a user interface. Whenever the state changes, it's automatically recombined with the presentation logic and a new user interface is produced.
 
 However, changes made to the user interface are *not* automatically propagated to the state. As a developer, you'll have to write this code yourself. Fortunately, explicitly defining how this happens in React is simple and gives more control over the state that needs updating. With some practice, you'll be building, maintaining, and optimizing complex user interfaces like a boss.
+
+```text
+         ┌───── Automatic change ────┐
+         │                           │
+         │                           ▼
+┌─────────────────┐         ┌─────────────────┐
+│                 │         │                 │
+│                 │         │                 │
+│      State      │         │ User Interface  │
+│                 │         │                 │
+│                 │         │                 │
+└─────────────────┘         └─────────────────┘
+         ▲                           │
+
+         └ ─ ─ ─ Manual change ─ ─ ─ ┘
+```
 
 ### Exercise
 
