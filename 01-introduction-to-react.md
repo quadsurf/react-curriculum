@@ -20,7 +20,7 @@ This chapter is a gentle introduction to the fundamental concepts of React.
 
 ### Components hierarchy
 
-React applications don't require many programming constructs. In most cases, there's simply no need to write controllers, models, directives, templates, or event listeners. In fact, all that's required is a hierarchy of **components**—encapsulated code that handles presentation, state, and behavior. Each component in the hierarchy knows how it should look and act given its current underlying data.
+React applications don't require many programming constructs. With React, there's no need for things like controllers, directives, or templates. In fact, all that's required is a **component**—encapsulated code that handles presentation, state, and behavior. In other words, a component knows how it should look and act given its current underlying information. Here's a diagram that illustrates what's inside a component and the technologies it uses.
 
 ```text
 ┌─────────────────────────────── Component ──────────────────────────────┐
@@ -33,13 +33,15 @@ React applications don't require many programming constructs. In most cases, the
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-React builds a component hierarchy and then inserts it into the DOM. Whenever its underlying data changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date. It's a radically different approach to developing web applications. In the beginning, it can be hard to imagine how it all works. But don't worry, you'll see a working example in a minute.
+React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date. It's a radically different approach to developing user interfaces for web applications.
+
+In the beginning, it can be hard to imagine how it all works. Imagine that components A, B, and C are arranged into the following hierarchy. If the state of components A and B change, React can update only the parts of the DOM that these components represent.
 
 ```text
-          ┏━━━━━━━━━━━━━┓
-          ┃             ┃
-          ┃ Component A ┃
-          ┃             ┃
+          ┏━━━━━━━━━━━━━┓                      <div id="A">
+          ┃             ┃                        <div id="B">Hello</div>
+          ┃ Component A ┃                        <div id="C">World</div>
+          ┃             ┃                      </div>
           ┗━━━━━━━━━━━━━┛
                  │
        ┌─────────┴─────────┐
