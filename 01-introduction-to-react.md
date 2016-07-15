@@ -114,7 +114,7 @@ The following is a short list of [design principals](https://facebook.github.io/
 
 - Though its concepts aren't fully mainstream, React is accessible to a wide range of developers of varying experience levels.
 
-- React can be gradually adopted for small features instead of requiring the entire application to be rewritten.
+- React can be gradually adopted for small features and doesn't require an entire application to be rewritten with it.
 
 - Well-designed React components can be composed together even if they're written by different people.
 
