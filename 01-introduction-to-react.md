@@ -112,7 +112,7 @@ When it was released in March 2013, React's approach to user interface developme
 
 The following is a short list of [design principals](https://facebook.github.io/react/contributing/design-principles.html) that guide React's development of these powerful techniques.
 
-- Though its concepts aren't fully mainstream, React is accessible to a wide range of developers with different experience levels.
+- Though its concepts aren't fully mainstream, React is accessible to a wide range of developers with varying experience levels.
 
 - React can be gradually adopted for small features instead of requiring the entire application to be rewritten.
 
