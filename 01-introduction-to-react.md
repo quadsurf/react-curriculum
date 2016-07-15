@@ -371,7 +371,7 @@ When an event handler is invoked by React, an `event` object is passed in as the
 
 In the code above, both the `h1` and `input` elements need be updated to reflect what the user has typed. In other words, the component's `this.state.who` value needs to be updated. To do that, the `this.setState()` function is called with a `nextState` object. This function performs a *shallow* merge of the `nextState` object into the current `this.state` object. The resulting object is automatically reassigned back into `this.state` variable for you.
 
-After the merge, the component is also automatically re-rendered thus updating the user interface. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState()` function.
+After the merge, the component is also automatically re-rendered, updating the user interface. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState()` function.
 
 React thinks of components as simple **state machines**. By thinking of a component as being in various states, it's easy to keep your user interface consistent. In React, you simply update a component's state using the `this.setState()` function and it will render a new user interface based on this new state. React efficiently updates the DOM using a process called **reconciliation** which we'll study later.
 
