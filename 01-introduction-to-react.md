@@ -384,7 +384,7 @@ By thinking of a component as being in one of a finite number of transitioning s
 
 Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
-## React behavior
+## Component behavior
 
 Now that our component class responds to user interface changes, let's expand its behavior so it's more interesting.
 
