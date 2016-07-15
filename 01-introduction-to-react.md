@@ -367,7 +367,7 @@ Component classes can also define custom **event handlers**. Event handlers resp
 
 **NOTE:** Here's an official list of the [supported events](https://facebook.github.io/react/docs/events.html#supported-events) in React.
 
-When an event handler is invoked by React, an `event` object is passed in as the first argument. The `event` object contains all the relevant information about the event that was just fired. Because of one-way data binding, it's up to you to use the `event` object when handling the event.
+When an event handler is invoked by React, an `event` object is passed in as the first argument. The `event` object contains all the relevant information about the event that was just fired. Because of one-way data binding, it's your job to use the `event` object to update the component's state.
 
 In the code above, both the `h1` and `input` elements need be updated to reflect what the user has typed. In other words, the component's state needs to be updated. To do that, the `this.setState()` function is called with a `nextState` object. This function performs a *shallow* merge of the `nextState` object into the current `this.state` object. The resulting object is automatically reassigned back into `this.state` variable for you.
 
