@@ -35,7 +35,7 @@ React applications don't require many programming constructs. With React, there'
 
 React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date. It's a radically different approach to developing user interfaces for web applications.
 
-In the beginning, it can be hard to imagine how it all works. Imagine that components A, B, and C are arranged into the following hierarchy. If the state of component C changes from `Charizard` to `Bulbasaur`, React can update only the part of the DOM that these components represent.
+Imagine that components A, B, and C are arranged into the following hierarchy. If the state of component C changes from `Charizard` to `Bulbasaur`, React can update only the part of the DOM that the component represents. In this case, only the contents of the `<div id="C">` element is updated.
 
 ```text
           ┌─────────────┐                       <div id="A">
