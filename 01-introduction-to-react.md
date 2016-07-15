@@ -112,13 +112,13 @@ When it was released in March 2013, React's approach to user interface developme
 
 The following is a short list of [design principals](https://facebook.github.io/react/contributing/design-principles.html) that guide React's development of these powerful techniques.
 
-1. Though React embraces concepts that aren't fully mainstream, it's accessible to a wide range of developers with different skills and experience levels.
+- Though React embraces concepts that aren't fully mainstream, it's accessible to a wide range of developers with different skills and experience levels.
 
-1. React can be gradually adopted for small features instead of requiring the entire application to be rewritten.
+- React can be gradually adopted for small features instead of requiring the entire application to be rewritten.
 
-1. Well-designed React components can be composed together even if they're written by different people.
+- Well-designed React components can be composed together even if they're written by different people.
 
-1. When something goes wrong, React provides breadcrumbs to trace the mistake to the source of the problem.
+- When something goes wrong, React provides breadcrumbs to trace the mistake to the source of the problem.
 
 ### Exercise
 
