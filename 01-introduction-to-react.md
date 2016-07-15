@@ -230,7 +230,7 @@ The `specification` object *must* implement a `render()` function that returns a
 
 The reason why this is so important is because the `ReactDOM.render()` function will call a component's `render()` function when it's rendering the component hierarchy. If it isn't implemented correctly, React will complain loudly by throwing an error. Also note how different a component class is from a standard, object-oriented class. You *never* explicitly call `new` to instantiate it. Again, React does that for you inside the `ReactDOM.render()` function.
 
-The last thing to note is how `React.createElement()` only requires one argument—`type`. If there's no data or children to pass into an element, they can be omitted.
+The last thing to note is how `React.createElement()` only requires one argument—`type`—when creating a `ReactElement` based on the `Hello` component class. If there's no data or children to pass into an element, they can be omitted.
 
 ### Exercise
 
