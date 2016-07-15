@@ -438,7 +438,7 @@ Update your code with the above changes. Once everything is working, update your
 
 ## Summary
 
-In this chapter, you were exposed to the fundamentals of developing React applications. React is a JavaScript library for building user interfaces that embraces the following concepts.
+In this chapter, you were exposed to the fundamentals of developing React applications. React is a JavaScript library for building sophisticated user interfaces using the following concepts.
 
 1. A hierarchy of components that encapsulate presentation, state, and behavior.
 2. One-way data binding where only changes to state are immediately propagated to the user interface.
