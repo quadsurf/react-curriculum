@@ -116,7 +116,7 @@ The following is a short list of [design principals](https://facebook.github.io/
 
 - React can be gradually adopted for small features and doesn't require an entire application to be rewritten with it.
 
-- Well-designed React components can be composed together even if they're written by different people.
+- Well-designed React components can be composed together even if they're built by different people.
 
 - When something goes wrong, React provides breadcrumbs to trace the mistake to the source of the problem.
 
