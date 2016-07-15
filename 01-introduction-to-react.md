@@ -373,7 +373,12 @@ In the code above, both the `h1` and `input` elements need be updated to reflect
 
 After the merge, the component is also automatically re-rendered, updating the user interface. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState()` function.
 
-React thinks of components as simple **state machines**. By thinking of a component as being in various states, it's easy to keep your user interface consistent. In React, you simply update a component's state using the `this.setState()` function and it will render a new user interface based on this new state. React efficiently updates the DOM using a process called **reconciliation** which we'll study later.
+React thinks of components as simple state machines. The **state machine** is an object that:
+
+1. Can be in one of a finite number of states.
+1. Can transition from one state to another when an event is fired.
+
+By thinking of a component as being in one of a finite number of transitioning states, it's easy to keep your user interface consistent. In React, you simply transition a component's state using the `this.setState()` function and it'll render a new user interface based on this new state. React efficiently updates the DOM using a process called **reconciliation** which you'll study later.
 
 ### Exercise
 
