@@ -428,11 +428,9 @@ Now that our component class responds to user interface changes, let's expand it
 </script>
 ```
 
-The main difference in the above code example is that the `render()` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that `message` is *not* part of the component's state.
+The main difference in the above code example is that the `render()` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that the `message` string is *not* part of the component's state.
 
-A component's state should only contain data that its event handlers may change in order to trigger a user interface update. In real applications, this data tends to be very small. When building a stateful component, think about the minimal possible representation of its state and only store those values in the `this.state` object. Then, inside the `render()` function, simply compute any other information you need based on `this.state`.
-
-Don't worry about precomputing values based on state. Adding redundant and computed values into the `this.state` object means you'll have to write code that explicitly keeps everything synchronized. Instead, rely on the component to compute values inside the `render()` function and the user interface will remain consistent when the state changes.
+A well-designed component will store the least amount of information possible in its `this.state` object. Then, inside the `render()` function, it computes other necessary information for the user interface based on its `this.state`. Adding redundant, precomputed values into the `this.state` object means you'll have to write code that explicitly keeps everything synchronized. Instead, rely on the component to compute values inside the `render()` function and the user interface will remain consistent when the state changes.
 
 ### Exercise
 
