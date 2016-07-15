@@ -17,7 +17,7 @@ This chapter is a gentle introduction to the fundamental concepts of React.
 
 ## What's React?
 
-[React](https://facebook.github.io/react/index.html) is a JavaScript library for building sophisticated user interfaces for large, dynamic web applications. As you know, a sophisticated user interface can be hard to build and maintain. Facebook created React to try to make this process easier and faster. What's interesting about React is how different it is compared to other JavaScript solutions. In fact, React has the entire industry rethinking its approach to modern web development.
+[React](https://facebook.github.io/react/index.html) is a JavaScript library for building sophisticated user interfaces for large, dynamic web applications. As you know, a sophisticated user interface can be hard to build and maintain. Facebook created React to try to make this process easier and faster. What's interesting about React is how different it is compared to other JavaScript solutions. In fact, React has the entire industry rethinking how to approach user interface development.
 
 ### Components hierarchy
 
@@ -108,7 +108,19 @@ In your own words, write down what's similar and what's different about React an
 
 ## Why is React important?
 
-[INSERT EXPLANATION HERE]
+When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, as developers began to understand the power in these techniques, many client-side tools, including Angular, adopted component hierarchies and one-way data binding, making them ordinary and conventional.
+
+The following is a short list of [design principals](https://facebook.github.io/react/contributing/design-principles.html). that guide the development of React's most powerful techniques.
+
+1. Though React embraces concepts that aren't fully mainstream, it's accessible to a wide range of developers with different skills and experience levels.
+
+1. Well-designed React components can be composed together even if they're written by different people.
+
+1. React can be gradually adopted for small features instead of requiring the entire application to be rewritten.
+
+1. When something goes wrong, React provides breadcrumbs to trace the mistake to the source of the problem.
+
+1. React provides a single programming model for developing products on both web and mobile platforms.
 
 ## What does React code look like?
 
