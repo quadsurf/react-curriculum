@@ -363,9 +363,9 @@ With a user interface in place, let's make it dynamic by connecting the `input` 
 </script>
 ```
 
-Component classes can also define custom **event handlers**. Event handlers respond to events that are fired due to a user interacting with a DOM element. To respond to events fired from a `ReactElement`, simply assign an event handler (e.g. `this.handleChange`) to a camelcase event (e.g. `onChange`) in its `props` object. Then any time a user changes the element, the event is triggered and the event handler is invoked.
+Component classes can also define custom **event handlers**. Event handlers respond to events that are fired due to a user interacting with a DOM element. To respond to events fired from a `ReactElement`, simply assign an event handler (e.g. `this.handleChange`) to a camelcase event (e.g. `onChange`) in its `props` object. Then, any time a user changes the element, the event is triggered and the event handler is invoked.
 
-Here's an official list of the [supported events](https://facebook.github.io/react/docs/events.html#supported-events) in React.
+**NOTE:** Here's an official list of the [supported events](https://facebook.github.io/react/docs/events.html#supported-events) in React.
 
 When an event handler is invoked by React, an `event` object is passed in as the first argument. The `event` object contains all the relevant information about the event that was just fired. Because of one-way data binding, it's up to you to determine how to handle the event.
 
