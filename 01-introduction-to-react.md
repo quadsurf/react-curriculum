@@ -8,8 +8,7 @@ This chapter is a gentle introduction to the fundamental concepts of React.
 
 - Explain what React is.
 - Explain why React is important.
-- Build a React application with some guidance.
-- Build a React application on your own.
+- Build a user interface with React.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
@@ -124,7 +123,7 @@ The following is a short list of [design principals](https://facebook.github.io/
 
 Take a moment to write down why React is important. After about a minute, your instructor will cold call on the class and ask what was written down.
 
-## What does React code look like?
+## How do you build a user interface with React?
 
 Let's start by examining this simple React application.
 
