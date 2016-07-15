@@ -108,7 +108,7 @@ In your own words, write down what's similar and what's different about React an
 
 ## Why is React important?
 
-When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, as developers began to understand the power in these techniques, many client-side tools, including Angular, adopted component hierarchies and one-way data binding, making them ordinary and conventional.
+When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, developers have begun to understand the power in these techniques. As a result, many client-side tools, including Angular, have adopted component hierarchies and one-way data binding, making them ordinary and conventional.
 
 The following is a short list of [design principals](https://facebook.github.io/react/contributing/design-principles.html). that guide the development of React's most powerful techniques.
 
