@@ -176,7 +176,7 @@ Once loaded, the `React.createElement()` function is called with three arguments
 |----------|----------|-------------------|
 | `'h1'`   | `null`   | `'Hello world'`   |
 
-The `type` tells React what kind of element to create. Next come the `props`, which is data passed into an element. You can ignore that for now. And finally, the `child` adds some content to the element. The `React.createElement()` function returns a new `ReactElement` object which is then stored in the `element` variable. It's important to note that nothing has been added to the DOM yet.
+The `type` tells React what kind of element to create. Next come the `props`, which is data passed into an element. You can safely ignore `props` for now. And finally, the `child` adds some content to the element. The `React.createElement()` function returns a new `ReactElement` object which is then stored in the `element` variable. It's important to note that nothing has been added to the DOM yet.
 
 Then comes the `document.getElementById()` function. You're probably familiar with how it searches the DOM for an existing element with a specific `id` attribute and returns it. The `DOMElement` is then stored in the `container` variable. Still, nothing has been added to the DOM.
 
