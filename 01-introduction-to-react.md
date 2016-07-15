@@ -104,23 +104,25 @@ However, changes made to the user interface are *not* automatically propagated t
 
 ### Exercise
 
-In your own words, write down what's similar and what's different about React and Angular.
+Turn to your partner and, in your own words, explain what React is and how it's similar as well as different than Angular. It may be helpful to draw a few diagrams together to illustrate your thoughts.
 
 ## Why is React important?
 
-When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, developers have begun to understand the power in these techniques. As a result, many client-side tools, including Angular, have adopted component hierarchies and one-way data binding, making them ordinary and conventional.
+When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, developers have begun to understand the power in these techniques. And as a result, many client-side tools, including Angular, are adopting component hierarchies and one-way data binding too, making them ordinary and conventional.
 
-The following is a short list of [design principals](https://facebook.github.io/react/contributing/design-principles.html). that guide the development of React's most powerful techniques.
+The following is a short list of [design principals](https://facebook.github.io/react/contributing/design-principles.html) that guide React's development of these powerful techniques.
 
 1. Though React embraces concepts that aren't fully mainstream, it's accessible to a wide range of developers with different skills and experience levels.
 
-1. Well-designed React components can be composed together even if they're written by different people.
-
 1. React can be gradually adopted for small features instead of requiring the entire application to be rewritten.
+
+1. Well-designed React components can be composed together even if they're written by different people.
 
 1. When something goes wrong, React provides breadcrumbs to trace the mistake to the source of the problem.
 
-1. React provides a single programming model for developing products on both web and mobile platforms.
+### Exercise
+
+Take a moment to write down why React is important. After about a minute, your instructor will cold call on the class and ask what was written down.
 
 ## What does React code look like?
 
