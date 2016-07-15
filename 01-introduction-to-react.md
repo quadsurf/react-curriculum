@@ -277,7 +277,7 @@ Update your code with the above changes. Once everything is working, update your
 
 ## Component hierarchy
 
-Now that our component class has state, let's provide a dynamic user interface to change that state. To start off, we'll need to add elements to our component hierarchy.
+Now that our component class has state, let's provide a user interface to change that state. To start off, we'll need to add elements to our component hierarchy.
 
 `hello.html`
 ```html
@@ -329,7 +329,7 @@ Now update your notes with what you just learned.
 
 ## One-way data binding
 
-With a dynamic user interface in place, let's connect it to the state inside our component class. Remember, React's one-way data bindings prevent changes made to the user interface from automatically propagating to the state. We'll have to write this code ourselves.
+With a user interface in place, let's make it dynamic by connecting the `input` element to the state inside our component class. Remember, React's one-way data bindings prevent changes made to the user interface from automatically propagating to the state. We'll have to manually propagate user interface changes to the state by writing this code ourselves.
 
 `hello.html`
 ```html
