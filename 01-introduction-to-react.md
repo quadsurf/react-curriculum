@@ -453,14 +453,15 @@ Make sure your app is case insensitive when it comes to city names. In other wor
 
 **HINT:** It's perfectly fine if the initial value of state properties, like `this.state.who`, start out as an empty String `""`.
 
-## References
+## Resources
 
-* [React Docs - Top Level API](https://facebook.github.io/react/docs/top-level-api.html)
-* [React Docs - Component API](https://facebook.github.io/react/docs/component-api.html)
-* [React Docs - Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
-* [React Docs - Tags and Attributes](https://facebook.github.io/react/docs/tags-and-attributes.html)
-* [React Docs - Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
-* [React Docs - Event System](https://facebook.github.io/react/docs/events.html)
-* [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
+- [React Docs - Design Principles](https://facebook.github.io/react/contributing/design-principles.html)
+- [React Docs - Top Level API](https://facebook.github.io/react/docs/top-level-api.html)
+- [React Docs - Component API](https://facebook.github.io/react/docs/component-api.html)
+- [React Docs - Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
+- [React Docs - Tags and Attributes](https://facebook.github.io/react/docs/tags-and-attributes.html)
+- [React Docs - Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
+- [React Docs - Event System](https://facebook.github.io/react/docs/events.html)
+- [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
 
 #### [Table of Contents](README.md#table-of-contents) | [Next ⇒](02-react-jsx.md)
