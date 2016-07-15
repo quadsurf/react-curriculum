@@ -230,7 +230,7 @@ The `specification` object *must* implement a `render()` function that returns a
 
 The reason why this is so important is because the `ReactDOM.render()` function will call a component's `render()` function when it's rendering the component hierarchy. If it isn't implemented correctly, React will complain loudly by throwing an error. Also note how different a component class is from a standard, object-oriented class. You *never* explicitly call `new` to instantiate it. Again, React does that for you inside the `ReactDOM.render()` function.
 
-The last thing to note is how `React.createElement()` only requires the `type` argument when creating a `ReactElement`. If there's no `props` or children to pass into an element, they can be omitted.
+The last thing to note is how `React.createElement()` only requires the `type` argument when creating a `ReactElement`. If there's no `props` or a `child` to pass into an element, they can be omitted.
 
 ### Exercise
 
@@ -306,7 +306,7 @@ Remember how the `React.createElement()` function accepts a `type`, some `props`
 
 In addition, an arbitrary number of children can be passed as arguments into the `React.createElement()` function. Just don't forget to pass something in for `type` and `props` first. Creating a hierarchy of `ReactElement` objects is how the `render()` function can return more than one element.
 
-**NOTE:** The order in which children are passed into the `React.createElement()` function is the order they'll be inserted into the DOM.
+**NOTE:** The order children are passed to the `React.createElement()` function is the order they'll be mounted into the DOM.
 
 As you can see from the above code, the `props` object is made up of key-value pairs that set the HTML attributes of the element. Any HTML attribute can be a key in `props` object so long as it's converted to camelcase. However, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
 
