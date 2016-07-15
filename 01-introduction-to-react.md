@@ -438,12 +438,10 @@ Update your code with the above changes. Once everything is working, update your
 
 ## Summary
 
-In this chapter, you were exposed to the fundamentals of developing React applications. While React is just a JavaScript library for building user interfaces, it's composed of two major concepts.
+In this chapter, you were exposed to the fundamentals of developing React applications. React is a JavaScript library for building user interfaces that embraces the following concepts.
 
-1. A components hierarchy that handles presentation, state, and behavior.
+1. A hierarchy of components that encapsulate presentation, state, and behavior.
 2. One-way data binding where only changes to state are immediately propagated to the user interface.
-
-These two concepts spawn a bunch more subconcepts like component classes, pure functions, mounting, event handlers, state machines, and more. To build your own React applications, you have to experience all the moving parts in this chapter. Speaking of which...
 
 ## Assignment
 
@@ -453,7 +451,7 @@ Write a React app that cheers your favorite city's sportsball team. For example:
 
 Make sure your app is case insensitive when it comes to city names. In other words, treat `SEATTLE`, `seattle`, `SeAtTlE`, etc. all that same.
 
-**HINT:** It's perfectly fine if the initial value of state properties, like `this.state.who`, start out as an empty String `""`.
+**HINT:** It's perfectly fine if the initial value of state properties, like `this.state.who`, start out as an empty string `""`.
 
 ## Resources
 
