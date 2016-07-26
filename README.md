@@ -15,6 +15,7 @@ The goal of this curriculum is to teach you how to build real-world React applic
 7. [Refs](07-refs.md)
 8. [Immutable Models](08-immutable-models.md)
 9. [Final Assignment](09-final-assignment.md)
+10. [Intermediate React](https://github.com/gschool/intermediate_react)
 
 ## How does this curriculum work?
 
