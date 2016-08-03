@@ -4,7 +4,7 @@
 
 This chapter is a gentle introduction to the fundamental concepts of React.
 
-### Objectives
+## Objectives
 
 - Explain what React is.
 - Explain why React is important.
@@ -33,25 +33,64 @@ React applications don't require many programming constructs. With React, there'
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date. It's a radically different approach to developing user interfaces for web applications.
+React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date.
 
-Imagine that components A, B, and C are arranged into the following hierarchy. If the state of component C changes from `Charizard` to `Bulbasaur`, React can update only the part of the DOM that the component represents. In this case, only the content of the `<div id="C">` element is updated. In a moment, you'll see a concrete example of how this works in code.
+For example, imagine the following component hierarchy...
 
 ```text
-          ┌─────────────┐                       <div id="A">
-          │             │                         <div id="B">Squirtle</div>  
-          │ Component A │                         <div id="C">Charizard</div>
-          │             │                       </div>
+          ┌─────────────┐
+          │             │
+          │  Component  │
+          │             │
           └─────────────┘
-                 │                              becomes
+                 │
        ┌─────────┴─────────┐
-       │                   │                    <div id="A">
-       ▼                   ▼                      <div id="B">Squirtle</div>  
-┌─────────────┐     ┏━━━━━━━━━━━━━┓               <div id="C">Bulbasaur</div>
-│             │     ┃             ┃             </div>
-│ Component B │     ┃ Component C ┃
+       │                   │
+       ▼                   ▼
+┌─────────────┐     ┌─────────────┐
+│             │     │             │
+│  Component  │     │  Component  │
+│  Bulbasaur  │     │  Charizard  │
+│             │     │             │
+└─────────────┘     └─────────────┘
+```
+
+Represents the following HTML.
+
+```html
+<div>
+  <div>Bulbasaur</div>  
+  <div>Charizard</div>
+</div>
+```
+
+If the component hierarchy is later changed to this...
+
+```text
+          ┌─────────────┐
+          │             │
+          │  Component  │
+          │             │
+          └─────────────┘
+                 │
+       ┌─────────┴─────────┐
+       │                   │
+       ▼                   ▼
+┌─────────────┐     ┏━━━━━━━━━━━━━┓
+│             │     ┃             ┃
+│  Component  │     ┃  Component  ┃
+│  Bulbasaur  │     ┃  Squirtle   ┃
 │             │     ┃             ┃
 └─────────────┘     ┗━━━━━━━━━━━━━┛
+```
+
+Then the HTML is changed to this.
+
+```html
+<div>
+  <div>Bulbasaur</div>  
+  <div>Squirtle</div>
+</div>
 ```
 
 Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of HTML. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
@@ -72,7 +111,7 @@ When an application uses **two-way** data binding:
 ┌─────────────────┐         ┌─────────────────┐
 │                 │         │                 │
 │                 │         │                 │
-│      State      │         │ User Interface  │
+│      State      │         │  User Interface │
 │                 │         │                 │
 │                 │         │                 │
 └─────────────────┘         └─────────────────┘
@@ -94,7 +133,7 @@ However, changes made to the user interface are *not* automatically propagated t
 ┌─────────────────┐         ┌─────────────────┐
 │                 │         │                 │
 │                 │         │                 │
-│      State      │         │ User Interface  │
+│      State      │         │  User Interface │
 │                 │         │                 │
 │                 │         │                 │
 └─────────────────┘         └─────────────────┘
@@ -109,7 +148,7 @@ Turn to your partner and, in your own words, explain what React is and how it's 
 
 ## Why is React important?
 
-When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, in that time, developers have begun to understand the power in these techniques. And as a result, many client-side tools, including Angular, are adopting component hierarchies and one-way data binding too, helping to make them ordinary and conventional.
+When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, developers have begun to understand the power in these techniques. And as a result, many client-side tools, including Angular, are adopting component hierarchies and one-way data binding too, helping to make them ordinary and conventional.
 
 The following is a short list of [design principals](https://facebook.github.io/react/contributing/design-principles.html) that guide React's approach to user interface development.
 
@@ -139,12 +178,12 @@ Let's start by examining this simple React application.
   <body>
     <div id="hello"></div>
 
-    <script src="https://fb.me/react-15.2.1.js"></script>
-    <script src="https://fb.me/react-dom-15.2.1.js"></script>
+    <script src="https://fb.me/react-15.3.0.js"></script>
+    <script src="https://fb.me/react-dom-15.3.0.js"></script>
 
     <script>
-      var element = React.createElement('h1', null, 'Hello world');
-      var container = document.getElementById('hello');
+      const element = React.createElement('h1', null, 'Hello world');
+      const container = document.getElementById('hello');
 
       ReactDOM.render(element, container);
     </script>
@@ -152,7 +191,7 @@ Let's start by examining this simple React application.
 </html>
 ```
 
-Open `hello.html` in your browser and, if you've typed everything correctly, you'll see the following.
+It produces the following user interface.
 
 ![Hello world](https://i.imgur.com/nKBW36S.png)
 
@@ -168,9 +207,9 @@ Type out the above code example *by hand* and then run it. No copy-and-paste che
 
 In your own words, write down how React works in as much detail as you can. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
 
-## How does React work?
+### How does React work?
 
-Most of the above code should look familiar. An empty `<div id="hello">` element is declared and inserted into the DOM. Then, the `react` and `react-dom` JavaScript libraries are loaded into the page.
+Most of the above code should look familiar. An empty `<div id="hello">` element is declared in the HTML and inserted into the DOM when the page loads. Then, the `react` and `react-dom` JavaScript libraries are loaded into the page.
 
 Once loaded, the `React.createElement()` function is called with three arguments—a `type`, some `props`, and a `child`.
 
@@ -178,9 +217,9 @@ Once loaded, the `React.createElement()` function is called with three arguments
 |----------|----------|-------------------|
 | `'h1'`   | `null`   | `'Hello world'`   |
 
-The `type` tells React what kind of element to create. Next come the `props`, which is data passed into an element. You can safely ignore `props` for now. And finally, the `child` adds some content to the element. The `React.createElement()` function returns a new `ReactElement` object which is then stored in the `element` variable. It's important to note that nothing has been added to the DOM yet.
+The `type` tells React what kind of element to create. Next come the `props`, which is data passed into an element. You can safely ignore `props` for now. And finally, the `child` adds some content to the element. The `React.createElement()` function returns a new `ReactElement` object which is then stored in the `element` variable. It's important to note that nothing from React has been added to the DOM yet.
 
-Then comes the `document.getElementById()` function. By now, you're familiar with how it searches the DOM for an existing element with a specific `id` attribute and returns it. The `DOMElement` is then stored in the `container` variable. Still, nothing has been added to the DOM.
+Then comes the `document.getElementById()` function. By now, you're familiar with how it searches the DOM for an existing element with a specific `id` attribute and returns it. The `DOMElement` is then stored in the `container` variable. Still, nothing from React has been added to the DOM.
 
 Finally, the `ReactDOM.render()` function is called with two arguments—a `ReactElement` and a `DOMElement`.
 
@@ -190,7 +229,7 @@ Finally, the `ReactDOM.render()` function is called with two arguments—a `Reac
 
 The `ReactDOM.render()` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM as the child of the `DOMElement`. The `ReactDOM.render()` function controls the contents of the `DOMElement`. Any existing content inside the `DOMElement` is replaced when the `ReactDOM.render()` function is invoked.
 
-**NOTE:** In a moment, you'll learn how React uses a reconciliation algorithm to efficiently update the contents of the `DOMElement`.
+**NOTE:** You'll learn how React uses a reconciliation algorithm to efficiently update the contents of the `DOMElement` later.
 
 To help learn how React works, the code example from above is extra explicit about the input and output of each React function. In a production application, the same code would be written like this.
 
@@ -207,16 +246,16 @@ To help learn how React works, the code example from above is extra explicit abo
 
 Update your code with the above changes. And if needed, update what you wrote earlier about how React works.
 
-## Component presentation
+### Component presentation
 
 Now that you've gotten some practice with the fundamentals, it's time to build a more interesting React application. You could use only `ReactElement` objects, but to really take advantage of React, you'll want to leverage components. Remember, a component is encapsulated code that handles presentation, state, and behavior.
 
-Let's start by moving the presentation logic of the previous code example into a custom component. The `React.createClass()` function will create and return a component class given a `specification` object.
+Let's start by moving the presentation logic of the previous code example into a custom component. The `React.createClass()` function accepts a `specification` object and returns a component class.
 
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     render: function() {
       return React.createElement('h1', null, 'Hello world');
     }
@@ -228,7 +267,7 @@ Let's start by moving the presentation logic of the previous code example into a
   );
 </script>
 ```
-The `specification` object *must* implement a `render()` function that returns a single `ReactElement`. This is so important, it bears repeating. The `specification` object given to the `React.createClass()` function **must** implement a `render()` function that returns a single `ReactElement`. Otherwise :boom:.
+The `specification` object *must* implement a `render()` function that returns a single `ReactElement`. This is so important, it bears repeating. The `specification` object given to the `React.createClass()` function **must** implement a `render()` function that returns a single `ReactElement`. Otherwise, the application will throw an error.
 
 The reason why this is so important is because the `ReactDOM.render()` function will call a component's `render()` function when it's rendering the component hierarchy. If it isn't implemented correctly, React will complain loudly by throwing an error. Also note how different a component class is from a standard, object-oriented class. You *never* explicitly call `new` to instantiate it. Again, React does that for you inside the `ReactDOM.render()` function.
 
@@ -238,14 +277,14 @@ The last thing to note is how `React.createElement()` only requires the `type` a
 
 Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
-## Component state
+### Component state
 
 Now that our component class has some presentation logic, let's spice it up by adding some state.
 
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
@@ -264,7 +303,7 @@ Now that our component class has some presentation logic, let's spice it up by a
 
 Component classes can also define a `getInitialState()` function. It's invoked once, and only once, right before the component is **mounted** or inserted into the DOM. The function's return value is used as the initial value of `this.state`.
 
-After the component is mounted, React will invoke the `render()` function which should be implemented as a **pure function**. In other words, it should:
+After the `getInitialState()` function is invoked, React will invoke the `render()` function which should be implemented as a **pure function**. In other words, it should:
 
 1. Return the same `ReactElement` given the same component state.
 2. Not modify the component's state.
@@ -277,14 +316,14 @@ React provides other places where you can modify state or interact with the brow
 
 Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
-## Component hierarchy
+### Component hierarchy
 
 Now that our component class has state, let's provide a user interface to change that state. To start off, we'll need to add elements to our component hierarchy.
 
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
@@ -308,9 +347,9 @@ Remember how the `React.createElement()` function accepts a `type`, some `props`
 
 In addition, an arbitrary number of children can be passed as arguments into the `React.createElement()` function. Just don't forget to pass something in for `type` and `props` first. Creating a hierarchy of `ReactElement` objects is how the `render()` function can return more than one element.
 
-**NOTE:** The order children are passed to the `React.createElement()` function is the order they'll be mounted into the DOM.
+**NOTE:** The order children are passed into the `React.createElement()` function is the order they'll be mounted.
 
-As you can see from the above code, the `props` object is made up of key-value pairs that set the HTML attributes of the element. Any HTML attribute can be a key in `props` object so long as it's converted to camelcase. However, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
+As you can see from the above code, the `props` object is made up of key-value pairs that set the HTML attributes of the element. Any HTML attribute can be a key in the `props` object so long as it's converted to camelcase. However, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
 
 **NOTE:** Here's an official list of the [supported HTML tags and attributes](https://facebook.github.io/react/docs/tags-and-attributes.html) in React.
 
@@ -329,20 +368,20 @@ Update your code with the above changes and run the code. Once everything is wor
 
 Now update your notes with what you just learned.
 
-## One-way data binding
+### One-way data binding
 
 With a user interface in place, let's make it dynamic by connecting the `input` element to the state inside our component class. Remember, React's one-way data bindings prevent changes made to the user interface from automatically propagating to the state. We'll have to manually propagate user interface changes to the state by writing this code ourselves.
 
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
 
     handleChange: function(event) {
-      var nextState = { who: event.target.value };
+      const nextState = { who: event.target.value };
       this.setState(nextState);
     },
 
@@ -375,36 +414,36 @@ In the code above, both the `h1` and `input` elements need be updated to reflect
 
 After the merge, the component is also automatically re-rendered, updating the user interface. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState()` function.
 
-React thinks of components as simple state machines. The **state machine** is an object that:
+React thinks of components as simple state machines. A **state machine** is an object that:
 
 1. Can be in one of a finite number of states.
 1. Can transition from one state to another when an event is fired.
 
-By thinking of a component as being in one of a finite number of transitioning states, it's easy to keep your user interface consistent. In React, you simply transition a component's state using the `this.setState()` function and it'll render a new user interface based on this new state. React efficiently updates the DOM using a process called **reconciliation** which you'll study later.
+By thinking of a component as being in one of a finite number of transitioning states, it's easy to keep your user interface consistent. In React, you simply transition a component's state using the `this.setState()` function and it'll render a new user interface based on this new state. React efficiently changes only the parts of the DOM that need updating using a process called **reconciliation**, which you'll study later.
 
 ### Exercise
 
 Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
-## Component behavior
+### Component behavior
 
 Now that our component class responds to user interface changes, let's expand its behavior so it's more interesting.
 
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
 
     handleChange: function(event) {
-      var nextState = { who: event.target.value };
+      const nextState = { who: event.target.value };
       this.setState(nextState);
     },
 
     render: function() {
-      var message;
+      let message;
 
       if (this.state.who.trim() === '') {
         message = 'Hello?';
@@ -432,7 +471,7 @@ Now that our component class responds to user interface changes, let's expand it
 
 The main difference in the above code example is that the `render()` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that the `message` string is *not* part of the component's state.
 
-A well-designed component will store the least amount of information possible in its `this.state` object. Then, inside the `render()` function, it computes other necessary information for the user interface based on its `this.state`. Adding redundant, precomputed values into the `this.state` object means you'll have to write code that explicitly keeps everything synchronized.
+A well-designed component will store the least amount of information possible in its `this.state` object. Then, inside the `render()` function, it computes other necessary information for the user interface based on its `this.state`. Adding redundant, precomputed values into the `this.state` object means you'll have to write code that explicitly keeps everything synchronized.
 
 ### Exercise
 
