@@ -144,7 +144,7 @@ However, changes made to the user interface are *not* automatically propagated t
 
 ### Exercise
 
-Turn to your partner and, in your own words, explain what React is and how it's similar as well as different than Angular. It may be helpful to draw a few diagrams together to illustrate your thoughts.
+Turn to a neighbor and, in your own words, explain what React is and how it's similar as well as different than Angular. It may be helpful to draw a few diagrams together to illustrate your thoughts.
 
 ## Why is React important?
 
