@@ -7,6 +7,7 @@ const App = React.createClass({
 
   handleChange(event) {
     const nextState = { who: event.target.value };
+
     this.setState(nextState);
   },
 
