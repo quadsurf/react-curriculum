@@ -426,11 +426,11 @@ open http://localhost:8000/
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/300/Screen_Shot_2016-08-04_at_3.44.31_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/318/Screen_Shot_2016-08-05_at_12.35.13_PM.png)
 
 Assuming your default browser is Chrome, if you open the Chrome Developer Tools and click on the Sources tab, then you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/301/Screen_Shot_2016-08-04_at_3.52.40_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/320/Screen_Shot_2016-08-05_at_12.36.51_PM.png)
 
 Because Brunch automatically generated source map files, you can see, right from the browser, what the source code looked like before it was transpiled. Even better, when a runtime error is thrown, Chrome will associate the error with the correct line number of the original source file.
 
@@ -459,13 +459,13 @@ As you can see, Brunch automatically transpiled the `app.jsx` file and updated t
 
 Now, switch back to the browser and open the Console tab in the Chrome Developer Tools. You should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/303/Screen_Shot_2016-08-05_at_4.41.16_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/321/Screen_Shot_2016-08-05_at_12.37.53_PM.png)
 
 Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin. This plugin tells the browser to refresh the page each time Brunch builds the application. That way the code in Atom is always the same as the code in the browser. Neat!
 
 Additionally, notice the `ReferenceError` shown in the Console refers to line number 5 of the `app.jsx` file. Click on the error's link and you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/304/Screen_Shot_2016-08-05_at_4.43.48_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/322/Screen_Shot_2016-08-05_at_12.38.40_PM.png)
 
 As you can see, Chrome associated the thrown runtime error with the correct line number of the original source file. Awesome!
 
@@ -511,11 +511,11 @@ Save the file and switch back to the browser. Play around with the application a
 
 ## What are the React Developer Tools?
 
-The **React Developer Tools** are a [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) and [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) that allow you to inspect and debug a React user interface from within the browser's developer tools panel.
+The **React Developer Tools** are a [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) and [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) that allow you to inspect and debug a React user interface from within the browser's developer tools panel. More specifically, the tools give you, the developer, access to the underlying React component hierarchy that's used to create and update the browser's DOM hierarchy.
 
-Using the links above, install the React Developer Tools for each browser. Once it's installed, refresh the **Hello world** application in Chrome. Then, open its developer tools panel and click on the React tab. You should see something like this.
+The best way to understand what the React Developer Tools are capable of is to use them. So go ahead and install the tools for each browser using the links above. Once they're installed, refresh the **Hello world** application in Chrome. Then, open its developer tools panel and click on the React tab. You should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/306/Screen_Shot_2016-08-05_at_5.52.28_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/324/Screen_Shot_2016-08-05_at_1.37.28_PM.png)
 
 ### Exercise
 
@@ -523,7 +523,7 @@ Play around with the React Developer Tools and see what you can discover on your
 
 ## Why are the React Developer Tools important?
 
-The React Developer Tools are important because they explain how a React component hierarchy creates and updates the DOM hierarchy of a user interface. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
+The React Developer Tools are important because they give you access to the underlying React component hierarchy that's used to create and update the browser's DOM hierarchy. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/309/49A90B0A-DD99-4EE5-802E-1E540F3A7F38-570-0000CD51419DD036.gif)
 
@@ -537,7 +537,7 @@ Notice the colors of the collapsable triangles in the tree view. They provide e
 
 ### Exercise
 
-In the main React Developer Tools window, click the `<h1>` component and use the breadcrumbs bar on the bottom of the panel to inspect it, its parent component, and its grandparent component. Then use the search bar to find the `<input />` component by its name.
+In the main React Developer Tools window, click the `<h1>` component and use the breadcrumbs bar on the bottom of the panel to access it, its parent component, and its grandparent component. Then use the search bar to access the `<input />` component by its name.
 
 Finally, turn to a neighbor and, in your own words, explain why the React Developer Tools are important. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
