@@ -2,7 +2,7 @@
 
 # React Tools
 
-## Objectives
+### Objectives
 
 - Explain what React JSX is.
 - Explain why React JSX is important.
