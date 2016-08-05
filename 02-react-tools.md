@@ -490,8 +490,9 @@ const App = React.createClass({
 
     if (this.state.who.trim() === '') {
       message = 'Hello?';
-    } else {
-      message = 'Hello ' + this.state.who;
+    }
+    else {
+      message = `Hello ${this.state.who}`;
     }
 
     return <div>
