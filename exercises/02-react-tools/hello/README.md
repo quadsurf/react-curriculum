@@ -12,54 +12,66 @@ npm install -g brunch
 
 ## Usage
 
-Create a new application based on this Brunch skeleton and install its dependencies.
+Create a new React application based on this Brunch skeleton and install its dependencies.
 
 ```shell
-brunch new path/to/app -s ryansobol/with-react
+brunch new path/to/app --skeleton ryansobol/with-react
 ```
-
-Build the client-side application every time a file is changed. This also launches an HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
-
-```shell
-npm start
-```
-
-Open the application in your default browser.
-
-```shell
-open http://localhost:8000
-```
-
-## Learn
 
 The application's code lives in the `app` directory.
 
 ```shell
-ls app
+la app
 ```
 
 Static files are placed in the `app/assets` directory and are copied to the `public` directory on build.
 
 ```shell
-ls app/assets
+la app/assets
 ```
 
 React components are placed in the `app/components` directory and are combined into the `public/app.js` file on build.
 
 ```shell
-ls app/components
+la app/components
 ```
 
 CSS stylesheets are placed in the `app/styles` directory and are combined into the `public/app.css` file on build.
 
 ```shell
-ls app/styles
+la app/styles
 ```
 
-On each build, the client-side application files are saved to the `public` directory and served by the HTTP server.
+On each build, the application's files are saved to the `public` directory and served by the HTTP server.
 
 ```shell
-ls public
+la public
+```
+
+To watch the project for changes and launch an HTTP server, start the build tool.
+
+**NOTE:** Press `Ctrl + C` to quit Brunch.
+
+```shell
+npm start
+```
+
+In a new Terminal tab, navigate back the the project directory.
+
+```shell
+cd path/to/app
+```
+
+Take a look at the `public` directory to see what Brunch created.
+
+```shell
+la public
+```
+
+Open the application in your default browser.
+
+```shell
+open http://localhost:8000/
 ```
 
 ## Resources
