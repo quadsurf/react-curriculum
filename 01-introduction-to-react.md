@@ -1,4 +1,4 @@
-#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](02-react-jsx.md)
+#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](02-react-tools.md)
 
 # Introduction to React
 
@@ -505,4 +505,4 @@ Make sure your app is case insensitive when it comes to city names. In other wor
 - [React Docs - Event System](https://facebook.github.io/react/docs/events.html)
 - [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
 
-#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](02-react-jsx.md)
+#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](02-react-tools.md)

@@ -1,6 +1,6 @@
 #### [⇐ Previous](06-component-life-cycle.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](08-immutable-models.md)
 
-# Refs 
+# Refs
 
 ## Objectives
 
@@ -109,7 +109,7 @@ Since we're going to be building larger applications, let's build an example ste
     ```
 
     2. Our App Component should have an initialState with the keys and values of:
-    
+
     ```js
     {
       val: "",

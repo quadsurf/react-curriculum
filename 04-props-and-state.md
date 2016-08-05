@@ -1,4 +1,4 @@
-#### [⇐ Previous](04-synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](06-component-life-cycle.md)
+#### [⇐ Previous](03-synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-component-life-cycle.md)
 
 # Props and State
 
@@ -277,4 +277,4 @@ When you're finished with the assignment above, enhance your `Books` and `Book` 
 * [React docs - Component Life Cycle](https://facebook.github.io/react/docs/component-specs.html)
 * [React docs - Multiple Components](https://facebook.github.io/react/docs/multiple-components.html)
 
-#### [⇐ Previous](04-synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](06-component-life-cycle.md)
+#### [⇐ Previous](03-synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-component-life-cycle.md)

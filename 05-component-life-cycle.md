@@ -1,4 +1,4 @@
-#### [⇐ Previous](05-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-refs.md)
+#### [⇐ Previous](04-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](06-refs.md)
 
 # Component Life Cycle
 
@@ -57,27 +57,27 @@ You can see these methods in action with this example:
           text: ""
         }
       },
-      
+
       componentWillMount: function(){
         console.log('WILL MOUNT JUST RAN!')
       },
-      
+
       componentDidMount: function(){
         console.log('DID MOUNT JUST RAN!')
       },
-      
+
       componentWillUnmount: function(){
         console.log('WILL UNMOUNT JUST RAN!')
       },
-      
+
       handleChange: function(e) {
         this.setState({text: e.target.value});
       },
-      
+
       remove: function(){
         ReactDOM.unmountComponentAtNode(document.getElementById('container'))
       },
-      
+
       render: function() {
         return (
           <div>
@@ -149,4 +149,4 @@ Modify the previous mounting/unmounting example in the following ways:
 [https://gist.github.com/fay-jai/fc8a5093c0b5124d4b2d#file-react-lifecycle-parent-child-jsx](https://gist.github.com/fay-jai/fc8a5093c0b5124d4b2d#file-react-lifecycle-parent-child-jsx)
 [http://tylermcginnis.com/an-introduction-to-life-cycle-events-in-react-js/](http://tylermcginnis.com/an-introduction-to-life-cycle-events-in-react-js/)
 
-#### [⇐ Previous](05-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-refs.md)
+#### [⇐ Previous](04-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](06-refs.md)

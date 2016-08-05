@@ -1,4 +1,4 @@
-#### [⇐ Previous](03-react-developer-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-props-and-state.md)
+#### [⇐ Previous](02-react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-props-and-state.md)
 
 # Synthetic Events
 
@@ -763,4 +763,4 @@ More specifically, your `Calculator` component also needs to:
 * [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
 * [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
 
-#### [⇐ Previous](03-react-developer-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-props-and-state.md)
+#### [⇐ Previous](02-react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-props-and-state.md)
