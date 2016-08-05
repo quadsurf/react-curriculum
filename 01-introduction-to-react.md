@@ -2,9 +2,7 @@
 
 # Introduction to React
 
-This chapter is a gentle introduction to the fundamental concepts of React.
-
-## Objectives
+### Objectives
 
 - Explain what React is.
 - Explain why React is important.
