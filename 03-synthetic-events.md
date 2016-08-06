@@ -2,13 +2,19 @@
 
 # Synthetic Events
 
-Now that you've gotten some practice with React JSX and the React Developer Tools, let's learn how to make our React applications more interactive. In this chapter, you'll learn what synthetic events are, why they're important, and how to use them. By the end, you'll have written a bunch of React applications that handle a variety of user interactions.
+### Objectives
+
+- Explain what a synthetic event is
+- Explain why a synthetic event is important.
+- Use synthetic events to build interactive React applications.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
 | TBD                  | About 10.5 hours    |
 
 ## What's a synthetic event and why is it important?
+
+Now that you've gotten some practice with React JSX and the React Developer Tools, let's learn how to make our React applications more interactive.
 
 A **synthetic event** is a cross-browser wrapper around a browser's native event. In React, event handlers are passed a [`SyntheticEvent`](https://facebook.github.io/react/docs/events.html) object to their first parameter.
 
@@ -18,7 +24,7 @@ handleChange: function(event) {
 }
 ```
 
-A `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object and an `event.preventDefault()` function. The only difference is that the properties of a synthetic event work *identically* across all browsers including IE8 and above. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point. In this chapter, we're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.
+A `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object and an `event.preventDefault()` function. The only difference is that the properties of a synthetic event work *identically* across all browsers including IE9 and above. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point. In this chapter, we're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.
 
 **NOTE:** In the vast majority of cases, you won't need the underlying native event object. But if for some reason you ever do, you can access it via the `event.nativeEvent` property.
 
@@ -114,7 +120,7 @@ React [supports a ton of synthetic events](https://facebook.github.io/react/docs
 
 Type out the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste!
 
-**NOTE:** The surrounding HTML structure has been omitted on purpose. From here on out, you're responsible for implementing it.
+**NOTE:** The surrounding HTML structure has been omitted on purpose. From here on out, you're responsible for implementing it.
 
 ## Form events
 
@@ -282,7 +288,7 @@ ReactDOM.render(
 );
 ```
 
-### Radio input
+### Radio input
 
 When a user clicks an `<input type="radio" />` component, the `onChange` event will fire. In HTML, you manage groups of radio elements using a shared value for the `name` attribute. In React, you manage groups with one-way data bindings instead. You'll need to register an `onChange` event handler to share control over the component's `checked` prop with your users.
 
@@ -680,79 +686,9 @@ ReactDOM.render(
 
 In this chapter, you learned how to make React applications more interactive. Specifically, you'll learned how React's synthetic event system works identically across all browsers. You also learned how to handle synthetic events and how to leverage their properties in a variety of common use cases. Believe it or not, but this chapter only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React.
 
-## Assignment: Colored Box
+## Assignment
 
-Make a react component that has a div on the page and an input.  The value of the input should be the background color of the div.  The user should be able to change the background color by changing the value in the input field.  Also, if the user presses shift while using the input box, a random color is generated.  Here is a starter html template to use:
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href="/box.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <div id="container"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
-    <script src="https://fb.me/react-15.2.1.js"></script>
-    <script src="https://fb.me/react-dom-15.2.1.js"></script>
-    <script type="text/babel" src="/box.jsx">
-  </body>
-</html>
-```
-
-And here is a css file to start with:
-
-```css
-.random-box {
-  width: 90%;
-  height: 500px;
-  margin: 0 auto;
-}
-```
-
-## Assignment: Calculator Part 1
-
-Using [this template](assignments/04-synthetic-events/calculator.html), create a `Calculator` React component that looks and behaves like this.
-
-![Calculator Part 1](http://i.imgur.com/58S88rS.gif)
-
-The `Calcuator` component only needs to solves math expressions with a single operator. But it does need to work with both positive and negative operands. (e.g. `1+2`, `-3*4`, `5/-6`, etc.)
-
-More specifically, your `Calculator` component needs to:
-
-* Display a blank screen when its first rendered.
-* Respond to operand or operator button clicks by adding its content to the screen.
-* Respond to equal button clicks by evaluating the screen's math expression.
-  * Match the math expression with the regular expression from below.
-  * If the expressions don't match, update the screen with the word `Error`.
-  * If the expressions do match, calculate the result and update the screen.
-* Ignore operand, operator, and equal button clicks when the screen displays `Error`.
-* Respond to cancel button clicks by clearing the screen.
-
-**HINT 1:** To make it easier for you to focus on handling events, you can use the [`String.prototype.match()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) function with the following regular expression: `/^(\-?\d+)(x|\/|\+|\-)(\-?\d+)$/`. For example, matching the math expression `-1+2` to the regular expression works like this.
-
-```js
-var matches = '-1+2'.match(/^(\-?\d+)(x|\/|\+|\-)(\-?\d+)$/);
-console.log(matches);  // ["-1+2", "-1", "+", "2"]
-```
-
-The `String.prototype.match()` function returns `null` when the math and regular expressions don't match.
-
-**HINT 2:** In this assignment, the `<input id="screen" />` is read-only because...
-
-## Assignment: Calculator Part 2
-
-When you're finished with the assignment above, enhance your `Calcuator` component so users can input a math expression from their keyboard like this.
-
-![Calculator Part 2](https://dl.dropboxusercontent.com/s/ay2rewk4bo0c3u7/6EBAFE26-B5E9-456F-8EB9-B86EB574CB7D-40520-000215706B37064A.gif?dl=0)
-
-More specifically, your `Calculator` component also needs to:
-
-* Respond to changes in the screen's value.
-* Respond to Enter key presses by evaluating the screen's math expression.
-* Respond to Escape key presses by clearing the screen.
+- [React Calculator](https://github.com/gSchool/wd-react-calculator)
 
 ## References
 
@@ -762,5 +698,3 @@ More specifically, your `Calculator` component also needs to:
 * [QuirksMode - Event ordering](http://www.quirksmode.org/js/events_order.html)
 * [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
 * [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
-
-#### [⇐ Previous](02-react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-props-and-state.md)
