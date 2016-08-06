@@ -25,17 +25,27 @@ const App = React.createClass({
 
       <div>
         {"I'm read-only, am under React's control, but raise a warning."}
-        <input checked={true} type="checkbox" />
+        <input
+          checked={true}
+          type="checkbox"
+        />
       </div>
 
       <div>
         {"I'm changeable but am not under React's control."}
-        <input defaultChecked={true} type="checkbox" />
+        <input
+          defaultChecked={true}
+          type="checkbox"
+         />
       </div>
 
       <div>
         {"I'm read-only and under React's control."}
-        <input checked={true} readOnly="true" type="checkbox" />
+        <input
+          checked={true}
+          readOnly="true"
+          type="checkbox"
+        />
       </div>
     </div>;
   }

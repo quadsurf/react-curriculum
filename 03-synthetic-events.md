@@ -458,17 +458,27 @@ const App = React.createClass({
 
       <div>
         {"I'm read-only, am under React's control, but raise a warning."}
-        <input checked={true} type="checkbox" />
+        <input
+          checked={true}
+          type="checkbox"
+        />
       </div>
 
       <div>
         {"I'm changeable but am not under React's control."}
-        <input defaultChecked={true} type="checkbox" />
+        <input
+          defaultChecked={true}
+          type="checkbox"
+         />
       </div>
 
       <div>
         {"I'm read-only and under React's control."}
-        <input checked={true} readOnly="true" type="checkbox" />
+        <input
+          checked={true}
+          readOnly="true"
+          type="checkbox"
+        />
       </div>
     </div>;
   }
@@ -548,14 +558,34 @@ const App = React.createClass({
 
       <div>
         {"We're read-only, are under React's control, but raise a warning."}
-        <input checked={true} name="1" type="radio" value="yes" />
-        <input checked={false} name="1" type="radio" value="no" />
+        <input
+          checked={true}
+          name="1"
+          type="radio"
+          value="yes"
+        />
+        <input
+          checked={false}
+          name="1"
+          type="radio"
+          value="no"
+        />
       </div>
 
       <div>
         {"We're changeable but are not under React's control."}
-        <input defaultChecked={true} name="2" type="radio" value="yes" />
-        <input defaultChecked={false} name="2" type="radio" value="no" />
+        <input
+          defaultChecked={true}
+          name="2"
+          type="radio"
+          value="yes"
+        />
+        <input
+          defaultChecked={false}
+          name="2"
+          type="radio"
+          value="no"
+        />
       </div>
 
       <div>
@@ -1093,6 +1123,5 @@ In this chapter, you learned how to build sophisticated React user interfaces. S
 - [QuirksMode - Event ordering](http://www.quirksmode.org/js/events_order.html)
 - [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
 - [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
-
 
 #### [⇐ Previous](02-react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-props-and-state.md)

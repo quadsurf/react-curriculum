@@ -32,14 +32,34 @@ const App = React.createClass({
 
       <div>
         {"We're read-only, are under React's control, but raise a warning."}
-        <input checked={true} name="1" type="radio" value="yes" />
-        <input checked={false} name="1" type="radio" value="no" />
+        <input
+          checked={true}
+          name="1"
+          type="radio"
+          value="yes"
+        />
+        <input
+          checked={false}
+          name="1"
+          type="radio"
+          value="no"
+        />
       </div>
 
       <div>
         {"We're changeable but are not under React's control."}
-        <input defaultChecked={true} name="2" type="radio" value="yes" />
-        <input defaultChecked={false} name="2" type="radio" value="no" />
+        <input
+          defaultChecked={true}
+          name="2"
+          type="radio"
+          value="yes"
+        />
+        <input
+          defaultChecked={false}
+          name="2"
+          type="radio"
+          value="no"
+        />
       </div>
 
       <div>
