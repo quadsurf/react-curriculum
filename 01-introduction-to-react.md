@@ -487,13 +487,7 @@ In this chapter, you were exposed to the fundamentals of developing React applic
 
 ## Assignment
 
-Write a React app that cheers your favorite city's sportsball team. For example:
-
-![City](https://dl.dropboxusercontent.com/s/w41k7wj1kqqs1in/B89A9A25-D4C8-453D-9398-BB694AA72781-40520-0001E846DB7513FF.gif?dl=0)
-
-Make sure your app is case insensitive when it comes to city names. In other words, treat `SEATTLE`, `seattle`, `SeAtTlE`, etc. all that same.
-
-**HINT:** It's perfectly fine if the initial value of state properties, like `this.state.who`, start out as an empty string `""`.
+- [Sports Ball with React](https://github.com/gSchool/wd-react-sports-ball/blob/master/sports_ball_with_react.md)
 
 ## Resources
 

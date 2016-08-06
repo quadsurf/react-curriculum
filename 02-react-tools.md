@@ -603,35 +603,7 @@ In this chapter, you were exposed to the fundamentals of React JSX, an HTML-like
 
 ## Assignment
 
-Remember the **sportsball team** assignment from the previous chapter? Since you're such a wizard at React JSX now, you should be able to refactor that application no problem. Give it go and ask questions if you get stuck.
-
-After you're done refactoring it, go ahead and add some additional functionality to the application. Start by using the techniques outlined in this chapter. Feel free to augment or completely change the application any way you want.
-
-As a reminder, here's a list of the new topics covered in this chapter.
-
-- Anchor tags
-- Image tags
-- List tags
-- CSS classes
-- Inline CSS styles
-- Attribute expressions
-- Child expressions
-
-However, feel free to use any of the [supported tags and attributes](https://facebook.github.io/react/docs/tags-and-attributes.html) in React. And for an even more advanced challenge, see if you can split your application into multiple component classes and try your hand at nested components.
-
-## Bonus
-
-Using your preferred ESLint rules, lint your project with the `npm run lint .` command.
-
-## Bonus
-
-If you haven't already, inspect and debug your **sportball team** solution from using the React Developer Tools. Make sure you understand the application's component hierarchy and its state.
-
-Then visit [Codecademy's landing page](https://www.codecademy.com/) and, using the React Developer Tools, see what changes can you make to this application's props and state values that'll cause the browser window to render a different DOM hierarchy.
-
-Then, log into your [Facebook](https://www.facebook.com/) account, if you have one, and see if you can figure out which component hierarchies are being reused on the timeline.
-
-Finally, [pick another React application](https://github.com/facebook/react/wiki/Sites-Using-React) and see what else you can uncover with your new x-ray vision.
+- [Sports Ball with React Tools](https://github.com/gSchool/wd-react-sports-ball/blob/master/sports_ball_with_react_tools.md)
 
 ## Resources
 
