@@ -599,7 +599,7 @@ In the React Developer Tools, both components are named `<App />` because their 
 
 ## Summary
 
-In this chapter, you were exposed to the fundamentals of React JSX, an HTML-like syntax for creating `ReactElement` objects. You practiced writing React JSX and transpiling it into JavaScript with a transpiler and a build tool. Additionally, you were exposed to the fundamentals of the React Developer Tools. You also practiced inspecting and debugging user interfaces written in React JSX. At this point, you're ready to write sophisticated React applications.
+In this chapter, you were exposed to the fundamentals of React JSX, an HTML-like syntax for creating `ReactElement` objects. You practiced writing React JSX and transpiling it into JavaScript with a transpiler and a build tool. Additionally, you were exposed to the fundamentals of the React Developer Tools. You also practiced inspecting and debugging user interfaces written in React JSX. At this point, you're ready to write sophisticated React user interfaces.
 
 ## Assignment
 
