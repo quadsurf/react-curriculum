@@ -51,7 +51,7 @@ A **transpiler** is a special type of compiler. Given the source code of one pro
 ┌──────────────── TypeScript ────────────────┐                  ┌──────────────── JavaScript ────────────────┐
 │                                            │                  │                                            │
 │ function greeter(person: string) {         │                  │ function greeter(person) {                 │
-│   return 'Hello, ' + person.toUpperCase(); │                  │   return 'Hello, ' + person.toUpperCase(); │
+│   return `Hello, ${person.toUpperCase()}`; │                  │   return `Hello, ${person.toUpperCase()}`; │
 │ }                                          │─── transpile ───▶│ }                                          │
 │                                            │                  │                                            │
 │ greeter('Jane');                           │                  │ greeter('Jane');                           │
