@@ -90,9 +90,9 @@ Turn to a neighbor and, in your own words, explain what React JSX is as well as 
 
 ## Why use React JSX?
 
-Simply put, JSX makes building React applications easier. But everyone has their own workflow, so JSX is not required to use React. However, we recommend using React JSX because of its concise and familiar syntax. Plus, it's a very small amount of syntax to learn. If you're not immediately sold on React JSX, that's fine, but [give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes).
+Simply put, JSX makes building React user interfaces easier. But everyone has their own workflow, so JSX is not required to use React. However, we recommend using React JSX because of its concise and familiar syntax. Plus, it's a very small amount of syntax to learn. If you're not immediately sold on React JSX, that's fine, but [give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes).
 
-You'll find that a React application written in JSX is a better way to separate concerns than the traditional division of presentation and behavior. That's because:
+You'll find that a React user interface written in JSX is a better way to separate concerns than the traditional division of presentation and behavior. That's because:
 
 1. Presentation and behavior are intimately tied together, so why keep them in separate HTML and JavaScript files.
 2. Dedicated template languages tend to be inadequate when implementing a complex user interface.
@@ -338,7 +338,7 @@ const element = <div>
 
 ### Building a React JSX user interface
 
-Let's build a React JSX user interface by refactoring the **Hello world** React application from the previous article into JSX.
+Let's build a React JSX user interface by refactoring the **Hello world** React user interface from the previous article into JSX.
 
 Unfortunately, you can't serve React JSX to a browser and expect it to parse or execute the code. Instead, you'll need the help of a build tool. A **build tool** is a program that automates the creation of a functioning application from source code. In this case, you'll use a build tool to transpile React JSX code into functioning JavaScript code before it's sent to a browser.
 
@@ -509,13 +509,13 @@ const App = React.createClass({
 export default App;
 ```
 
-Save the file and switch back to the browser. Play around with the application and, once everything is working, pat yourself on back. You've just written your first React JSX user interface!
+Save the file and switch back to the browser. Play around with the user interface and, once everything is working, pat yourself on back. You've just written your first React JSX user interface!
 
 ## What are the React Developer Tools?
 
 The **React Developer Tools** are a [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) and [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) that allow you to inspect and debug a React user interface from within the browser's developer tools panel. More specifically, the tools give you, the developer, access to the underlying React component hierarchy that's used to create and update the browser's DOM hierarchy.
 
-The best way to understand what the React Developer Tools are capable of is to use them. So go ahead and install the tools for each browser using the links above. Once they're installed, refresh the **Hello world** application in Chrome. Then, open its developer tools panel and click on the React tab. You should see something like this.
+The best way to understand what the React Developer Tools are capable of is to use them. So go ahead and install the tools for each browser using the links above. Once they're installed, refresh the **Hello world** user interface in Chrome. Then, open its developer tools panel and click on the React tab. You should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/324/Screen_Shot_2016-08-05_at_1.37.28_PM.png)
 
@@ -551,7 +551,7 @@ By selecting a component in the tree view, you can inspect and debug its current
 
 **NOTE:** Not every change to a props or state value will result in an update to the DOM hierarchy. When it comes to component classes, it depends on the `ReactElement` object that's returned from its `render()` function.
 
-With the React Developers Tools, you can finally see that a **component** is an instance of either a React component class or an HTML tag. And, a component hierarchy is made up of a root component with possible children, grandchildren, etc. You can confirm this by rendering a second component hierarchy for the **Hello world** application using the same root component class. Start by adding another application container to the `app/assets/index.html` file.
+With the React Developers Tools, you can finally see that a **component** is an instance of either a React component class or an HTML tag. And, a component hierarchy is made up of a root component with possible children, grandchildren, etc. You can confirm this by rendering a second component hierarchy for the **Hello world** user interface using the same root component class. Start by adding another user interface container to the `app/assets/index.html` file.
 
 ```html
 <!DOCTYPE html>
@@ -591,7 +591,7 @@ ReactDOM.render(
 );
 ```
 
-Switch back to the browser and voilà! Now, the application now has two distinct and isolated component hierarchies.
+Switch back to the browser and voilà! Now, the user interface now has two distinct and isolated component hierarchies.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/315/FD5CCC3E-152C-4CC4-932C-256EF93E1FC3-570-0000D28E7B9AEFEA.gif)
 
@@ -599,7 +599,7 @@ In the React Developer Tools, both components are named `<App />` because their 
 
 ## Summary
 
-In this chapter, you were exposed to the fundamentals of React JSX, an HTML-like syntax for creating `ReactElement` objects. You practiced writing React JSX and transpiling it into JavaScript with a transpiler and a build tool. Additionally, you were exposed to the fundamentals of the React Developer Tools. You also practiced inspecting and debugging user interfaces written in React JSX. At this point, you're ready to write more sophisticated React applications.
+In this chapter, you were exposed to the fundamentals of React JSX, an HTML-like syntax for creating `ReactElement` objects. You practiced writing React JSX and transpiling it into JavaScript with a transpiler and a build tool. Additionally, you were exposed to the fundamentals of the React Developer Tools. You also practiced inspecting and debugging user interfaces written in React JSX. At this point, you're ready to write sophisticated React applications.
 
 ## Assignment
 
