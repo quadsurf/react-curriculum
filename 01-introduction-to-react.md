@@ -225,7 +225,7 @@ Finally, the `ReactDOM.render()` function is called with two arguments—a `Reac
 |----------------|---------------|
 | `element`      |   `container` |
 
-The `ReactDOM.render()` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM as the child of the `DOMElement`. The `ReactDOM.render()` function controls the contents of the `DOMElement`. Any existing content inside the `DOMElement` is replaced when the `ReactDOM.render()` function is invoked.
+The `ReactDOM.render()` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM hierarchy as the child of the `DOMElement`. The `ReactDOM.render()` function controls the contents of the `DOMElement`. Any existing content inside the `DOMElement` is replaced when the `ReactDOM.render()` function is invoked.
 
 **NOTE:** You'll learn how React uses a reconciliation algorithm to efficiently update the contents of the `DOMElement` later.
 
