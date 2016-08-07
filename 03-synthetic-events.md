@@ -243,7 +243,7 @@ The problem with this controlled component is that it renders a read-only elemen
 const element = <input onChange={this.handleChange} type="text" value={this.state.value} />;
 ```
 
-When a user changes the component's underlying element, its event handler is triggered. The handler can then update `this.state.value` and cause the component hierarchy to re-render the user interface. On most devices, this happens so fast that a user never perceives a delay. The next few sections demonstrate the difference between controlled and uncontrolled form components in greater detail.
+When a user changes the component's underlying element, its event handler is triggered. The handler can then update `this.state.value` with the `this.setState()` method. This causes the component hierarchy to re-render which updates the DOM hierarchy. On most devices, this happens so fast that a user never perceives a delay. The next few sections demonstrate the difference between controlled and uncontrolled form components in greater detail.
 
 ### Textfield
 
