@@ -31,7 +31,7 @@ React applications don't require many programming constructs. With React, there'
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date.
+React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the component hierarchy and update the DOM hierarchy as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date.
 
 For example, imagine the following component hierarchy...
 
@@ -53,7 +53,7 @@ For example, imagine the following component hierarchy...
 └─────────────┘     └─────────────┘
 ```
 
-Represents the following HTML.
+Represents the following DOM hierarchy.
 
 ```html
 <div>
@@ -82,7 +82,7 @@ If the component hierarchy is later changed to this...
 └─────────────┘     ┗━━━━━━━━━━━━━┛
 ```
 
-Then the HTML is changed to this.
+Then the DOM hierarchy is changed to this.
 
 ```html
 <div>
@@ -91,7 +91,7 @@ Then the HTML is changed to this.
 </div>
 ```
 
-Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of HTML. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
+Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of the DOM. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
 
 ### One-way data binding
 
