@@ -4,13 +4,13 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <div id="hello"></div>
+    <div id="app"></div>
 
     <script src="https://fb.me/react-15.3.0.js"></script>
     <script src="https://fb.me/react-dom-15.3.0.js"></script>
 
     <script>
-      const Hello = React.createClass({
+      const App = React.createClass({
         getInitialState: function() {
           return { who: 'world' };
         },
@@ -43,8 +43,8 @@
       });
 
       ReactDOM.render(
-        React.createElement(Hello),
-        document.getElementById('hello')
+        React.createElement(App),
+        document.getElementById('app')
       );
     </script>
   </body>
