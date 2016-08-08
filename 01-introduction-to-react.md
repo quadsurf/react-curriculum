@@ -31,7 +31,7 @@ React applications don't require many programming constructs. With React, there'
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date.
+React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the component hierarchy and update the DOM hierarchy as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date.
 
 For example, imagine the following component hierarchy...
 
@@ -53,7 +53,7 @@ For example, imagine the following component hierarchy...
 └─────────────┘     └─────────────┘
 ```
 
-Represents the following HTML.
+Represents the following DOM hierarchy.
 
 ```html
 <div>
@@ -82,7 +82,7 @@ If the component hierarchy is later changed to this...
 └─────────────┘     ┗━━━━━━━━━━━━━┛
 ```
 
-Then the HTML is changed to this.
+Then the DOM hierarchy is changed to this.
 
 ```html
 <div>
@@ -91,7 +91,7 @@ Then the HTML is changed to this.
 </div>
 ```
 
-Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of HTML. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
+Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of the DOM. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
 
 ### One-way data binding
 
@@ -174,14 +174,14 @@ Let's start by examining this simple React application.
     <meta charset="utf-8">
   </head>
   <body>
-    <div id="hello"></div>
+    <div id="app"></div>
 
     <script src="https://fb.me/react-15.3.0.js"></script>
     <script src="https://fb.me/react-dom-15.3.0.js"></script>
 
     <script>
       const element = React.createElement('h1', null, 'Hello world');
-      const container = document.getElementById('hello');
+      const container = document.getElementById('app');
 
       ReactDOM.render(element, container);
     </script>
@@ -198,7 +198,7 @@ It produces the following user interface.
 Type out the above code example *by hand* and then run it. No copy-and-paste cheating either. Once everything is working, inspect the page in your browser's developer tools. In the **Elements** tab, you'll see something like this.
 
 ```html
-<div id="hello">
+<div id="app">
   <h1 data-reactroot>Hello world</h1>
 </div>
 ```
@@ -207,7 +207,7 @@ In your own words, write down how React works in as much detail as you can. No p
 
 ### How does React work?
 
-Most of the above code should look familiar. An empty `<div id="hello">` element is declared in the HTML and inserted into the DOM when the page loads. Then, the `react` and `react-dom` JavaScript libraries are loaded into the page.
+Most of the above code should look familiar. An empty `<div id="app">` element is declared in the HTML and inserted into the DOM when the page loads. Then, the `react` and `react-dom` JavaScript libraries are loaded into the page.
 
 Once loaded, the `React.createElement()` function is called with three arguments—a `type`, some `props`, and a `child`.
 
@@ -225,7 +225,7 @@ Finally, the `ReactDOM.render()` function is called with two arguments—a `Reac
 |----------------|---------------|
 | `element`      |   `container` |
 
-The `ReactDOM.render()` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM as the child of the `DOMElement`. The `ReactDOM.render()` function controls the contents of the `DOMElement`. Any existing content inside the `DOMElement` is replaced when the `ReactDOM.render()` function is invoked.
+The `ReactDOM.render()` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM hierarchy as the child of the `DOMElement`. The `ReactDOM.render()` function controls the contents of the `DOMElement`. Any existing content inside the `DOMElement` is replaced when the `ReactDOM.render()` function is invoked.
 
 **NOTE:** You'll learn how React uses a reconciliation algorithm to efficiently update the contents of the `DOMElement` later.
 
@@ -235,7 +235,7 @@ To help learn how React works, the code example from above is extra explicit abo
 <script>
   ReactDOM.render(
     React.createElement('h1', null, 'Hello world'),
-    document.getElementById('hello')
+    document.getElementById('app')
   );
 </script>
 ```
@@ -253,15 +253,15 @@ Let's start by moving the presentation logic of the previous code example into a
 `hello.html`
 ```html
 <script>
-  const Hello = React.createClass({
+  const App = React.createClass({
     render: function() {
       return React.createElement('h1', null, 'Hello world');
     }
   });
 
   ReactDOM.render(
-    React.createElement(Hello),
-    document.getElementById('hello')
+    React.createElement(App),
+    document.getElementById('app')
   );
 </script>
 ```
@@ -282,19 +282,19 @@ Now that our component class has some presentation logic, let's spice it up by a
 `hello.html`
 ```html
 <script>
-  const Hello = React.createClass({
+  const App = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
 
     render: function() {
-      return React.createElement('h1', null, 'Hello ' + this.state.who);
+      return React.createElement('h1', null, `Hello ${this.state.who}`);
     }
   });
 
   ReactDOM.render(
-    React.createElement(Hello),
-    document.getElementById('hello')
+    React.createElement(App),
+    document.getElementById('app')
   );
 </script>
 ```
@@ -304,9 +304,9 @@ Component classes can also define a `getInitialState()` function. It's invoked o
 After the `getInitialState()` function is invoked, React will invoke the `render()` function which should be implemented as a **pure function**. In other words, it should:
 
 1. Return the same `ReactElement` given the same component state.
-2. Not modify the component's state.
-3. Not read from or write to the DOM.
-4. Not interact with the browser via functions like `setTimeout()`.
+1. Not modify the component's state.
+1. Not read from or write directly to the DOM.
+1. Not interact with the browser via functions like `setTimeout()`.
 
 React provides other places where you can modify state or interact with the browser. Just not in the `render()` function. Keeping the `render()` function pure makes component classes easier to think about.
 
@@ -321,22 +321,22 @@ Now that our component class has state, let's provide a user interface to change
 `hello.html`
 ```html
 <script>
-  const Hello = React.createClass({
+  const App = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
 
     render: function() {
       return React.createElement('div', null,
-        React.createElement('h1', null, 'Hello ' + this.state.who),
+        React.createElement('h1', null, `Hello ${this.state.who}`),
         React.createElement('input', { type: 'text' })
       );
     }
   });
 
   ReactDOM.render(
-    React.createElement(Hello),
-    document.getElementById('hello')
+    React.createElement(App),
+    document.getElementById('app')
   );
 </script>
 ```
@@ -356,7 +356,7 @@ As you can see from the above code, the `props` object is made up of key-value p
 Update your code with the above changes and run the code. Once everything is working, inspect the page in your browser's developer tools. In the **Elements** tab, you'll see something like this.
 
 ```html
-<div id="hello">
+<div id="app">
   <div data-reactroot>
     <h1>Hello world</h1>
     <input type="text">
@@ -373,7 +373,7 @@ With a user interface in place, let's make it dynamic by connecting the `input` 
 `hello.html`
 ```html
 <script>
-  const Hello = React.createClass({
+  const App = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
@@ -386,7 +386,7 @@ With a user interface in place, let's make it dynamic by connecting the `input` 
 
     render: function() {
       return React.createElement('div', null,
-        React.createElement('h1', null, 'Hello ' + this.state.who),
+        React.createElement('h1', null, `Hello ${this.state.who}`),
         React.createElement('input', {
           onChange: this.handleChange,
           type: 'text',
@@ -397,8 +397,8 @@ With a user interface in place, let's make it dynamic by connecting the `input` 
   });
 
   ReactDOM.render(
-    React.createElement(Hello),
-    document.getElementById('hello')
+    React.createElement(App),
+    document.getElementById('app')
   );
 </script>
 ```
@@ -431,7 +431,7 @@ Now that our component class responds to user interface changes, let's expand it
 `hello.html`
 ```html
 <script>
-  const Hello = React.createClass({
+  const App = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
@@ -464,8 +464,8 @@ Now that our component class responds to user interface changes, let's expand it
   });
 
   ReactDOM.render(
-    React.createElement(Hello),
-    document.getElementById('hello')
+    React.createElement(App),
+    document.getElementById('app')
   );
 </script>
 ```
