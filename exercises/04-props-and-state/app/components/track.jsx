@@ -8,6 +8,7 @@ const Track = React.createClass({
   render() {
     return <div>
       <p>{this.props.track.title} - {this.props.track.artist}</p>
+
       <p>Likes: {this.props.track.likes}</p>
 
       <button onClick={this.handleClick}>Like</button>
