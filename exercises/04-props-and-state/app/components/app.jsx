@@ -1,33 +1,37 @@
-import Book from 'components/book';
 import React from 'react';
+import Track from 'components/track';
 
 const App = React.createClass({
   getInitialState() {
     return {
-      books: [
-        'A Game of Thrones',
-        'Snow Crash',
-        'The Martian'
-      ]
+      tracks: [{
+        title: 'Hey Jude',
+        artist: 'The Beatles',
+        likes: 0
+      }, {
+        title: 'Hello',
+        artist: 'Adele',
+        likes: 0
+      }]
     };
   },
 
-  updateBook(index, value) {
-    const nextBooks = this.state.books;
+  updateTrack(index) {
+    const nextTracks = this.state.tracks;
 
-    nextBooks[index] = value;
+    nextTracks[index].likes += 1;
 
-    this.setState({ books: nextBooks });
+    this.setState({ tracks: nextTracks });
   },
 
   render() {
     return <div>
-      {this.state.books.map((book, index) => {
-        return <Book
-          book={book}
+      {this.state.tracks.map((track, index) => {
+        return <Track
           index={index}
           key={index}
-          updateBook={this.updateBook}
+          track={track}
+          updateTrack={this.updateTrack}
         />;
       })}
     </div>;
