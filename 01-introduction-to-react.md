@@ -31,7 +31,7 @@ React applications don't require many programming constructs. With React, there'
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the component hierarchy and update the DOM hierarchy as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date.
+React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date.
 
 For example, imagine the following component hierarchy...
 
@@ -53,7 +53,7 @@ For example, imagine the following component hierarchy...
 └─────────────┘     └─────────────┘
 ```
 
-Represents the following DOM hierarchy.
+Represents the following HTML.
 
 ```html
 <div>
@@ -82,7 +82,7 @@ If the component hierarchy is later changed to this...
 └─────────────┘     ┗━━━━━━━━━━━━━┛
 ```
 
-Then the DOM hierarchy is changed to this.
+Then the HTML is changed to this.
 
 ```html
 <div>
@@ -91,7 +91,7 @@ Then the DOM hierarchy is changed to this.
 </div>
 ```
 
-Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of the DOM. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
+Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of HTML. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
 
 ### One-way data binding
 
@@ -118,7 +118,7 @@ When an application uses **two-way** data binding:
          └───── Automatic change ────┘
 ```
 
-Two-way data binding works great, especially for smaller applications. With larger applications, it's common to run into a few problems. First, it can be difficult to prevent cycles where a change to one two-way data binding causes a second data binding to change which causes the first data binding to change again. Second, two-way data bindings are expensive in terms of CPU resources. Too many of them can negatively affect an application's perceived speed, especially on resource-contrained mobile devices.
+Two-way data binding works great, especially for smaller applications. With larger applications, it's common to run into a few problems. First, it can be difficult to prevent cycles where a change to one two-way data binding causes a second data binding to change which causes the first data binding to change again. Second, two-way data bindings are expensive in terms of CPU resources. Too many of them can negatively affect an application's perceived speed, especially on resource-constrained mobile devices.
 
 React avoids these problems by only using **one-way** data binding. When building a component hierarchy, its state and presentation logic are combined to produce a user interface. Whenever the state changes, it's automatically recombined with the presentation logic and a new user interface is produced.
 
@@ -225,7 +225,7 @@ Finally, the `ReactDOM.render()` function is called with two arguments—a `Reac
 |----------------|---------------|
 | `element`      |   `container` |
 
-The `ReactDOM.render()` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM hierarchy as the child of the `DOMElement`. The `ReactDOM.render()` function controls the contents of the `DOMElement`. Any existing content inside the `DOMElement` is replaced when the `ReactDOM.render()` function is invoked.
+The `ReactDOM.render()` function uses the `ReactElement` to create a component hierarchy and then inserts it into the DOM as the child of the `DOMElement`. The `ReactDOM.render()` function controls the contents of the `DOMElement`. Any existing content inside the `DOMElement` is replaced when the `ReactDOM.render()` function is invoked.
 
 **NOTE:** You'll learn how React uses a reconciliation algorithm to efficiently update the contents of the `DOMElement` later.
 
