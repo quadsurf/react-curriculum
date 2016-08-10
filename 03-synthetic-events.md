@@ -170,7 +170,7 @@ const App = React.createClass({
 });
 ```
 
-And if you need to stop a synthetic event from propagating to other components during the synthetic bubbling phase, call the `event.stopPropagation()` function. However, this is pretty rare and you should only do it if there's a compelling reason.
+And if you need to stop a synthetic event from propagating to other components during the synthetic bubbling phase, call the `event.stopPropagation()` function. This is pretty rare, though, and you should only do it if there's a compelling reason. Be aware that, from React, it's not possible to stop a native event from propagating through the native bubbling phase. 
 
 **NOTE:** Returning `false` from a React event handler doesn't prevent the default behavior or stop event propagation. You'll need to call `event.preventDefault()` or `event.stopPropagation()` manually.
 
