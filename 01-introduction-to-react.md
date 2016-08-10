@@ -18,14 +18,14 @@
 
 ### Components hierarchy
 
-React applications don't require many programming constructs. With React, there's no need for things like controllers, directives, or templates. In fact, all that's required is a **component** which is encapsulated code that handles presentation, state, and behavior. In other words, a component knows how it should look and act given its current underlying information. Here's a diagram that illustrates what's inside a component and the technologies it uses.
+A React user interface doesn't require many programming constructs. With React, there's no need for things like controllers, directives, or templates. In fact, all that's required is a **component** which is encapsulated code that handles presentation, state, and behavior. In other words, a component knows how it should look and act given its current underlying information. Here's a diagram that illustrates what's inside a component and the technologies it uses.
 
 ```text
 ┌─────────────────────────────── Component ──────────────────────────────┐
 │                                                                        │
 │ ┌─── Presentation ───┐  ┌─────── State ──────┐  ┌───── Behavior ─────┐ │
 │ │                    │  │                    │  │                    │ │
-│ │        HTML        │  │     JavaScript     │  │     JavaScript     │ │
+│ │     JavaScript     │  │     JavaScript     │  │     JavaScript     │ │
 │ │                    │  │                    │  │                    │ │
 │ └────────────────────┘  └────────────────────┘  └────────────────────┘ │
 └────────────────────────────────────────────────────────────────────────┘
@@ -91,16 +91,16 @@ Then the DOM hierarchy is changed to this.
 </div>
 ```
 
-Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of the DOM. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
+Thinking about a user interface as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of the DOM. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
 
 ### One-way data binding
 
-In computer science, data binding refers to the process of establishing a connection between an application's state and its user interface. Data binding is a great way to maintain consistency without writing much code by hand.
+In computer science, data binding refers to the process of establishing a connection between a user interface's state and presentation. Data binding is a great way to maintain consistency without writing much code by hand.
 
-When an application uses **two-way** data binding:
+When a user interface uses **two-way** data binding:
 
-1. Changes to its state (e.g. data received from a server) are *immediately* propagated to the user interface.
-2. Changes to its user interface (e.g. input received from a user) are *immediately* propagated to the state.
+1. Changes to its state (e.g. data received from a server) are *immediately* propagated to the presentation.
+2. Changes to its presentation (e.g. input received from a user) are *immediately* propagated to the state.
 
 ```text
          ┌───── Automatic change ────┐
@@ -109,7 +109,7 @@ When an application uses **two-way** data binding:
 ┌─────────────────┐         ┌─────────────────┐
 │                 │         │                 │
 │                 │         │                 │
-│      State      │         │  User Interface │
+│      State      │         │   Presentation  │
 │                 │         │                 │
 │                 │         │                 │
 └─────────────────┘         └─────────────────┘
@@ -118,11 +118,11 @@ When an application uses **two-way** data binding:
          └───── Automatic change ────┘
 ```
 
-Two-way data binding works great, especially for smaller applications. With larger applications, it's common to run into a few problems. First, it can be difficult to prevent cycles where a change to one two-way data binding causes a second data binding to change which causes the first data binding to change again. Second, two-way data bindings are expensive in terms of CPU resources. Too many of them can negatively affect an application's perceived speed, especially on resource-constrained mobile devices.
+Two-way data binding works great, especially for smaller user interfaces. With larger user interfaces, it's common to run into a few problems. First, it can be difficult to prevent cycles where a change to one two-way data binding causes a second data binding to change which causes the first data binding to change again. Second, two-way data bindings are expensive in terms of CPU resources. Too many of them can negatively affect a user interface's perceived speed, especially on resource-constrained mobile devices.
 
-React avoids these problems by only using **one-way** data binding. When building a component hierarchy, its state and presentation logic are combined to produce a user interface. Whenever the state changes, it's automatically recombined with the presentation logic and a new user interface is produced.
+React avoids these problems by only using **one-way** data binding. When building a component hierarchy, its state and presentation are combined to produce a user interface. Whenever the state changes, it's automatically recombined with the presentation and a new user interface is produced.
 
-However, changes made to the user interface are *not* automatically propagated to the state. As a developer, you'll have to write this code yourself. Fortunately, explicitly defining how this happens in React is simple and gives more control over the state that needs updating. With some practice, you'll be building, maintaining, and optimizing complex user interfaces like a boss.
+However, changes made to the presentation are *not* automatically propagated to the state. As a developer, you'll have to write this code yourself. Fortunately, explicitly defining how this happens in React is simple and gives more control over the state that needs updating. With some practice, you'll be building, maintaining, and optimizing a sophisticated user interface like a boss.
 
 ```text
          ┌───── Automatic change ────┐
@@ -131,7 +131,7 @@ However, changes made to the user interface are *not* automatically propagated t
 ┌─────────────────┐         ┌─────────────────┐
 │                 │         │                 │
 │                 │         │                 │
-│      State      │         │  User Interface │
+│      State      │         │   Presentation  │
 │                 │         │                 │
 │                 │         │                 │
 └─────────────────┘         └─────────────────┘
@@ -164,7 +164,7 @@ Take a moment to write down why React is important. After about a minute, your i
 
 ## How do you build a user interface with React?
 
-Let's start by examining this simple React application.
+Let's start by examining this simple React user interface.
 
 `hello.html`
 ```html
@@ -191,7 +191,7 @@ Let's start by examining this simple React application.
 
 It produces the following user interface.
 
-![Hello world](https://i.imgur.com/nKBW36S.png)
+![](https://i.imgur.com/nKBW36S.png)
 
 ### Exercise
 
@@ -246,7 +246,7 @@ Update your code with the above changes. And if needed, update what you wrote ea
 
 ### Component presentation
 
-Now that you've gotten some practice with the fundamentals, it's time to build a more interesting React application. You could use only `ReactElement` objects, but to really take advantage of React, you'll want to leverage components. Remember, a component is encapsulated code that handles presentation, state, and behavior.
+Now that you've gotten some practice with the fundamentals, it's time to build a more interesting React user interface. You could use only `ReactElement` objects, but to really take advantage of React, you'll want to leverage components. Remember, a component is encapsulated code that handles presentation, state, and behavior.
 
 Let's start by moving the presentation logic of the previous code example into a custom component. The `React.createClass()` function accepts a `specification` object and returns a component class.
 
@@ -265,7 +265,7 @@ Let's start by moving the presentation logic of the previous code example into a
   );
 </script>
 ```
-The `specification` object *must* implement a `render()` function that returns a single `ReactElement`. This is so important, it bears repeating. The `specification` object given to the `React.createClass()` function **must** implement a `render()` function that returns a single `ReactElement`. Otherwise, the application will throw an error.
+The `specification` object *must* implement a `render()` function that returns a single `ReactElement`. This is so important, it bears repeating. The `specification` object given to the `React.createClass()` function **must** implement a `render()` function that returns a single `ReactElement`. Otherwise, the React will throw an error.
 
 The reason why this is so important is because the `ReactDOM.render()` function will call a component's `render()` function when it's rendering the component hierarchy. If it isn't implemented correctly, React will complain loudly by throwing an error. Also note how different a component class is from a standard, object-oriented class. You *never* explicitly call `new` to instantiate it. Again, React does that for you inside the `ReactDOM.render()` function.
 
@@ -316,7 +316,7 @@ Update your code with the above changes. Once everything is working, update your
 
 ### Component hierarchy
 
-Now that our component class has state, let's provide a user interface to change that state. To start off, we'll need to add elements to our component hierarchy.
+Now that our component class has state, let's allow the user to change that state. To start off, we'll need to add an input element to our component hierarchy.
 
 `hello.html`
 ```html
@@ -368,7 +368,7 @@ Now update your notes with what you just learned.
 
 ### One-way data binding
 
-With a user interface in place, let's make it dynamic by connecting the `input` element to the state inside our component class. Remember, React's one-way data bindings prevent changes made to the user interface from automatically propagating to the state. We'll have to manually propagate user interface changes to the state by writing this code ourselves.
+With an input element in place, let's make it dynamic by connecting changes to its value to the state inside the component. Remember, React's one-way data bindings prevent changes made to the presentation from automatically propagating to the state. We'll have to manually propagate presentation changes to the state by writing this code ourselves.
 
 `hello.html`
 ```html
@@ -411,14 +411,14 @@ When an event handler is invoked by React, an `event` object is passed in as the
 
 In the code above, both the `h1` and `input` elements need be updated to reflect what the user has typed. In other words, the component's `this.state.who` value needs to be updated. To do that, the `this.setState()` function is called with a `nextState` object. This function performs a *shallow* merge of the `nextState` object into the current `this.state` object. The resulting object is automatically reassigned back into `this.state` variable for you.
 
-After the merge, the component is also automatically re-rendered, updating the user interface. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState()` function.
+After the merge, the component is also automatically re-rendered, updating the presentation. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState()` function.
 
 React thinks of components as simple state machines. A **state machine** is an object that:
 
 1. Can be in one of a finite number of states.
 1. Can transition from one state to another when an event is fired.
 
-By thinking of a component as being in one of a finite number of transitioning states, it's easy to keep your user interface consistent. In React, you simply transition a component's state using the `this.setState()` function and it'll render a new user interface based on this new state. React efficiently changes only the parts of the DOM that need updating using a process called **reconciliation**, which you'll study later.
+By thinking of a component as being in one of a finite number of transitioning states, it's easy to keep your user interface consistent. In React, you simply transition a component's state using the `this.setState()` function and it'll render a new presentation based on this new state. React efficiently changes only the parts of the DOM that need updating using a process called **reconciliation**, which you'll study later.
 
 ### Exercise
 
@@ -426,7 +426,7 @@ Update your code with the above changes. Once everything is working, update your
 
 ### Component behavior
 
-Now that our component class responds to user interface changes, let's expand its behavior so it's more interesting.
+Now that our user interface responds to changes, let's expand its behavior so it's more interesting.
 
 `hello.html`
 ```html
@@ -472,7 +472,7 @@ Now that our component class responds to user interface changes, let's expand it
 
 The main difference in the above code example is that the `render()` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that the `message` string is *not* part of the component's state.
 
-A well-designed component will store the least amount of information possible in its `this.state` object. Then, inside the `render()` function, it computes other necessary information for the user interface based on its `this.state`. Adding redundant, precomputed values into the `this.state` object means you'll have to write code that explicitly keeps everything synchronized.
+A well-designed component will store the least amount of information possible in its `this.state` object. Then, inside the `render()` function, it computes other necessary information for the presentation based on its `this.state`. Adding redundant, precomputed values into the `this.state` object means you'll have to write code that explicitly keeps everything synchronized.
 
 ### Exercise
 
@@ -480,10 +480,10 @@ Update your code with the above changes. Once everything is working, update your
 
 ## Summary
 
-In this chapter, you were exposed to the fundamentals of developing React applications. React is a JavaScript library for building sophisticated user interfaces using the following concepts.
+In this chapter, you were exposed to the fundamentals of developing React user interfaces. React is a JavaScript library for building sophisticated user interfaces using the following concepts.
 
 1. A hierarchy of components that encapsulate presentation, state, and behavior.
-2. One-way data binding where only changes to state are immediately propagated to the user interface.
+2. One-way data binding where only changes to state are immediately propagated to the presentation.
 
 ## Assignment
 
