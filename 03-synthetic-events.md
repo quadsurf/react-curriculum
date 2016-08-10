@@ -202,13 +202,13 @@ Now, it's time to practice handling synthetic events to build a few interactive 
 To get started, create a new Brunch application.
 
 ```shell
-brunch new synthentic --skeleton ryansobol/with-react
+brunch new synthentic_events --skeleton ryansobol/with-react
 ```
 
 And change into the project directory.
 
 ```shell
-cd synthentic
+cd synthentic_events
 ```
 
 Watch the project for changes and launch an HTTP server.
@@ -217,10 +217,10 @@ Watch the project for changes and launch an HTTP server.
 npm start
 ```
 
-In a new Terminal tab, navigate to the project directory.
+In a new Terminal tab, navigate back to the project directory.
 
 ```shell
-cd path/to/synthentic
+cd path/to/synthentic_events
 ```
 
 And open the project in Atom.
@@ -320,7 +320,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/textfield.html
@@ -397,7 +397,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/textarea.html
@@ -469,7 +469,7 @@ const App = React.createClass({
         <input
           defaultChecked={true}
           type="checkbox"
-         />
+        />
       </div>
 
       <div>
@@ -490,7 +490,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/checkbox.html
@@ -615,7 +615,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/radio.html
@@ -706,7 +706,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/select.html
@@ -799,7 +799,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/form.html
@@ -871,7 +871,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/focus.html
@@ -971,7 +971,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/mouse.html
@@ -1101,7 +1101,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/keyboard.html
