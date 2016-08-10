@@ -91,7 +91,7 @@ Then the DOM hierarchy is changed to this.
 </div>
 ```
 
-Thinking about a user interface as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of the DOM. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
+Thinking about a user interface as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of the DOM. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React. The goal of this article is to expose you to all the moving parts of React. Don't expect everything about React to click by the end. In upcoming articles, you'll dive deeper into each moving part one at a time.
 
 ### One-way data binding
 
