@@ -277,7 +277,7 @@ Update your code with the above changes. Once everything is working, update your
 
 ### Component state
 
-Now that our component class has some presentation logic, let's spice it up by adding some state.
+Now that your component class has some presentation logic, let's spice it up by adding some state.
 
 `hello.html`
 ```html
@@ -316,7 +316,7 @@ Update your code with the above changes. Once everything is working, update your
 
 ### Component hierarchy
 
-Now that our component class has state, let's allow the user to change that state. To start off, we'll need to add an input element to our component hierarchy.
+Now that your component class has state, let's allow the user to change that state. To start off, we'll need to add an input element to the component hierarchy.
 
 `hello.html`
 ```html
@@ -368,7 +368,7 @@ Now update your notes with what you just learned.
 
 ### One-way data binding
 
-With an input element in place, let's make it dynamic by connecting changes to its value to the state inside the component. Remember, React's one-way data bindings prevent changes made to the presentation from automatically propagating to the state. We'll have to manually propagate presentation changes to the state by writing this code ourselves.
+With an input element in place, let's make it dynamic by changing the component's state when its presentation changes. Remember, React's one-way data bindings prevent changes made to the presentation from automatically propagating to the state. We'll have to manually propagate presentation changes to the state by writing this code ourselves.
 
 `hello.html`
 ```html
@@ -426,7 +426,7 @@ Update your code with the above changes. Once everything is working, update your
 
 ### Component behavior
 
-Now that our user interface responds to changes, let's expand its behavior so it's more interesting.
+Now that your component class responds to changes, let's expand its behavior so it's more interesting.
 
 `hello.html`
 ```html
