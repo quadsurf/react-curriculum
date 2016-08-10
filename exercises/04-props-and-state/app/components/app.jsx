@@ -16,10 +16,16 @@ const App = React.createClass({
     };
   },
 
-  updateTrack(index) {
-    const nextTracks = this.state.tracks;
+  incrementLikes(track) {
+    const nextTracks = this.state.tracks.map((element) => {
+      if (track !== element) {
+        return element;
+      }
 
-    nextTracks[index].likes += 1;
+      const nextLikes = track.likes + 1;
+
+      return Object.assign({}, track, { likes: nextLikes });
+    });
 
     this.setState({ tracks: nextTracks });
   },
@@ -28,10 +34,9 @@ const App = React.createClass({
     return <div>
       {this.state.tracks.map((track, index) => {
         return <Track
-          index={index}
+          incrementLikes={this.incrementLikes}
           key={index}
           track={track}
-          updateTrack={this.updateTrack}
         />;
       })}
     </div>;

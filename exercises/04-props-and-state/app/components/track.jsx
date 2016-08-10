@@ -2,7 +2,7 @@ import React from 'react';
 
 const Track = React.createClass({
   handleClick() {
-    this.props.updateTrack(this.props.index);
+    this.props.incrementLikes(this.props.track);
   },
 
   render() {
