@@ -48,15 +48,15 @@ A traditional **compiler** translates the source code of one programming languag
 A **transpiler** is a special type of compiler. Given the source code of one programming language, a transpiler produces equivalent source code in another programming language of approximately the *same* level of abstraction. For example, TypeScript transpiles into JavaScript because both languages are similar in capabilities.
 
 ```text
-┌──────────────── TypeScript ────────────────┐                  ┌──────────────── JavaScript ────────────────┐
-│                                            │                  │                                            │
-│ function greeter(person: string) {         │                  │ function greeter(person) {                 │
-│   return `Hello, ${person.toUpperCase()}`; │                  │   return `Hello, ${person.toUpperCase()}`; │
-│ }                                          │─── transpile ───▶│ }                                          │
-│                                            │                  │                                            │
-│ greeter('Jane');                           │                  │ greeter('Jane');                           │
-│                                            │                  │                                            │
-└────────────────────────────────────────────┘                  └────────────────────────────────────────────┘
+┌────────────── TypeScript ───────────────┐                  ┌────────────── JavaScript ───────────────┐
+│                                         │                  │                                         │
+│ function greeter(who: string) {         │                  │ function greeter(who) {                 │
+│   return `Hello, ${who.toUpperCase()}`; │                  │   return `Hello, ${who.toUpperCase()}`; │
+│ }                                       │─── transpile ───▶│ }                                       │
+│                                         │                  │                                         │
+│ greeter('Jane');                        │                  │ greeter('Jane');                        │
+│                                         │                  │                                         │
+└─────────────────────────────────────────┘                  └─────────────────────────────────────────┘
 ```
 
 The take away is that JSX is *not* a template language even though it looks like one. Template languages are compiled into HTML while JSX is transpiled into JavaScript. They're both approximately at the same level of abstraction.
