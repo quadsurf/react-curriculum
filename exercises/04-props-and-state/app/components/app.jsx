@@ -5,13 +5,13 @@ const App = React.createClass({
   getInitialState() {
     return {
       tracks: [{
-        title: 'Hey Jude',
         artist: 'The Beatles',
-        likes: 0
+        likes: 0,
+        title: 'Hey Jude'
       }, {
-        title: 'Hello',
         artist: 'Adele',
-        likes: 0
+        likes: 0,
+        title: 'Hello'
       }]
     };
   },
