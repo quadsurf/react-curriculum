@@ -10,7 +10,7 @@
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| TBD                  | About 10.5 hours    |
+| 7 hours              | About 10.5 hours    |
 
 ## What's a synthetic event?
 
@@ -170,7 +170,7 @@ const App = React.createClass({
 });
 ```
 
-And if you need to stop a synthetic event from propagating to other components during the synthetic bubbling phase, call the `event.stopPropagation()` function. This is pretty rare, though, and you should only do it if there's a compelling reason. Be aware that, from React, it's not possible to stop a native event from propagating through the native bubbling phase. 
+And if you need to stop a synthetic event from propagating to other components during the synthetic bubbling phase, call the `event.stopPropagation()` function. This is pretty rare, though, and you should only do it if there's a compelling reason. Be aware that, from React, it's not possible to stop a native event from propagating through the native bubbling phase.
 
 **NOTE:** Returning `false` from a React event handler doesn't prevent the default behavior or stop event propagation. You'll need to call `event.preventDefault()` or `event.stopPropagation()` manually.
 
@@ -202,13 +202,13 @@ Now, it's time to practice handling synthetic events to build a few interactive 
 To get started, create a new Brunch application.
 
 ```shell
-brunch new synthentic_events --skeleton ryansobol/with-react
+brunch new synthetic_events --skeleton ryansobol/with-react
 ```
 
 And change into the project directory.
 
 ```shell
-cd synthentic_events
+cd synthetic_events
 ```
 
 Watch the project for changes and launch an HTTP server.
@@ -220,7 +220,7 @@ npm start
 In a new Terminal tab, navigate back to the project directory.
 
 ```shell
-cd path/to/synthentic_events
+cd path/to/synthetic_events
 ```
 
 And open the project in Atom.

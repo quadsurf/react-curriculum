@@ -370,9 +370,9 @@ Let's walkthrough the files and directories provided by the skeleton starting wi
 less README.md
 ```
 
-To watch the project for changes and launch an HTTP server, start Brunch.
+Watch the project for changes and launch an HTTP server.
 
-**NOTE:** Press `Ctrl + C` to quit Brunch.
+**NOTE:** Press `Ctrl + C` to quit.
 
 ```shell
 npm start

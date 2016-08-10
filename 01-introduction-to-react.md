@@ -10,7 +10,7 @@
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| About 2 hours        | About 4 hours       |
+| About 3 hours        | About 4.5 hours     |
 
 ## What's React?
 
