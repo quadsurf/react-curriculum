@@ -31,7 +31,7 @@ const App = React.createClass({
       />
 
       <input
-        readOnly="true"
+        readOnly={true}
         type="text"
         value="I'm read-only and under React's control."
       />

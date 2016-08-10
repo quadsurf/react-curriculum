@@ -67,14 +67,14 @@ const App = React.createClass({
         <input
           checked={true}
           name="3"
-          readOnly="true"
+          readOnly={true}
           type="radio"
           value="yes"
         />
         <input
           checked={false}
           name="3"
-          readOnly="true"
+          readOnly={true}
           type="radio"
           value="no"
         />

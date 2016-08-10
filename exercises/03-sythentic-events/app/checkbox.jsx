@@ -43,7 +43,7 @@ const App = React.createClass({
         {"I'm read-only and under React's control."}
         <input
           checked={true}
-          readOnly="true"
+          readOnly={true}
           type="checkbox"
         />
       </div>

@@ -28,7 +28,7 @@ const App = React.createClass({
       />
 
       <textarea
-        readOnly="true"
+        readOnly={true}
         value="I'm read-only and under React's control."
       />
     </div>;
