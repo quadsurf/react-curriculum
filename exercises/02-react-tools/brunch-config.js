@@ -10,7 +10,9 @@ module.exports = {
     },
 
     stylesheets: {
-      joinTo: 'app.css'
+      joinTo: {
+        'app.css': /^app/
+      }
     }
   },
 

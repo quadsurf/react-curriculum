@@ -36,7 +36,7 @@ const App = React.createClass({
         <input
           defaultChecked={true}
           type="checkbox"
-         />
+        />
       </div>
 
       <div>
