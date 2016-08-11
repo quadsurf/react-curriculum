@@ -38,9 +38,9 @@ const App = React.createClass({
   handleChange(event) {
     // event is a SyntheticEvent object
 
-    const nextState = { value: event.target.value };
+    const nextValue = event.target.value;
 
-    this.setState(nextState);
+    this.setState({ value: nextValue });
   },
 
   render() {
@@ -76,9 +76,9 @@ const App = React.createClass({
   handleChange(event) {
     // event is a SyntheticEvent object
 
-    const nextState = { value: event.target.value };
+    const nextValue = event.target.value;
 
-    this.setState(nextState);
+    this.setState({ value: nextValue });
   },
 
   render() {
@@ -751,9 +751,7 @@ const App = React.createClass({
   },
 
   handleChange(event) {
-    const nextState = {};
-
-    nextState[event.target.name] = event.target.value;
+    const nextState = { [event.target.name]: event.target.value };
 
     this.setState(nextState);
   },
@@ -935,12 +933,10 @@ const App = React.createClass({
   },
 
   handleMouseMove(event) {
-    const nextState = {
-      pageX: event.pageX,
-      pageY: event.pageY
-    };
+    const nextPageX = event.pageX;
+    const nextPageY = event.pageY;
 
-    this.setState(nextState);
+    this.setState({ pageX: nextPageX, pageY: nextPageY });
   },
 
   render() {
@@ -1109,7 +1105,7 @@ open http://localhost:8000/keyboard.html
 
 ## Summary
 
-In this chapter, you learned how to build sophisticated React user interfaces. Specifically, you'll learned how React's synthetic event system works identically across all browsers. You also practiced handling synthetic events in a variety of common use cases. Believe it or not, but this chapter only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React's synthetic event system.
+In this chapter, you learned how to build sophisticated React user interfaces. Specifically, you learned how React's synthetic event system works identically across all browsers. You also practiced handling synthetic events in a variety of common use cases. Believe it or not, but this chapter only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React's synthetic event system.
 
 ## Assignment
 
@@ -1123,5 +1119,3 @@ In this chapter, you learned how to build sophisticated React user interfaces. S
 - [QuirksMode - Event ordering](http://www.quirksmode.org/js/events_order.html)
 - [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
 - [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
-
-#### [⇐ Previous](02-react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-props-and-state.md)

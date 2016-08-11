@@ -1,5 +1,7 @@
 #### [⇐ Previous](03-synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-component-life-cycle.md)
 
+# Props and State
+
 ### Objectives
 
 - Explain what props are.
