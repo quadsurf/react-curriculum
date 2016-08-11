@@ -48,7 +48,7 @@ Turn to a neighbor and, in your own words, explain what props are and how they'r
 
 ## What's state?
 
-**State** is data that's initialized and updated from within a component. State is initialized by a component's `getInitialState()` method which is automatically invoked once before a component is mounted. Once initialized, state is accessible anywhere inside a component class via the `this.state` object.
+**State** is data that's initialized and changed from within a component. State is initialized by a component's `getInitialState()` method which is automatically invoked once before a component is mounted. Once initialized, state is accessible anywhere inside a component class via the `this.state` object.
 
 Additionally, state is **mutable**, or changeable, data that represents the internal state of a component. To mutate state, you use the `this.setState()` method which is typically done after an event handler is triggered from a user interaction or a server response.
 
@@ -94,7 +94,7 @@ Turn to a neighbor and, in your own words, explain what state is and how it's us
 
 ## Why are props and state important?
 
-Props and state are important because they're implicit inputs to the `render()` method. React invokes a component's `render()` method whenever it's mounted or its state is updated. Using one-way data binding, a component's props, state, and presentation logic are combined into a user interface.
+Props and state are important because they're implicit inputs to the `render()` method. React invokes a component's `render()` method whenever it's mounted or its state is changed. Using one-way data binding, a component's props, state, and presentation logic are combined into a user interface.
 
 ```jsx
 import React from 'react';
@@ -178,7 +178,7 @@ React uses the component hierarchy to generate and insert HTML elements into the
 
 Once mounting is complete, React holds onto the component hierarchy for later. You'll see why in a moment.
 
-Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method.
+Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler changes the component's state using the `this.setState()` method.
 
 ```text
 ┌──────────────────── <App /> ───────────────────┐
@@ -455,7 +455,7 @@ handleClick() {
 }
 ```
 
-As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with a stateless `<Track />` component. Rather than invoking the `this.setState()` method for itself, each `<Track />` component invokes the `this.props.incrementLikes()` state mutator method from its `handleClick()` event handler.
+As you've seen, event handlers process an event and changes a component's state. However, not all components have state, as is the case with a stateless `<Track />` component. Rather than invoking the `this.setState()` method for itself, each `<Track />` component invokes the `this.props.incrementLikes()` state mutator method from its `handleClick()` event handler.
 
 In React, a **state mutator** is a method inside a stateful component that invokes the `this.setState()` method. The `incrementLikes()` state mutator is defined in the `<App />` component, but is passed to each `<Track />` component through its props. It's up to the `<Track />` component to determine the when to invoke it. The following code snippet illustrates the `incrementLikes()` method of an `<App />` component.
 
