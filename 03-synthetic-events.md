@@ -714,7 +714,7 @@ open http://localhost:8000/select.html
 
 ### Form
 
-When a user submits a `<form>` component, the `onChange` event will fire. You'll need to register an `onSubmit` event handler that calls the `event.preventDefault()` function to prevent the browser from reloading the page.
+When a user submits a `<form>` component, the `onSubmit` event will fire. You'll need to register an `onSubmit` event handler that calls the `event.preventDefault()` function to prevent the browser from reloading the page.
 
 In terms of their events, `<input type="text" />` and `<input type="password" />` components are identical. Because each component has a unique `name` prop, the `this.handleChange()` event handler can be registered with both components.
 
@@ -767,8 +767,8 @@ const App = React.createClass({
   },
 
   render() {
-    return <div>
-      <form onSubmit={this.handleSubmit}>
+    return <form onSubmit={this.handleSubmit}>
+      <label>
         Username:
         <input
           name="username"
@@ -776,7 +776,9 @@ const App = React.createClass({
           type="text"
           value={this.state.username}
         />
+      </label>
 
+      <label>
         Password:
         <input
           name="password"
@@ -784,10 +786,10 @@ const App = React.createClass({
           type="password"
           value={this.state.password}
         />
+      </label>
 
-        <input type="submit" value="Log in" />
-      </form>
-    </div>;
+      <input type="submit" value="Log in" />
+    </form>;
   }
 });
 
@@ -1119,3 +1121,5 @@ In this chapter, you learned how to build sophisticated React user interfaces. S
 - [QuirksMode - Event ordering](http://www.quirksmode.org/js/events_order.html)
 - [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
 - [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
+
+#### [⇐ Previous](02-react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-props-and-state.md)

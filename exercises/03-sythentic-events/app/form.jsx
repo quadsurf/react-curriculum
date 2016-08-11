@@ -23,8 +23,8 @@ const App = React.createClass({
   },
 
   render() {
-    return <div>
-      <form onSubmit={this.handleSubmit}>
+    return <form onSubmit={this.handleSubmit}>
+      <label>
         Username:
         <input
           name="username"
@@ -32,7 +32,9 @@ const App = React.createClass({
           type="text"
           value={this.state.username}
         />
+      </label>
 
+      <label>
         Password:
         <input
           name="password"
@@ -40,10 +42,10 @@ const App = React.createClass({
           type="password"
           value={this.state.password}
         />
+      </label>
 
-        <input type="submit" value="Log in" />
-      </form>
-    </div>;
+      <input type="submit" value="Log in" />
+    </form>;
   }
 });
 
