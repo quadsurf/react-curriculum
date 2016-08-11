@@ -1045,34 +1045,24 @@ const App = React.createClass({
   },
 
   handleKeyDown(event) {
-    const nextEvents = this.state.events;
-
-    nextEvents.push(`Key Down: ${event.which}`);
+    const nextEvents = this.state.events.concat(`Key Down: ${event.which}`);
 
     this.setState({ events: nextEvents });
   },
 
   handleKeyPress(event) {
-    const nextEvents = this.state.events;
-
-    nextEvents.push(`Key Press: ${event.which}`);
+    const nextEvents = this.state.events.concat(`Key Press: ${event.which}`);
 
     this.setState({ events: nextEvents });
   },
 
   handleKeyUp(event) {
-    const nextEvents = this.state.events;
-
-    nextEvents.push(`Key Up: ${event.which}`);
+    const nextEvents = this.state.events.concat(`Key Up: ${event.which}`);
 
     this.setState({ events: nextEvents });
   },
 
   render() {
-    const eventEls = this.state.events.map((event, index) => {
-      return <div key={index}>{event}</div>;
-    });
-
     return <div>
       <textarea
         onChange={this.handleChange}
@@ -1088,7 +1078,9 @@ const App = React.createClass({
 
       <h2>History</h2>
 
-      {eventEls}
+      {this.state.events.map((event, index) => {
+        return <div key={index}>{event}</div>;
+      })}
     </div>;
   }
 });
@@ -1107,7 +1099,7 @@ open http://localhost:8000/keyboard.html
 
 ## Summary
 
-In this chapter, you learned how to build sophisticated React user interfaces. Specifically, you learned how React's synthetic event system works identically across all browsers. You also practiced handling synthetic events in a variety of common use cases. Believe it or not, but this chapter only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React's synthetic event system.
+In this chapter, you learned how to build sophisticated React user interfaces. Specifically, you learned how React's synthetic event system works identically across all browsers. You also practiced handling synthetic events in a variety of common use cases. Believe it or not, but this article only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React's synthetic event system.
 
 ## Assignment
 
