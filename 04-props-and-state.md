@@ -181,7 +181,7 @@ Once mounting is complete, React holds onto the component hierarchy for later. Y
 Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method.
 
 ```text
-┌────────────────────── <App /> ─────────────────┐
+┌──────────────────── <App /> ───────────────────┐
 │ ┌──────── Props ────────┐  ┏━━━━━ State ━━━━━┓ │
 │ │                       │  ┃                 ┃ │
 │ │ { greeting: 'Hello' } │  ┃ { who: 'Jane' } ┃ │
