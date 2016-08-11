@@ -24,7 +24,9 @@ const App = React.createClass({
 
       const nextLikes = track.likes + 1;
 
-      return Object.assign({}, track, { likes: nextLikes });
+      const nextTrack = Object.assign({}, track, { likes: nextLikes });
+
+      return nextTrack;
     });
 
     this.setState({ tracks: nextTracks });
