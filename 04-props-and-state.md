@@ -540,7 +540,7 @@ Update your previous description of how information flows between stateful and s
 
 ## Summary
 
-In this chapter, you learned how use props and state to separate the concerns of a React user interface. Specifically, you separated the concerns of a component hierarchy into stateful and stateless components. At this point, you're ready to write even more sophisticated React user interfaces.
+In this chapter, you learned how use props and state to separate the concerns of a React user interface. Specifically, you separated the concerns of a component hierarchy into stateful and stateless components. While everything might not make perfect sense right now, you're ready to write an even more sophisticated React user interface.
 
 ## Assignment
 
