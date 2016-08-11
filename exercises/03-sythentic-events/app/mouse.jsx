@@ -26,12 +26,10 @@ const App = React.createClass({
   },
 
   handleMouseMove(event) {
-    const nextState = {
-      pageX: event.pageX,
-      pageY: event.pageY
-    };
+    const nextPageX = event.pageX;
+    const nextPageY = event.pageY;
 
-    this.setState(nextState);
+    this.setState({ pageX: nextPageX, pageY: nextPageY });
   },
 
   render() {
