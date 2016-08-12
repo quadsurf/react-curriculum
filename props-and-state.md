@@ -457,7 +457,7 @@ handleClick() {
 
 As you've seen, event handlers process an event and changes a component's state. However, not all components have state, as is the case with a stateless `<Track />` component. Rather than invoking the `this.setState()` method for itself, each `<Track />` component invokes the `this.props.incrementLikes()` state mutator method from its `handleClick()` event handler.
 
-In React, a **state mutator** is a method inside a stateful component that invokes the `this.setState()` method. The `incrementLikes()` state mutator is defined in the `<App />` component, but is passed to each `<Track />` component through its props. It's up to the `<Track />` component to determine the when to invoke it. The following code snippet illustrates the `incrementLikes()` method of an `<App />` component.
+In React, a **state mutator** is a method inside a stateful component that invokes the `this.setState()` method. The `incrementLikes()` state mutator is defined in the `<App />` component, but is passed to each `<Track />` component through its props. It's up to the `<Track />` component to determine when to invoke it. The following code snippet illustrates the `incrementLikes()` method of an `<App />` component.
 
 ```jsx
 // From app/components/app.jsx
@@ -479,7 +479,7 @@ incrementLikes(track) {
 }
 ```
 
-As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. However, instead of updating a `track` object, the method creates a new `nextTracks` array that contains all the elements of the current `this.state.track` array but with one difference. The current `track` object is replaced with a new `nextTrack` object.
+As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. However, instead of updating a `track` object, the method creates a new `nextTracks` array that contains all the elements of the current `this.state.tracks` array but with one difference. The current `track` object is replaced with a new `nextTrack` object.
 
 Using the `Object.assign()` method, a `nextTrack` object contains a copy of the key-value pairs from a `track` object merged with a copy of the key-value pairs from a `{ likes: nextLikes }` object. The following diagram illustrates the creation of a `nextTrack` object.
 
@@ -501,7 +501,7 @@ Using the `Object.assign()` method, a `nextTrack` object contains a copy of the 
                                                   └──────────────┘
 ```
 
-This tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it requires a bit more work on your part, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn how an immutable data model can improve performance later.
+This tactic of copying key-value pairs is part of an immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it requires a bit more work on your part, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn how an immutable data model can improve performance later.
 
 The final step in resolving the `incrementLikes()` state mutator is to change the state of its component. Using the `this.setState()` method, a `nextTracks` array is merged into the current `this.state` object. After the merge, the component hierarchy, beginning with the current component, is automatically re-rendered which repeats the whole process.
 
