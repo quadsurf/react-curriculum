@@ -1,4 +1,4 @@
-#### [⇐ Previous](04-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](06-refs.md)
+#### [⇐ Previous](props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](refs.md)
 
 # Component Life Cycle
 
@@ -149,4 +149,4 @@ Modify the previous mounting/unmounting example in the following ways:
 [https://gist.github.com/fay-jai/fc8a5093c0b5124d4b2d#file-react-lifecycle-parent-child-jsx](https://gist.github.com/fay-jai/fc8a5093c0b5124d4b2d#file-react-lifecycle-parent-child-jsx)
 [http://tylermcginnis.com/an-introduction-to-life-cycle-events-in-react-js/](http://tylermcginnis.com/an-introduction-to-life-cycle-events-in-react-js/)
 
-#### [⇐ Previous](04-props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](06-refs.md)
+#### [⇐ Previous](props-and-state.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](refs.md)

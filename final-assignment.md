@@ -1,4 +1,4 @@
-#### [⇐ Previous](07-immutable-models.md) | [Table of Contents](README.md#table-of-contents)
+#### [⇐ Previous](immutable-models.md) | [Table of Contents](README.md#table-of-contents)
 
 # Final Assignment: React Todo
 
@@ -28,4 +28,4 @@ You've made it to the end of this unit, congratulations! Your assignment is to b
  * [http://ricostacruz.com/cheatsheets/react.html](http://ricostacruz.com/cheatsheets/react.html)
  * [https://egghead.io/series/react-fundamentals](https://egghead.io/series/react-fundamentals)
 
- #### [⇐ Previous](07-immutable-models.md) | [Table of Contents](README.md#table-of-contents)
+ #### [⇐ Previous](immutable-models.md) | [Table of Contents](README.md#table-of-contents)

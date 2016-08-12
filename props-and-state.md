@@ -1,4 +1,4 @@
-#### [⇐ Previous](03-synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-component-life-cycle.md)
+#### [⇐ Previous](synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](component-life-cycle.md)
 
 # Props and State
 
@@ -553,4 +553,4 @@ In this chapter, you learned how use props and state to separate the concerns of
 - [React docs - Multiple Components](https://facebook.github.io/react/docs/multiple-components.html)
 - [React docs - Reconciliation](https://facebook.github.io/react/docs/reconciliation.html)
 
-#### [⇐ Previous](03-synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](05-component-life-cycle.md)
+#### [⇐ Previous](synthetic-events.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](component-life-cycle.md)

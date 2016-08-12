@@ -1,4 +1,4 @@
-#### [⇐ Previous](01-introduction-to-react.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](03-synthetic-events.md)
+#### [⇐ Previous](introduction-to-react.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](synthetic-events.md)
 
 # React Tools
 
@@ -616,4 +616,4 @@ In this chapter, you were exposed to the fundamentals of React JSX, an HTML-like
 - [React Docs - Self-closing Tag](https://facebook.github.io/react/tips/self-closing-tag.html)
 - [Wikipedia - Source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)
 
-#### [⇐ Previous](01-introduction-to-react.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](03-synthetic-events.md)
+#### [⇐ Previous](introduction-to-react.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](synthetic-events.md)

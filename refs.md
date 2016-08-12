@@ -1,4 +1,4 @@
-#### [⇐ Previous](05-component-life-cycle.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-immutable-models.md)
+#### [⇐ Previous](component-life-cycle.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](immutable-models.md)
 
 # Refs
 
@@ -489,4 +489,4 @@ DEMO:
 * Read [this](http://stackoverflow.com/questions/25941585/react-refs-with-components) post on when to NOT use refs
 * Watch [this](https://egghead.io/lessons/react-using-refs-to-access-components) video and build the application. Refactor this app to use the React.findDOMNode method.
 
-#### [⇐ Previous](05-component-life-cycle.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](07-immutable-models.md)
+#### [⇐ Previous](component-life-cycle.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](immutable-models.md)

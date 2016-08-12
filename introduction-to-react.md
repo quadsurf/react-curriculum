@@ -1,4 +1,4 @@
-#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](02-react-tools.md)
+#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](react-tools.md)
 
 # Introduction to React
 
@@ -500,4 +500,4 @@ In this chapter, you were exposed to the fundamentals of developing React user i
 - [React Docs - Event System](https://facebook.github.io/react/docs/events.html)
 - [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
 
-#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](02-react-tools.md)
+#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](react-tools.md)

@@ -1,4 +1,4 @@
-#### [⇐ Previous](02-react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-props-and-state.md)
+#### [⇐ Previous](react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](props-and-state.md)
 
 # Synthetic Events
 
@@ -1114,4 +1114,4 @@ In this chapter, you learned how to build sophisticated React user interfaces. S
 - [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
 - [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
 
-#### [⇐ Previous](02-react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](04-props-and-state.md)
+#### [⇐ Previous](react-tools.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](props-and-state.md)

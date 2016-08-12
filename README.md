@@ -6,14 +6,14 @@ The goal of this curriculum is to teach you how to build real-world React applic
 
 ## Table of Contents
 
-1. [Introduction to React](01-introduction-to-react.md)
-1. [React Tools](02-react-tools.md)
-1. [Synthetic Events](03-synthetic-events.md)
-1. [Props and State](04-props-and-state.md)
-1. [Component Life Cycle](05-component-life-cycle.md)
-1. [Refs](06-refs.md)
-1. [Immutable Models](07-immutable-models.md)
-1. [Final Assignment](08-final-assignment.md)
+1. [Introduction to React](introduction-to-react.md)
+1. [React Tools](react-tools.md)
+1. [Synthetic Events](synthetic-events.md)
+1. [Props and State](props-and-state.md)
+1. [Component Life Cycle](component-life-cycle.md)
+1. [Refs](refs.md)
+1. [Immutable Models](immutable-models.md)
+1. [Final Assignment](final-assignment.md)
 1. [Intermediate React](https://github.com/gschool/intermediate_react)
 
 ## How does this curriculum work?
