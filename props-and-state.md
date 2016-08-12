@@ -16,7 +16,7 @@
 
 ## What are props?
 
-**Props** are data that's passed into a component when it's created. For example, you can use props to pass in HTML attributes when creating a native HTML component.
+**Props** are data that's passed into a component when it's created. For example, you can use props to pass in HTML attributes when creating an HTML component.
 
 ```jsx
 const element = <p className="bold">Tokyo Dog</p>;
@@ -44,7 +44,7 @@ Every component has their own `this.props` object. But remember, the key-value p
 
 ### Exercise
 
-Turn to a neighbor and, in your own words, explain what props are and how they're used. After about thirty seconds, your instructor will cold call on the class and ask what was discussed.
+Turn to a neighbor and, in your own words, explain what props are and how they're used. After about a minute seconds, your instructor will cold call on the class and ask what was discussed.
 
 ## What's state?
 
@@ -90,7 +90,7 @@ Every component has their own `this.state` object. And because the key-value pai
 
 ### Exercise
 
-Turn to a neighbor and, in your own words, explain what state is and how it's used. After about thirty seconds, your instructor will cold call on the class and ask what was discussed.
+Turn to a neighbor and, in your own words, explain what state is and how it's used. After about a minute seconds, your instructor will cold call on the class and ask what was discussed.
 
 ## Why are props and state important?
 
