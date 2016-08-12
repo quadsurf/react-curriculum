@@ -405,7 +405,7 @@ On the other hand, a `<Track />` component is stateless because it doesn't use t
 └─────────────────────────────────────────┘    └────────────────────────────────────────┘
 ```
 
-Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns. In React, an **owner** is a component that sets the props of another component. The following code snippet illustrates the owner-owned relationship between an `<App />` component and its `<Track />` components.
+Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns. In React, an **owner** is a component that sets the props of another component. The following code snippet illustrates the owner-ownee relationship between an `<App />` component and its `<Track />` components.
 
 **NOTE:** The `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a component's child, its elements conveniently become individual children of that parent component.
 
