@@ -24,11 +24,9 @@ To accomplish this goal, chapters are comprised of exercises that'll prepare you
 
 Completing a chapter's **exercises** will reinforce its concepts. Sometimes you'll be asked to explain a concept in your own words and then write it down. Other times you'll be asked to type out a code example into your text editor by hand and then run it.  Working copies of the code examples from every chapter can be found in the [`exercises/`](exercises/) directory of this repository.
 
-Additionally, completing a chapter's **assignment** will cement its concepts. You'll be asked to apply some or all of what you've learned to solve a coding challenge. Remember, just because you don't use a concept to complete an assignment doesn't mean it's unimportant. Collectively, the assignments will help you practice the concepts you'll need to know for the final assignment. If an assignment provides a starting HTML/CSS template, you can find it in the [`assignments/`](assignments/) directory of this repository.
+Additionally, completing a chapter's **assignment** will cement its concepts. You'll be asked to apply some or all of what you've learned to solve a coding challenge. Remember, just because you don't use a concept to complete an assignment doesn't mean it's unimportant. Collectively, the assignments will help you practice the concepts you'll need to know for the final assignment.
 
 The **final assignment** is where you'll be evaluated. You'll be asked to apply all the significant concepts you've learned from previous assignments to build a real-world application.
-
-**NOTE:** Instructors and students who complete the program have access to [solutions](https://github.com/gSchool/react-curriculum-solutions) for all assignments.
 
 ## How are the duration times determined?
 
