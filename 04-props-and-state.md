@@ -544,7 +544,7 @@ In this chapter, you learned how use props and state to separate the concerns of
 
 ## Assignment
 
-- [React Inventory]()
+- [React Inventory](https://github.com/gSchool/wd-react-inventory)
 
 ## Resources
 
